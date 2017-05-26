@@ -1,0 +1,42 @@
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head> 
+<body>
+	<div id="wrapper">
+		<div class="date"><span>May.26.2017</span></div>
+		<h1>Image Compression</h1>
+		<h2>Lossless and Lossy</h2>
+		<div class="author"><span>By Dery Rahman A</span></div>
+		<p>
+			Kompresi merupakan teknik untuk mereduksi ukuran file dengan melibatkan encoding menggunakan bits yang lebih sedikit dibanding representasi file yang asli. Teknik untuk mereduksi 2 dibagi menjadi 2 bagian yaitu lossless compression dan lossy compression. Lossless compression adalah kelas dari algoritma kompresi data yang dapat mengurangi bits dengan cara membuang redundansi data tanpa kehilangan informasi asli. Sehingga ketika sebuah file didekompres, file tersebut  utuh sesuai dengan aslinya sebelum dikompres, dalam kata lain, teknik lossless compression bersifat reversible. Sedangkan lossy compression merupakan kompresi data dengan yang dapat mengurangi bits dengan cara membuang informasi-informasi yang dianggap kurang penting. Sehingga dalam lossy compression, terdapat informasi yang hilang.
+		</p>
+		<h3>Kompresi Gambar</h3>
+		<p>
+			Kompresi gambar / image compression adalah teknik dalam image processing. Teknik ini berguna agar file gambar mempunyai ukuran bits yang kecil sehingga memudahkan pengiriman gambar atau penyimpanannya. Kompresi gambar diharapkan dapat mengurangi data gambar yang redundan namun tetap mirip dengan gambar asli yang dilihat manusia.
+		</p>
+		<h3>Lossless Compression</h3>
+		<p>
+		Run-length encoding :
+	Merupakan bentuk paling sederhana dalam lessless compression. Sekuens dari nilai data yang sama dapat disimpan dalam data tunggal yang berisi nilai data beserta jumlah. Pada kompresi gambar, dibanding menggunakan pixel warna (merah,merah,merah,...) akan jauh lebih ringkas dengan menggunakan data (merah,278). 
+
+	Contoh, pada gambar hitam putih, format data pixel dapat direpresentasikan seperti berikut (hitam direpresentasikan sebagai B, dan putih direpresentasikan sebagai W) :
+
+	WWWWWWWWWWWWBWWWWWWWWWWWWBBBWWWWWWWWWWWWWWWWWWWWWWWWBWWWWWWWWWWWWWW
+
+	Kompresi dengan RLE dapat dijadikan sebagai berikut
+
+	12W1B12W3B24W1B14W
+
+	dibanding menggunakan representasi asli 67 karakter, akan lebih hemat jika menggunakan hanya 18 karakter.
+
+	Contoh format gambar yang melibatkan RLE adalah GIF, TIFF, BMP, dan PCX.
+Entropy encoding :
+	Entropi endocing merupakan teknik lossless compression yang merepresentasikan data pada gambar bergantung pada frekuensi kemunculannya. Pola yang sering muncul akan direpresentasikan dengan bits yang kecil, sedangkan pola yang jarang kemunculannya akan direpresentasikan dengan bits yang lebih panjang. Huffman encoding merupakan salah satu tipe dari entropy encoding.
+Constant Area Encoding :
+	Merupakan metode lanjutan dari RLE. Yaitu dengan cara membagi gambar menjadi beberapa segment, setiap segmen merepresentasikan data yang hanya mempunyai 1 warna. 
+		</p>
+		<h3>Lossy Compression</h3>
+	</div>
+</body>
+</html>
