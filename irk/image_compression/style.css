@@ -38,3 +38,17 @@ pre {
 	border: 1px solid #ddd;
 	border-left: 1rem solid #ddd;
 }
+
+@media screen and (max-width: 960px) {
+    #wrapper {
+    	width: 90%;
+    	margin: 0px 20px;
+    }
+    img {
+    	max-width: 100%;
+    }
+    pre{
+    	width: 100%;
+    	padding: 10px 10px;
+    }
+}

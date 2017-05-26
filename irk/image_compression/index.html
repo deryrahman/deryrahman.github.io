@@ -2,6 +2,7 @@
 <head>
 	<title>Image Compression : Lossless and Lossy</title>
 	<link rel="stylesheet" type="text/css" href="style.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head> 
 <body>
 	<div id="wrapper">
@@ -48,7 +49,7 @@
 			Yaitu teknik yang memanfaatkan fakta bahwa mata manusia merasa brightness (luminance) lebih berpengaruh daripada warna (chrominance) itu sendiri, maka dilakukan pengurangan resolusi warna dengan disampling ulang. Biasanya digunakan pada sinyal YUV.<br />
 			Chorma Subsampling terdiri dari 3 komponen: Y (luminance) : U (CBlue) : V (CRed)<br />
 			Y merupakan komponen luminance (brightness) dan U dan V adalah komponen chrominance (warna). Sinyal YUV diciptakan dari sumber RGB (red, green, blue),dengan diberi bobot tertentu, nilai R, G dan B ditambahkan untuk menghasilkan sinyal Y, yang menyatakan terang-gelap secara keseluruhan, atau luminance dari titik tersebut. Sinyal U lalu dibentuk dengan mengurangkan sinyal blue dari RGB dengan Y, dan V dengan mengurangkan red.<br />
-			<img src="img/3.png" />
+			<img src="img/3.png" /><br />
 
 			<b>Transform coding</b><br />
 			Teknik ini digunakan untuk data natural contohnya seperti gambar fotografi. Output yang dihasilkan mempunyai kualitas rendah. Transform coding merupakan teknik dasar yang digunakan gambar berformat JPEG. Transform coding mengubah nilai pixel citra spasial untuk nilai koefisiennya. Beberapa tipe transform coding yang diimplementasikan dalam kompresi gambar adalah  Fourier,  Karhonen-Loeve,  Walsh-Hadamard,  lapped  orthogonal, discrete cosine (DCT), dan wavelets.
