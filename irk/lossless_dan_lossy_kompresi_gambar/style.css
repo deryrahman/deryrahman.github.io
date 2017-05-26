@@ -28,3 +28,13 @@ a:hover { text-decoration: underline }
 .read-more { -moz-border-radius: 50%; -moz-transition: all 0.2s ease-in-out; -webkit-border-radius: 50%; -webkit-transition: all 0.2s ease-in-out; background: #111; border-radius: 50%; border: 10px solid #fdfdfd; color: #fff; display: block; font-family: 'Open Sans', sans-serif; font-size: 14px; height: 80px; line-height: 80px; margin: -40px 0 0 -40px; position: absolute; bottom: 0px; left: 50%; text-align: center; text-transform: uppercase; width: 80px; }
 
 .read-more:hover { background: #990000; text-decoration: none; }
+
+pre {
+	width: 92%;
+	overflow: auto;
+	margin: 2rem 0;
+	padding: 1rem 0.8rem 1rem 1.2rem;
+	color: #3f3b36;
+	border: 1px solid #ddd;
+	border-left: 1rem solid #ddd;
+}
