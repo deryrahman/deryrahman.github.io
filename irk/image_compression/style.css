@@ -40,12 +40,10 @@ pre {
 }
 
 @media screen and (max-width: 960px) {
-	body{
-		overflow-x: hidden;
-	}
     #wrapper {
     	width: 90%;
     	margin: 0px auto;
+		overflow-x: hidden;
     }
     img {
     	max-width: 100%;
