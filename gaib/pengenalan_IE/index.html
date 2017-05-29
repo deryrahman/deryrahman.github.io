@@ -1,6 +1,6 @@
 <html>
 <head>
-	<title>Information Extraction</title>
+	<title>Information Extraction : Web Scraping</title>
 	<link rel="stylesheet" type="text/css" href="style.css">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head> 
@@ -8,13 +8,33 @@
 	<div id="wrapper">
 		<div class="date"><span>May.29.2017</span></div>
 		<h1>Information Extraction</h1>
+		<h2>Web Scraping</h2>
 		<div class="author"><span>By Dery Rahman A</span></div>
+		<h3>Information Extraction</h3>
 		<p>
-			Lorem ipsum dolor sit amet.
+			Information Extraction (IE) merupakan suatu proses untuk meng-ekstraksi informasi dari <i>unstructured</i> atau <i>semi-structured</i> menjadi <i>structured</i> yang dapat dibaca oleh mesin. Teks yang biasa kita baca, merupakan contoh dari <i>unstructured</i>, sedangkan mesin hanya dapat memproses informasi yang terstruktur. Oleh karena itu, IE ini penting untuk memisahkan antar entitas penting pada suatu teks tidak terstruktur beserta relasinya.
 		</p>
-		<h3>Lorem Ipsum</h3>
-		<h3>Referensi</h3>
 		<p>
+			Untuk mendapatkan informasi terstruktur dari teks yang tidak terstruktur, hal pertama yang perlu diperhatikan adalah informasi target sebagai informasi terstruktur yang akan diekstrak. Kita tertarik hanya kepada informasi penting saja. Oleh karena itu perlu ditentukan, target data yang akan diekstrak.
+		</p>
+		<h3>Web Scraping</h3>
+		<p>
+			Web Scraping merupakan proses ekstraksi data dari website. Data tersebut disajikan oleh website sebagai HTML (semi-structured), kemudian oleh web scraper, data yang penting akan diekstrak untuk kemudian dimasukan kedalam database (structured). Pada search engine, web scraping dilakukan setiap crawling berjalan. Crawler menelusuri setiap halaman dokumen, kemudian scraper melakukan extraksi data penting dari halaman web tersebut.
+		</p>
+		<p>
+			Pada dasarnya HTML dibangun dari 4 tipe elemen : struktur dokumen, block, inline, dan elemen interaktif. Setiap versi HTML dibangun berdasarkan DTD (Document Type Definition) yang mengatur bagaimana elemen dikonstruksikan. Model yang paling banyak digunakan untuk struktur dokumen HTML adalah model pohon.
+			<img src="img/1.png" />
+		</p>
+		<p>
+			Setiap <i>tag</i> HTML direpresentasikan sebagai simpul. <i>Nested tag</i> merupakan anak dari simpul tersebut. Isi dari setiap simpul merupakan sebuah informasi yang kemudian akan diekstrak informasi yang penting untuk kemudian dimasukan kedalam database. Ekstraksi ini dapat dilakukan dengan menggunakan <i>Regular Expression</i>.
+		</p>
+		<h3>Example : Scraping using Python</h3>
+		<p>
+			Pada kali ini, saya mencoba untuk melakukan scraping sederhana dengan menggunakan python. Contoh website yang akan saya gunakan adalah <pre><code>http://econpy.pythonanywhere.com/ex/001.html</code> </pre>
+		</p>
+		<p>
+			Jika kita lihat, dalam website tersebut terdapat tag div dengan atribut <code>title="buyer-info"</code> dan setiap buyer-info mempunyai data berupa nama buyer dan harga barang. Masing masing berada dalam tag div dengan atribut <code>title="buyer-name"</code> dan tag span dengan atribut <code>class="item-price"</code>. <br />
+			<img src="img/2.png" />
 		</p>
 	</div>
 </body>
