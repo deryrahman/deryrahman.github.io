@@ -33,8 +33,35 @@
 			Pada kali ini, saya mencoba untuk melakukan scraping sederhana dengan menggunakan python. Contoh website yang akan saya gunakan adalah <pre><code>http://econpy.pythonanywhere.com/ex/001.html</code> </pre>
 		</p>
 		<p>
-			Jika kita lihat, dalam website tersebut terdapat tag div dengan atribut <code>title="buyer-info"</code> dan setiap buyer-info mempunyai data berupa nama buyer dan harga barang. Masing masing berada dalam tag div dengan atribut <code>title="buyer-name"</code> dan tag span dengan atribut <code>class="item-price"</code>. <br />
+			Jika kita lihat, dalam website tersebut terdapat tag div dengan atribut <code>title="buyer-info"</code> dan setiap buyer-info mempunyai data berupa nama buyer dan harga barang. Masing masing berada dalam tag div dengan atribut <code>title="buyer-name"</code> dan tag span dengan atribut <code>class="item-price"</code>. <br /><br />
 			<img src="img/2.png" />
+		</p>
+		<p>
+			Secara sederhana, program python yang dibuat untuk mengekstraksi entitas nama dan entitas harga adalah sebagai berikut :
+			<pre>
+from lxml import html
+import requests
+
+page = requests.get('http://econpy.pythonanywhere.com/ex/001.html')
+tree = html.fromstring(page.content)
+
+buyers = tree.xpath('//div[@title="buyer-name"]/text()')
+prices = tree.xpath('//span[@class="item-price"]/text()')
+
+print 'Buyers: ', buyers
+print 'Prices: ', prices
+			</pre>
+		</p>
+		<p>
+			Hasil yang didapat merupakan list yang berupa kumpulan nama, dan kumpulan harga sebagai berikut :
+			<pre>
+Buyers:  ['Carson Busses', 'Earl E. Byrd', 'Patty Cakes', 'Derri Anne Connecticut', 'Moe Dess', 'Leda Doggslife', 'Dan Druff', 'Al Fresco', 'Ido Hoe', 'Howie Kisses', 'Len Lease', 'Phil Meup', 'Ira Pent', 'Ben D. Rules', 'Ave Sectomy', 'Gary Shattire', 'Bobbi Soks', 'Sheila Takya', 'Rose Tattoo', 'Moe Tell']
+Prices:  ['$29.95', '$8.37', '$15.26', '$19.25', '$19.25', '$13.99', '$31.57', '$8.49', '$14.47', '$15.86', '$11.11', '$15.98', '$16.27', '$7.50', '$50.85', '$14.26', '$5.68', '$15.00', '$114.07', '$10.09']
+			</pre>
+		</p>
+		<h3>Kesimpulan</h3>
+		<p>
+			TBD
 		</p>
 	</div>
 </body>
