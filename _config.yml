@@ -16,14 +16,14 @@ title:            Dery R A
 tagline:          ''
 description:      'AI Enthusiast • Software Engineer • Long Life Learner'
 url:              https://deryrahman.github.io
-baseurl:          /
-blogurl:          /blog/
+baseurl:          ''
+blogurl:          /blog
 
 author:
   name:           'Dery Rahman A'
   url:            https://deryrahman.github.io
 
-paginate_path: "/blog/page:num/"
+paginate_path:    "/blog/page:num"
 paginate:         1
 
 # Custom vars
@@ -33,4 +33,4 @@ github:
   repo:           https://github.com/deryrahman
 
 linkedin:
-  url:            https://www.linkedin.com/in/deryrahman/
+  url:            https://www.linkedin.com/in/deryrahman
