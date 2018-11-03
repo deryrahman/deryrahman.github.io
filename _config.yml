@@ -8,7 +8,7 @@ markdown:         kramdown
 highlighter:      rouge
 
 # Permalinks
-permalink:        pretty
+permalink:        /:title
 # relative_permalinks: true
 
 # Setup
@@ -17,17 +17,17 @@ tagline:          ''
 description:      'AI Enthusiast • Software Engineer • Long Life Learner'
 url:              https://deryrahman.github.io
 baseurl:          ''
-blogurl:          /blog
+blogurl:          /blog/
 
 author:
   name:           'Dery Rahman A'
   url:            https://deryrahman.github.io
 
 paginate_path:    "/blog/page:num"
-paginate:         1
+paginate:         5
 
 # Custom vars
-version:          0.1.0
+version:          0.1.1
 
 github:
   repo:           https://github.com/deryrahman
