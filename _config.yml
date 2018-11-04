@@ -14,7 +14,7 @@ permalink:        /:title
 # Setup
 title:            Dery R A
 tagline:          ''
-description:      'AI Enthusiast • Software Engineer • Long Life Learner'
+description:      'AI Enthusiast • Software Engineer • Lifelong Learner'
 url:              https://deryrahman.github.io
 baseurl:          ''
 blogurl:          /blog/
@@ -27,7 +27,7 @@ paginate_path:    "/blog/page:num"
 paginate:         5
 
 # Custom vars
-version:          0.1.1
+version:          0.1.2
 
 github:
   repo:           https://github.com/deryrahman
