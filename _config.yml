@@ -18,6 +18,7 @@ description:      'AI Enthusiast • Software Engineer • Lifelong Learner'
 url:              https://deryrahman.github.io
 baseurl:          ''
 blogurl:          /blog/
+paymenturl:       /payment/
 
 author:
   name:           'Dery Rahman A'
