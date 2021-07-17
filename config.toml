@@ -1,4 +1,4 @@
-baseurl = "/"
+baseurl = "https://deryrahman.github.io"
 languageCode = "en-us"
 theme = "terminal"
 paginate = 5
@@ -28,7 +28,7 @@ paginate = 5
 
   # set post to show the last updated
   # If you use git, you can set `enableGitInfo` to `true` and then post will automatically get the last updated
-  showLastUpdated = false
+  showLastUpdated = true
   # Provide a string as a prefix for the last update date. By default, it looks like this: 2020-xx-xx [Updated: 2020-xx-xx] :: Author
   # updatedDatePrefix = "Updated"
 
@@ -40,8 +40,8 @@ paginate = 5
   # set Twitter handles for Twitter cards
   # see https://developer.twitter.com/en/docs/tweets/optimize-with-cards/guides/getting-started#card-and-content-attribution
   # do not include @
-  creator = ""
-  site = ""
+  creator = "deryrahman"
+  site = "deryrahman"
 
 [languages]
   [languages.en]
