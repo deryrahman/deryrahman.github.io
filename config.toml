@@ -46,7 +46,7 @@ paginate = 5
 [languages]
   [languages.en]
     languageName = "English"
-    title = "Terminal"
+    title = "Dery R Ahaddienata"
     subtitle = "A simple, retro theme for Hugo"
     owner = "Dery R Ahaddienata"
     keywords = ""
