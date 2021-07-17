@@ -1,0 +1,4 @@
+[submodule "themes/terminal"]
+	path = themes/terminal
+	url = https://github.com/deryrahman/hugo-theme-terminal
+	branch = master
