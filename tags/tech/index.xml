@@ -1,4 +1,65 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>tech on Dery R Ahaddienata</title><link>https://deryrahman.github.io/tags/tech/</link><description>Recent content in tech on Dery R Ahaddienata</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Fri, 09 Apr 2021 18:27:48 +0700</lastBuildDate><atom:link href="https://deryrahman.github.io/tags/tech/index.xml" rel="self" type="application/rss+xml"/><item><title>Slow Coding</title><link>https://deryrahman.github.io/posts/slow-coding/</link><pubDate>Fri, 09 Apr 2021 18:27:48 +0700</pubDate><guid>https://deryrahman.github.io/posts/slow-coding/</guid><description>I wrote this article for my own documentation related to lesson learned I was gathered during my coding-life. Really, up until now, coding is fun. The way we transfer our idea and logic into code so that computer can do whatever we want seems really magical. There&amp;rsquo;s a joke I&amp;rsquo;ve found somewhere (I forget exactly), today&amp;rsquo;s magician is programmer. It&amp;rsquo;s quite true, imagine the world which can do so much things, efficiently, automatically, and precisely without human inference.</description><content>&lt;p>I wrote this article for my own documentation related to lesson learned I was gathered during my coding-life. Really, up until now, coding is fun. The way we transfer our idea and logic into code so that computer can do whatever we want seems really magical. There&amp;rsquo;s a joke I&amp;rsquo;ve found somewhere (I forget exactly), today&amp;rsquo;s magician is programmer. It&amp;rsquo;s quite true, imagine the world which can do so much things, efficiently, automatically, and precisely without human inference. It can be done with computer.&lt;/p>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>tech on Dery R Ahaddienata</title><link>https://deryrahman.github.io/tags/tech/</link><description>Recent content in tech on Dery R Ahaddienata</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Mon, 19 Jul 2021 15:49:33 +0700</lastBuildDate><atom:link href="https://deryrahman.github.io/tags/tech/index.xml" rel="self" type="application/rss+xml"/><item><title>Software System Fundamentals</title><link>https://deryrahman.github.io/posts/software-system-fundamentals/</link><pubDate>Mon, 19 Jul 2021 15:49:33 +0700</pubDate><guid>https://deryrahman.github.io/posts/software-system-fundamentals/</guid><description>The book I&amp;rsquo;m currently reading is Designing Data Intensive Applications by Martin Kleppmann. During the first read, I found concise fundamentals we need to concern most when dealing with a high quality software system. There&amp;rsquo;re 3 fundamentals as follow:
+Fundamental Definition Reliability The system should work properly even when the things go wrong (faulty) Scalability The system should be able to handle the growth (data volume, traffic, or complexity) Maintainability The system should easily adaptable enough during maintenance (bugs, failures, and new features) Reliability Faulty can come up from several places:</description><content>&lt;p>The book I&amp;rsquo;m currently reading is &lt;a href="https://learning.oreilly.com/library/view/designing-data-intensive-applications/9781491903063/">Designing Data Intensive Applications&lt;/a> by Martin Kleppmann. During the first read, I found concise fundamentals we need to concern most when dealing with a high quality software system. There&amp;rsquo;re 3 fundamentals as follow:&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>Fundamental&lt;/th>
+&lt;th>Definition&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>&lt;strong>Reliability&lt;/strong>&lt;/td>
+&lt;td>The system should work properly even when the things go wrong (faulty)&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;strong>Scalability&lt;/strong>&lt;/td>
+&lt;td>The system should be able to handle the growth (data volume, traffic, or complexity)&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;strong>Maintainability&lt;/strong>&lt;/td>
+&lt;td>The system should easily adaptable enough during maintenance (bugs, failures, and new features)&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;h2 id="reliability">Reliability&lt;/h2>
+&lt;p>Faulty can come up from several places:&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>Hardware Faults&lt;/strong>: eg. Hard disk has MTTF (mean time to failure) of about 10 to 50 years.&lt;/li>
+&lt;li>&lt;strong>Software Faults&lt;/strong>: eg. Uncaught bugs in Linux kernel due to leap second on June 20, 2012.&lt;/li>
+&lt;li>&lt;strong>Human Errors&lt;/strong>: eg. Configuration error by operators leads the most system outage.&lt;/li>
+&lt;/ul>
+&lt;h2 id="scalability">Scalability&lt;/h2>
+&lt;p>Data growth is equal to increasing load. There&amp;rsquo;re 2 things need to describe:&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>Load&lt;/strong>: current load existing on the system. Some parameters:
+&lt;ul>
+&lt;li>request per second&lt;/li>
+&lt;li>response time&lt;/li>
+&lt;li>read write ration on DB&lt;/li>
+&lt;li>number of concurrent user&lt;/li>
+&lt;li>hit rate on cache&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>&lt;strong>Performance&lt;/strong>: metrics that used to define how good the system handle load. It can be used as SLA / SLO. Some metrics:
+&lt;ul>
+&lt;li>avg / mean&lt;/li>
+&lt;li>median: p50&lt;/li>
+&lt;li>percentile: p95, p99, p999&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h2 id="maintainability">Maintainability&lt;/h2>
+&lt;p>The goal is to minimize pain during maintenance. Three design principles need to follow:&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>Operability&lt;/strong>: make it easy for teams to keep the system run smoothly.&lt;/li>
+&lt;li>&lt;strong>Simplicity&lt;/strong>: make it easy for new engineer to understand the system.&lt;/li>
+&lt;li>&lt;strong>Evolvability&lt;/strong>: make it easy for engineer to extend the system.&lt;/li>
+&lt;/ul>
+&lt;p>&lt;strong>References&lt;/strong>&lt;/p>
+&lt;ol>
+&lt;li>&lt;a href="https://learning.oreilly.com/library/view/designing-data-intensive-applications/9781491903063/">Designing Data Intensive Applications&lt;/a> by Martin Kleppmann&lt;/li>
+&lt;/ol></content></item><item><title>Slow Coding</title><link>https://deryrahman.github.io/posts/slow-coding/</link><pubDate>Fri, 09 Apr 2021 18:27:48 +0700</pubDate><guid>https://deryrahman.github.io/posts/slow-coding/</guid><description>I wrote this article for my own documentation related to lesson learned I was gathered during my coding-life. Really, up until now, coding is fun. The way we transfer our idea and logic into code so that computer can do whatever we want seems really magical. There&amp;rsquo;s a joke I&amp;rsquo;ve found somewhere (I forget exactly), today&amp;rsquo;s magician is programmer. It&amp;rsquo;s quite true, imagine the world which can do so much things, efficiently, automatically, and precisely without human inference.</description><content>&lt;p>I wrote this article for my own documentation related to lesson learned I was gathered during my coding-life. Really, up until now, coding is fun. The way we transfer our idea and logic into code so that computer can do whatever we want seems really magical. There&amp;rsquo;s a joke I&amp;rsquo;ve found somewhere (I forget exactly), today&amp;rsquo;s magician is programmer. It&amp;rsquo;s quite true, imagine the world which can do so much things, efficiently, automatically, and precisely without human inference. It can be done with computer.&lt;/p>
 &lt;p>But the ugliest fact is that thing is dumb, computer can&amp;rsquo;t do anything meaningful unless someone instructs the machine to do something. How to instruct the computer? Through code. Code is just an alternate name of computer instruction which computer can understand. To code, or we can say coding, is quite similar with typing. The fun part, coding/typing is like a playing keyboard, it satisfies if we could type it fast. Expecially when you use mechanical keyboard :)&lt;/p>
 &lt;hr>
 &lt;p>On typing, we use natural language, we know english, indonesian, japanese, etc. On coding, we use programming language, we know golang, python, ruby, etc. To type/code we need to understand the language syntax, grammar, and meaning. Both translates conceptual abstraction into text. On typing, if we don&amp;rsquo;t know the concept idea / the topic / story, we can&amp;rsquo;t write the article, even we know fluently about the grammar and the words meaning. Same with coding, we&amp;rsquo;ll stuck and don&amp;rsquo;t know what to code if we didn&amp;rsquo;t know the bigger picture of the abstract system we want to build. It can tremendously slow down the coding process. To understand the bigger picture is to understand how to code effectively. I&amp;rsquo;ve ever experienced to not knowing bigger picture of the flow of the service our team owned, so I code blindly without knowing the side effect of my code.&lt;/p>
