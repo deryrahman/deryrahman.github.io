@@ -59,6 +59,62 @@ Fundamental Definition Reliability The system should work properly even when the
 &lt;p>&lt;strong>References&lt;/strong>&lt;/p>
 &lt;ol>
 &lt;li>&lt;a href="https://learning.oreilly.com/library/view/designing-data-intensive-applications/9781491903063/">Designing Data Intensive Applications&lt;/a> by Martin Kleppmann&lt;/li>
+&lt;/ol></content></item><item><title>Redis Cluster Migration Strategy</title><link>https://deryrahman.github.io/posts/redis-cluster-migration-strategy/</link><pubDate>Sat, 17 Jul 2021 23:16:48 +0700</pubDate><guid>https://deryrahman.github.io/posts/redis-cluster-migration-strategy/</guid><description>Last week I have a chance to perform Redis cluster migration. Our Redis cluster contains 6 high memory VMs. At peak, it has 800 request/second. In this article I would like to explain how we migrate Redis cluster with zero downtime as well as lesson learned I&amp;rsquo;ve gathered.
+Problem Statement As Ubuntu 16.04 no longer support LTS, we need to upgrade some obsolete VMs to latest version (20.04). One of the obsolete VMs are our Redis cluster.</description><content>&lt;p>Last week I have a chance to perform Redis cluster migration. Our Redis cluster contains 6 high memory VMs. At peak, it has 800 request/second. In this article I would like to explain how we migrate Redis cluster with zero downtime as well as lesson learned I&amp;rsquo;ve gathered.&lt;/p>
+&lt;h2 id="problem-statement">Problem Statement&lt;/h2>
+&lt;p>As Ubuntu 16.04 no longer support LTS, we need to upgrade some obsolete VMs to latest version (20.04). One of the obsolete VMs are our Redis cluster. Most of the services rely on our service that use this Redis cluster as in-memory storage. Upgrading the OS inside the node is not the option since it require complex reconfiguration as well as inevitable downtime.&lt;/p>
+&lt;p>We&amp;rsquo;re using Redis version 5.0.9, with GCP VM n2-highmem-4. The cluster contains 3 master nodes and 3 slave nodes. The keys are stored in memory that filled up 16GB across 3 partitions.&lt;/p>
+&lt;h2 id="goal">Goal&lt;/h2>
+&lt;p>Upgrade the Ubuntu version (16.04) of all Redis cluster nodes to 20.14 with zero downtime.&lt;/p>
+&lt;h2 id="approach">Approach&lt;/h2>
+&lt;p>First we spin up new GCP VM with Ubuntu 20.04 installed. Then install and configure the Redis so that this new Redis are ready to join to the existing cluster. Then add this node to the cluster as a slave of partition 1. Wait for this slave to sync the data with the master. Repeat it for the partition 2 and 3. Then perform manual failover so the new node will be promoted as a new master. Finally, detach all the old Redis nodes from cluster. It seems like quite easy. Yes it does. But in practice, we have a challenge. The challenge will be explained in the &lt;a href="#lesson-learned">Lesson Learned&lt;/a> section.&lt;/p>
+&lt;p>Put image here (TBD)&lt;/p>
+&lt;p>Here&amp;rsquo;re some steps in details:&lt;/p>
+&lt;ol>
+&lt;li>Spin up new GCP VM. I won&amp;rsquo;t explain how to do that since it&amp;rsquo;s out of scope from our topic.&lt;/li>
+&lt;li>Configure Redis 5.0.9 to meet minimum requirement as a node cluster. All configuration can be seen &lt;a href="https://redis.io/topics/cluster-tutorial">here&lt;/a>.
+&lt;div class="collapsable-code">
+&lt;input id="1" type="checkbox" />
+&lt;label for="1">
+&lt;span class="collapsable-code__language">conf&lt;/span>
+&lt;span class="collapsable-code__title">redis.conf&lt;/span>
+&lt;span class="collapsable-code__toggle" data-label-expand="△" data-label-collapse="▽">&lt;/span>
+&lt;/label>
+&lt;pre class="language-conf" >&lt;code>
+cluster-node-timeout 100
+cluster-enabled yes
+cluster-config-file &amp;#34;auto-nodes.conf&amp;#34;
+cluster-replica-validity-factor 1
+cluster-require-full-coverage no
+aof-use-rdb-preamble yes
+&lt;/code>&lt;/pre>
+&lt;/div>
+&lt;/li>
+&lt;li>Add the new node to the existing cluster as a slave. Wait for this new node to perform full sync with master. We have 3 node partitions, make sure this new node will join as a slave of corresponding master.
+&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-sh" data-lang="sh">redis-cli --cluster add-node &amp;lt;new_redis_box_ip&amp;gt;:6379 &amp;lt;any_old_redis_box_ip&amp;gt;:6379 --cluster-slave --cluster-master-id &amp;lt;master_id&amp;gt;
+&lt;/code>&lt;/pre>&lt;/div>&lt;/li>
+&lt;li>Repeat step 1-3 for each partitions. The result, there&amp;rsquo;re 2 new slaves for each partition. Total nodes in cluster is 12, 6 old nodes, other 6 are new nodes.&lt;/li>
+&lt;li>&lt;a href="https://redis.io/commands/cluster-failover">Failover&lt;/a> the old master and promote new node as a master for each partitions.
+&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-sh" data-lang="sh">redis-cli -h &amp;lt;new_redis_box_ip&amp;gt; -p &lt;span style="color:#ae81ff">6379&lt;/span>
+&lt;span style="color:#75715e"># run redis-cli command: CLUSTER FAILOVER&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;/li>
+&lt;li>Detach 6 old nodes from the cluster.
+&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-sh" data-lang="sh">redis-cli --cluster del-node &amp;lt;new_redis_box_ip&amp;gt;:6379 &amp;lt;old_node_id&amp;gt;
+&lt;/code>&lt;/pre>&lt;/div>&lt;/li>
+&lt;/ol>
+&lt;h2 id="lesson-learned">Lesson Learned&lt;/h2>
+&lt;p>When we do step 3, there&amp;rsquo;s a huge missing read request. After we seek for the root cause it happens because during full sync, ~5GB data transfer from master to new slave, the new slave will fill up the huge data to memory from disk. This activity leads to high CPU usage on our new slave node. Thus, some request that read data from this slave would not be proceeded.&lt;/p>
+&lt;p>Before that, we also suspect it&amp;rsquo;s because of the fork process during RDB backup on the master. Redis cluster use RDB file to sync with the replica. And yup, fork process on Redis would consume huge CPU. But if this is the cause, it could be the issue for a long time ago, since the sync process between master and slave is always happening.&lt;/p>
+&lt;p>Second suspect is &lt;a href="https://github.com/redis/redis/issues/4815">due to bandwidth limit&lt;/a>. During full sync process, master and slave will transfer the data as fast as possible so that the bandwidth is reach its limit. Hence, it will cause the request blocking. But, after we saw from our monitoring tool, we didn&amp;rsquo;t see any request error when master was transfering data to the new slave.&lt;/p>
+&lt;p>The request was blocked when new slave fill up the new data. It happened so fast so that the CPU usage was 100%. Some requests that read from this new slave was failing. We still didn&amp;rsquo;t know and the inner process how the Redis fill up memory from zero. We also seek for a solution to hold the Redis read from specific slave, but we didn&amp;rsquo;t see any configuration to configure this. The close possible solution is &lt;code>cluster-allow-reads-when-down&lt;/code>, but it&amp;rsquo;s for redis 6.0. We didn&amp;rsquo;t have time to explore this deeper.&lt;/p>
+&lt;p>Thus we planned to do this migration during off hour.&lt;/p>
+&lt;h2 id="conclusion">Conclusion&lt;/h2>
+&lt;p>We&amp;rsquo;re fail to do Redis cluster migration with zero downtime. But, we know for sure that this strategy is worked when data it not big. We performed the Redis cluster migration on integration, and we achieved zero error and zero downtime. Perhaps, if we can block the Redis read on the new slave, it might probably help when the new slave perform a full sync from master node.&lt;/p>
+&lt;p>&lt;strong>References&lt;/strong>&lt;/p>
+&lt;ol>
+&lt;li>&lt;a href="https://redis.io/topics/cluster-tutorial">https://redis.io/topics/cluster-tutorial&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://redis.io/commands/cluster-failover">https://redis.io/commands/cluster-failover&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://github.com/redis/redis/issues/4815">https://github.com/redis/redis/issues/4815&lt;/a>&lt;/li>
 &lt;/ol></content></item><item><title>Working Setup</title><link>https://deryrahman.github.io/posts/working-setup/</link><pubDate>Sun, 11 Apr 2021 19:35:30 +0700</pubDate><guid>https://deryrahman.github.io/posts/working-setup/</guid><description>Here&amp;rsquo;s the quick post. I wrote this to remind myself, the working setup I enjoyed most. The ultimate arrangement for immense productivity, 12h+ in front of computer. Do and learn much things.
 Lofi Hip Hop Every time I opened my computer, I always set Lofi Hip Hop as my default background song when I&amp;rsquo;m in working mode. But when I&amp;rsquo;m in reading mode / absorbing new content, I mostly listen to mindfulness song.</description><content>&lt;p>Here&amp;rsquo;s the quick post. I wrote this to remind myself, the working setup I enjoyed most. The ultimate arrangement for immense productivity, 12h+ in front of computer. Do and learn much things.&lt;/p>
 &lt;hr>
