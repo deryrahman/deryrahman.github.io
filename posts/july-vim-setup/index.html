@@ -1,0 +1,412 @@
+<!doctype html><html lang=en><head><title>July Vim Setup :: Dery R Ahaddienata</title><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=description content="I've been using [vim as my default IDE](https://levelup.gitconnected.com/tweak-your-vim-as-a-powerful-ide-fcea5f7eff9c) for about a year. Until now I'm still improving the vim configuration so that I could do the task even more effective. Now after [nvim launch version 0.5.0](https://neovim.io/roadmap/) which support native LSP client, I immediately tried this feature. Yeps, there're no significant difference when I use [LanguageClient-neovim](https://github.com/autozimu/LanguageClient-neovim), but since version 0.5.0 has built in feature for LSP client, I would preferably use the built in one."><meta name=keywords content="vim,setup,neovim"><meta name=robots content="noodp"><link rel=canonical href=https://deryrahman.github.io/posts/july-vim-setup/><link rel=stylesheet href=https://deryrahman.github.io/assets/style.css><link rel=apple-touch-icon href=https://deryrahman.github.io/img/apple-touch-icon-192x192.png><link rel="shortcut icon" href=https://deryrahman.github.io/img/favicon/orange.png><meta name=twitter:card content="summary"><meta name=twitter:site content="deryrahman"><meta name=twitter:creator content="deryrahman"><meta property="og:locale" content="en"><meta property="og:type" content="article"><meta property="og:title" content="July Vim Setup"><meta property="og:description" content="I've been using [vim as my default IDE](https://levelup.gitconnected.com/tweak-your-vim-as-a-powerful-ide-fcea5f7eff9c) for about a year. Until now I'm still improving the vim configuration so that I could do the task even more effective. Now after [nvim launch version 0.5.0](https://neovim.io/roadmap/) which support native LSP client, I immediately tried this feature. Yeps, there're no significant difference when I use [LanguageClient-neovim](https://github.com/autozimu/LanguageClient-neovim), but since version 0.5.0 has built in feature for LSP client, I would preferably use the built in one."><meta property="og:url" content="https://deryrahman.github.io/posts/july-vim-setup/"><meta property="og:site_name" content="Dery R Ahaddienata"><meta property="og:image" content="https://deryrahman.github.io"><meta property="og:image:width" content="2048"><meta property="og:image:height" content="1024"><meta property="article:published_time" content="2021-07-20 12:02:09 +0700 +0700"></head><body class=orange><div class="container center headings--one-size"><header class=header><div class=header__inner><div class=header__logo><a href=/><div class=logo>deryrahman@github.io:~#</div></a></div><div class=menu-trigger>menu</div></div><nav class=menu><ul class="menu__inner menu__inner--desktop"><li><a href=/about>About</a></li><li><a href=/pillars-principles>Pillars & Principles</a></li></ul><ul class="menu__inner menu__inner--mobile"><li><a href=/about>About</a></li><li><a href=/pillars-principles>Pillars & Principles</a></li></ul></nav></header><div class=content><div class=post><h1 class=post-title><a href=https://deryrahman.github.io/posts/july-vim-setup/>July Vim Setup</a></h1><div class=post-meta><span class=post-date>2021-07-20</span>
+<span class=post-author>:: Dery R Ahaddienata</span></div><span class=post-tags>#<a href=https://deryrahman.github.io/tags/tech/>tech</a>&nbsp;
+#<a href=https://deryrahman.github.io/tags/editor/>editor</a>&nbsp;
+#<a href=https://deryrahman.github.io/tags/vim/>vim</a>&nbsp;</span><div class=table-of-contents><h2>Table of Contents</h2><nav id=TableOfContents><ul><li><a href=#plugins>Plugins</a><ul><li><a href=#autocomplete-definition-etc-related-plugin>Autocomplete, Definition, etc Related Plugin</a></li><li><a href=#syntax-linter-etc-related-plugin>Syntax, Linter, etc Related Plugin</a></li><li><a href=#theme--layouting-related-plugin>Theme & Layouting Related Plugin</a></li><li><a href=#debbuger>Debbuger</a></li><li><a href=#misc>Misc</a></li></ul></li><li><a href=#dot-files>Dot Files</a><ul><li><a href=#plugin-config>Plugin Config</a></li><li><a href=#external-config>External Config</a></li></ul></li><li><a href=#custom-shortcut-list>Custom Shortcut List</a></li></ul></nav></div><div class=post-content><div><p>I&rsquo;ve been using <a href=https://levelup.gitconnected.com/tweak-your-vim-as-a-powerful-ide-fcea5f7eff9c>vim as my default IDE</a> for about a year. Until now I&rsquo;m still improving the vim configuration so that I could do the task even more effective. Now after <a href=https://neovim.io/roadmap/>nvim launch version 0.5.0</a> which support native LSP client, I immediately tried this feature. Yeps, there&rsquo;re no significant difference when I use <a href=https://github.com/autozimu/LanguageClient-neovim>LanguageClient-neovim</a>, but since version 0.5.0 has built in feature for LSP client, I would preferably use the built in one.</p><p>If we compare with <a href=https://levelup.gitconnected.com/tweak-your-vim-as-a-powerful-ide-fcea5f7eff9c>my last setup</a>, we can see significant config differences. And because I also planned to try contribute on <a href=https://github.com/ChristianChiarulli/LunarVim>LunarVim project</a>, I would like to documenting all of the setup I used now.</p><h2 id=plugins>Plugins<a href=#plugins class=hanchor arialabel=Anchor>&#8983;</a></h2><h3 id=autocomplete-definition-etc-related-plugin>Autocomplete, Definition, etc Related Plugin<a href=#autocomplete-definition-etc-related-plugin class=hanchor arialabel=Anchor>&#8983;</a></h3><ol><li>neovim/nvim-lspconfig</li><li>hrsh7th/nvim-compe</li><li>ojroques/nvim-lspfuzzy</li></ol><h3 id=syntax-linter-etc-related-plugin>Syntax, Linter, etc Related Plugin<a href=#syntax-linter-etc-related-plugin class=hanchor arialabel=Anchor>&#8983;</a></h3><ol><li>nvim-treesitter/nvim-treesitter</li><li>dense-analysis/ale</li></ol><h3 id=theme--layouting-related-plugin>Theme & Layouting Related Plugin<a href=#theme--layouting-related-plugin class=hanchor arialabel=Anchor>&#8983;</a></h3><ol><li>junegunn/fzf.vim</li><li>szw/vim-maximizer</li><li>preservim/nerdtree</li><li>Xuyuanp/nerdtree-git-plugin</li><li>morhetz/gruvbox</li><li>vim-airline/vim-airline</li><li>vim-airline/vim-airline-themes</li><li>airblade/vim-gitgutter</li><li>yuttie/comfortable-motion.vim</li></ol><h3 id=debbuger>Debbuger<a href=#debbuger class=hanchor arialabel=Anchor>&#8983;</a></h3><ol><li>puremourning/vimspector</li></ol><h3 id=misc>Misc<a href=#misc class=hanchor arialabel=Anchor>&#8983;</a></h3><ol><li>vimwiki/vimwiki</li></ol><h2 id=dot-files>Dot Files<a href=#dot-files class=hanchor arialabel=Anchor>&#8983;</a></h2><h3 id=plugin-config>Plugin Config<a href=#plugin-config class=hanchor arialabel=Anchor>&#8983;</a></h3><div class=collapsable-code><input id=138564927 type=checkbox checked>
+<label for=138564927><span class=collapsable-code__language>vim</span>
+<span class=collapsable-code__title>~/.vimrc</span>
+<span class=collapsable-code__toggle data-label-expand=△ data-label-collapse=▽></span></label><pre class=language-vim><code>
+    set nocompatible
+    filetype plugin on
+    syntax on
+    set modeline
+    set expandtab
+    set tabstop=4
+    set shiftwidth=4
+    set exrc &#34; .vimrc in local project dir
+    set secure
+    autocmd BufRead,BufNewFile * set signcolumn=yes
+    autocmd FileType tagbar,nerdtree set signcolumn=no
+    set foldmethod=syntax
+    set nofoldenable
+    set number
+    set belloff=&#34;&#34;
+    set lazyredraw
+    set ttyfast
+    set spell spelllang=en_us
+
+    au CursorHold,CursorHoldI * checktime
+
+    if (has(&#39;nvim&#39;))
+        set diffopt&#43;=vertical
+        &#34;-- VIM-PLUG --
+        call plug#begin(&#39;~/.vim/plugged&#39;)
+            Plug &#39;neovim/nvim-lspconfig&#39;
+            Plug &#39;hrsh7th/nvim-compe&#39;
+            Plug &#39;ojroques/nvim-lspfuzzy&#39;
+            Plug &#39;nvim-treesitter/nvim-treesitter&#39;, {&#39;do&#39;: &#39;:TSUpdate&#39;}
+            Plug &#39;puremourning/vimspector&#39;
+            Plug &#39;szw/vim-maximizer&#39;
+            Plug &#39;preservim/nerdtree&#39;
+            Plug &#39;Xuyuanp/nerdtree-git-plugin&#39;
+            Plug &#39;sonph/onehalf&#39;, {&#39;rtp&#39;: &#39;vim/&#39;}
+            Plug &#39;morhetz/gruvbox&#39;
+            Plug &#39;vim-airline/vim-airline&#39;
+            Plug &#39;vim-airline/vim-airline-themes&#39;
+            Plug &#39;airblade/vim-gitgutter&#39;
+            Plug &#39;dense-analysis/ale&#39;
+            Plug &#39;junegunn/fzf.vim&#39;
+            Plug &#39;/usr/local/opt/fzf&#39;
+            Plug &#39;yuttie/comfortable-motion.vim&#39;
+            Plug &#39;vimwiki/vimwiki&#39;
+        call plug#end()
+
+        &#34;-- PLUGIN CONFIGS --
+        source ~/.vim/config/theme.vim
+        source ~/.vim/config/fzf.vim
+        source ~/.vim/config/treesitter.vim
+        source ~/.vim/config/vimwiki.vim
+        luafile ~/.vim/config/compe.lua
+        luafile ~/.vim/config/lspfuzzy.lua
+        source ~/.vim/config/lsp_config.vim
+        source ~/.vim/config/ale.vim
+        source ~/.vim/config/vimspector.vim
+        source ~/.vim/config/maximizer.vim
+
+        &#34;-- EXTERNAL CONFIGS --
+        source ~/.vim/config/autoclose.vim
+        source ~/.vim/config/custom_map.vim
+        source ~/.vim/config/session.vim
+    endif
+</code></pre></div><div class=collapsable-code><input id=396218475 type=checkbox checked>
+<label for=396218475><span class=collapsable-code__language>vim</span>
+<span class=collapsable-code__title>~/.vim/config/theme.vim</span>
+<span class=collapsable-code__toggle data-label-expand=△ data-label-collapse=▽></span></label><pre class=language-vim><code>
+    if (has(&#34;termguicolors&#34;) &amp;&amp; $TERM_PROGRAM ==# &#39;iTerm.app&#39;)
+      set termguicolors
+    endif
+
+    set cursorline
+    set background=dark
+
+    autocmd vimenter * &#43;&#43;nested colorscheme gruvbox
+
+    hi Error        ctermfg=204 ctermbg=NONE guifg=#ff5f87 guibg=NONE
+    hi Warning      ctermfg=178 ctermbg=NONE guifg=#D7AF00 guibg=NONE
+    hi Folded       ctermfg=grey guifg=grey ctermbg=NONE guibg=NONE
+    hi Normal       ctermbg=NONE guibg=NONE
+    hi SignColumn   ctermbg=235 guibg=#262626
+    hi LineNr       ctermfg=grey guifg=grey ctermbg=NONE guibg=NONE
+    hi CursorLineNr ctermbg=NONE guibg=NONE ctermfg=178 guifg=#d7af00
+
+    hi LspDiagnosticsDefaultError   ctermfg=204 ctermbg=NONE guifg=#ff5f87 guibg=NONE
+    hi LspDiagnosticsDefaultWarning ctermfg=178 ctermbg=NONE guifg=#D7AF00 guibg=NONE
+
+    let g:gitgutter_set_sign_backgrounds = 0
+
+    &#34;-- Whitespace highlight --
+    hi ExtraWhitespace ctermbg=204 guibg=#ff5f87
+    match ExtraWhitespace /\s\&#43;$/
+    autocmd BufWinEnter * match ExtraWhitespace /\s\&#43;$/
+    autocmd InsertEnter * match ExtraWhitespace /\s\&#43;\%#\@&lt;!$/
+    autocmd InsertLeave * match ExtraWhitespace /\s\&#43;$/
+    autocmd BufWinLeave * call clearmatches()
+
+    &#34;-- Vimwiki color --
+    &#34;-- this using palenight color scheme --
+    hi VimwikiHeader1 ctermbg=NONE guibg=NONE ctermfg=180 guifg=#ffcb6b
+    hi VimwikiHeader2 ctermbg=NONE guibg=NONE ctermfg=39 guifg=#82b1ff
+    hi VimwikiHeader3 ctermbg=NONE guibg=NONE ctermfg=38 guifg=#89ddff
+    hi VimwikiHeader4 ctermbg=NONE guibg=NONE ctermfg=38 guifg=#89ddff
+    hi VimwikiHeader5 ctermbg=NONE guibg=NONE ctermfg=38 guifg=#89ddff
+    hi VimwikiHeader6 ctermbg=NONE guibg=NONE ctermfg=38 guifg=#89ddff
+
+    let g:airline#extensions#tabline#enabled = 1
+    let g:airline#extensions#fugutive#enabled = 1
+    let g:airline#extensions#coc#enabled = 1
+
+    let NERDTreeShowHidden = 1
+</code></pre></div><div class=collapsable-code><input id=594213678 type=checkbox checked>
+<label for=594213678><span class=collapsable-code__language>vim</span>
+<span class=collapsable-code__title>~/.vim/config/fzf.vim</span>
+<span class=collapsable-code__toggle data-label-expand=△ data-label-collapse=▽></span></label><pre class=language-vim><code>
+    set rtp&#43;=/usr/local/opt/fzf
+    source /usr/local/opt/fzf/plugin/fzf.vim
+
+    let g:fzf_tags_command = &#39;ctags -R&#39;
+    let g:fzf_layout = {&#39;up&#39;:&#39;~90%&#39;, &#39;window&#39;: { &#39;width&#39;: 0.8, &#39;height&#39;: 0.8,&#39;yoffset&#39;:0.5,&#39;xoffset&#39;: 0.5, &#39;highlight&#39;: &#39;Todo&#39;, &#39;border&#39;: &#39;sharp&#39; } }
+    let $FZF_DEFAULT_OPTS = &#39;--layout=reverse --info=inline&#39;
+</code></pre></div><div class=collapsable-code><input id=682735941 type=checkbox checked>
+<label for=682735941><span class=collapsable-code__language>vim</span>
+<span class=collapsable-code__title>~/.vim/config/treesitter.vim</span>
+<span class=collapsable-code__toggle data-label-expand=△ data-label-collapse=▽></span></label><pre class=language-vim><code>
+    lua &lt;&lt;EOF
+    require&#39;nvim-treesitter.configs&#39;.setup {
+      ensure_installed = &#34;maintained&#34;, -- one of &#34;all&#34;, &#34;maintained&#34; (parsers with maintainers), or a list of languages
+      ignore_install = {}, -- List of parsers to ignore installing
+      highlight = {
+        enable = true,              -- false will disable the whole extension
+        disable = {},  -- list of language that will be disabled
+        -- Setting this to true will run `:h syntax` and tree-sitter at the same time.
+        -- Set this to `true` if you depend on &#39;syntax&#39; being enabled (like for indentation).
+        -- Using this option may slow down your editor, and you may see some duplicate highlights.
+        -- Instead of true it can also be a list of languages
+        additional_vim_regex_highlighting = false,
+      },
+    }
+    EOF
+</code></pre></div><div class=collapsable-code><input id=183795426 type=checkbox checked>
+<label for=183795426><span class=collapsable-code__language>vim</span>
+<span class=collapsable-code__title>~/.vim/config/vimwiki.vim</span>
+<span class=collapsable-code__toggle data-label-expand=△ data-label-collapse=▽></span></label><pre class=language-vim><code>
+    let g:vimwiki_folding = &#39;custom&#39;
+    :hi VimwikiHeader1 guifg=#FF0000
+    :hi VimwikiHeader2 guifg=#00FF00
+    :hi VimwikiHeader3 guifg=#0000FF
+    :hi VimwikiHeader4 guifg=#FF00FF
+    :hi VimwikiHeader5 guifg=#00FFFF
+    :hi VimwikiHeader6 guifg=#FFFF00
+    let g:vimwiki_global_ext = 0
+</code></pre></div><div class=collapsable-code><input id=591246873 type=checkbox checked>
+<label for=591246873><span class=collapsable-code__language>vim</span>
+<span class=collapsable-code__title>~/.vim/config/lsp_config.vim</span>
+<span class=collapsable-code__toggle data-label-expand=△ data-label-collapse=▽></span></label><pre class=language-vim><code>
+    &#34; LSP config (the mappings used in the default file don&#39;t quite work right)
+    nnoremap &lt;silent&gt; gd &lt;cmd&gt;lua vim.lsp.buf.definition()&lt;CR&gt;
+    nnoremap &lt;silent&gt; gD &lt;cmd&gt;lua vim.lsp.buf.declaration()&lt;CR&gt;
+    nnoremap &lt;silent&gt; gr &lt;cmd&gt;lua vim.lsp.buf.references()&lt;CR&gt;
+    nnoremap &lt;silent&gt; gi &lt;cmd&gt;lua vim.lsp.buf.implementation()&lt;CR&gt;
+    nnoremap &lt;silent&gt; K &lt;cmd&gt;lua vim.lsp.buf.hover()&lt;CR&gt;
+    nnoremap &lt;silent&gt; &lt;C-k&gt; &lt;cmd&gt;lua vim.lsp.buf.signature_help()&lt;CR&gt;
+    nnoremap &lt;silent&gt; &lt;C-p&gt; &lt;cmd&gt;lua vim.lsp.diagnostic.goto_prev()&lt;CR&gt;
+    nnoremap &lt;silent&gt; &lt;C-n&gt; &lt;cmd&gt;lua vim.lsp.diagnostic.goto_next()&lt;CR&gt;
+
+    &#34; LSP config for specific language
+    luafile ~/.vim/config/lsp/go.lua
+    luafile ~/.vim/config/lsp/js.lua
+    luafile ~/.vim/config/lsp/json.lua
+
+    &#34; auto-format
+    autocmd BufWritePre *.js lua vim.lsp.buf.formatting_sync(nil, 100)
+    autocmd BufWritePre *.jsx lua vim.lsp.buf.formatting_sync(nil, 100)
+    autocmd BufWritePre *.ts lua vim.lsp.buf.formatting_sync(nil, 100)
+    autocmd BufWritePre *.tsx lua vim.lsp.buf.formatting_sync(nil, 100)
+    autocmd BufWritePre *.py lua vim.lsp.buf.formatting_sync(nil, 100)
+    autocmd BufWritePre *.go lua vim.lsp.buf.formatting_sync(nil, 100)
+    autocmd BufWritePre *.json lua vim.lsp.buf.formatting_sync(nil, 100)
+</code></pre></div><div class=collapsable-code><input id=651289374 type=checkbox checked>
+<label for=651289374><span class=collapsable-code__language>vim</span>
+<span class=collapsable-code__title>~/.vim/config/ale.vim</span>
+<span class=collapsable-code__toggle data-label-expand=△ data-label-collapse=▽></span></label><pre class=language-vim><code>
+    hi clear ALEErrorSign
+    hi clear ALEWarningSign
+    let g:ale_echo_msg_format = &#39;[%linter%] %s [%severity%]&#39;
+    let g:ale_sign_warning = &#39;○&#39;
+    let g:ale_sign_error = &#39;◉&#39;
+
+    hi ALEError ctermfg=204 guifg=#ff5f87 ctermbg=52 guibg=#5f0000 cterm=undercurl gui=undercurl
+    hi link ALEErrorSign    Error
+    hi link ALEWarningSign  Warning
+
+    let g:ale_linters = {
+                \ &#39;python&#39;: [&#39;pylint&#39;],
+                \ &#39;javascript&#39;: [&#39;eslint&#39;],
+                \ &#39;typescript&#39;: [&#39;eslint&#39;],
+                \ &#39;json&#39;: [&#39;fixjson&#39;],
+                \ &#39;vue&#39;: [&#39;eslint&#39;],
+                \ &#39;go&#39;: [&#39;gobuild&#39;, &#39;golint&#39;, &#39;gofmt&#39;],
+                \ &#39;rust&#39;: [&#39;rls&#39;],
+                \ &#39;ruby&#39;: [&#39;rubocop&#39;]
+                \}
+
+    let g:ale_fixers = {
+                \ &#39;*&#39;: [&#39;remove_trailing_lines&#39;, &#39;trim_whitespace&#39;],
+                \ &#39;python&#39;: [&#39;autopep8&#39;],
+                \ &#39;javascript&#39;: [&#39;eslint&#39;],
+                \ &#39;typescript&#39;: [&#39;eslint&#39;],
+                \ &#39;json&#39;: [&#39;fixjson&#39;],
+                \ &#39;vue&#39;: [&#39;eslint&#39;],
+                \ &#39;go&#39;: [&#39;gofmt&#39;, &#39;goimports&#39;],
+                \ &#39;rust&#39;: [&#39;rustfmt&#39;],
+                \ &#39;ruby&#39;: [&#39;rubocop&#39;]
+                \}
+    let g:ale_fix_on_save = 1
+</code></pre></div><div class=collapsable-code><input id=742985613 type=checkbox checked>
+<label for=742985613><span class=collapsable-code__language>vim</span>
+<span class=collapsable-code__title>~/.vim/config/vimspector.vim</span>
+<span class=collapsable-code__toggle data-label-expand=△ data-label-collapse=▽></span></label><pre class=language-vim><code>
+    let g:vimspector_enable_mappings=&#39;HUMAN&#39;
+    nmap &lt;leader&gt;dd &lt;Plug&gt;VimspectorContinue
+    nmap &lt;leader&gt;dc :call vimspector#ClearBreakpoints()&lt;CR&gt;
+    nmap &lt;leader&gt;dq :VimspectorReset&lt;CR&gt;
+    nmap &lt;leader&gt;dr &lt;Plug&gt;VimspectorRestart
+    nmap &lt;leader&gt;db &lt;Plug&gt;VimspectorToggleBreakpoint
+    nmap &lt;leader&gt;dn &lt;Plug&gt;VimspectorStepOver
+    nmap &lt;leader&gt;di &lt;Plug&gt;VimspectorStepInto
+    nmap &lt;leader&gt;do &lt;Plug&gt;VimspectorStepOut
+</code></pre></div><div class=collapsable-code><input id=634819527 type=checkbox checked>
+<label for=634819527><span class=collapsable-code__language>vim</span>
+<span class=collapsable-code__title>~/.vim/config/maximizer.vim</span>
+<span class=collapsable-code__toggle data-label-expand=△ data-label-collapse=▽></span></label><pre class=language-vim><code>
+    map &lt;C-W&gt;z :MaximizerToggle&lt;CR&gt;
+
+</code></pre></div><div class=collapsable-code><input id=389217456 type=checkbox checked>
+<label for=389217456><span class=collapsable-code__language>lua</span>
+<span class=collapsable-code__title>~/.vim/config/compe.lua</span>
+<span class=collapsable-code__toggle data-label-expand=△ data-label-collapse=▽></span></label><pre class=language-lua><code>
+    vim.o.completeopt = &#34;menuone,noselect&#34;
+
+    require&#39;compe&#39;.setup {
+      enabled = true;
+      autocomplete = true;
+      debug = false;
+      min_length = 1;
+      preselect = &#39;enable&#39;;
+      throttle_time = 80;
+      source_timeout = 200;
+      incomplete_delay = 400;
+      max_abbr_width = 100;
+      max_kind_width = 100;
+      max_menu_width = 100;
+      documentation = false;
+
+      source = {
+        path = true;
+        buffer = true;
+        calc = true;
+        vsnip = true;
+        nvim_lsp = true;
+        nvim_lua = true;
+        spell = true;
+        tags = true;
+        snippets_nvim = true;
+      };
+    }
+</code></pre></div><div class=collapsable-code><input id=684792135 type=checkbox checked>
+<label for=684792135><span class=collapsable-code__language>lua</span>
+<span class=collapsable-code__title>~/.vim/config/lspfuzzy.lua</span>
+<span class=collapsable-code__toggle data-label-expand=△ data-label-collapse=▽></span></label><pre class=language-lua><code>
+    require(&#39;lspfuzzy&#39;).setup {
+      methods = {&#39;textDocument/implementation&#39;,&#39;textDocument/references&#39;},         -- either &#39;all&#39; or a list of LSP methods (see below)
+      fzf_preview = {          -- arguments to the FZF &#39;--preview-window&#39; option
+        &#39;right:&#43;{2}-/2&#39;          -- preview on the right and centered on entry
+      },
+      fzf_action = {           -- FZF actions
+        [&#39;ctrl-t&#39;] = &#39;tabedit&#39;,  -- go to location in a new tab
+        [&#39;ctrl-v&#39;] = &#39;vsplit&#39;,   -- go to location in a vertical split
+        [&#39;ctrl-x&#39;] = &#39;split&#39;,    -- go to location in a horizontal split
+      },
+      fzf_modifier = &#39;:~:.&#39;,   -- format FZF entries, see |filename-modifiers|
+      fzf_trim = true,         -- trim FZF entries
+    }
+</code></pre></div><h3 id=external-config>External Config<a href=#external-config class=hanchor arialabel=Anchor>&#8983;</a></h3><div class=collapsable-code><input id=789624153 type=checkbox checked>
+<label for=789624153><span class=collapsable-code__language>vim</span>
+<span class=collapsable-code__title>~/.vim/config/autoclose.vim</span>
+<span class=collapsable-code__toggle data-label-expand=△ data-label-collapse=▽></span></label><pre class=language-vim><code>
+    &#34;-- AUTOCLOSE --
+    &#34;disable autoclose
+    inoremap &lt;C-W&gt;&#39; &#39;
+    inoremap &lt;C-W&gt;` `
+    inoremap &lt;C-W&gt;&#34; &#34;
+    inoremap &lt;C-W&gt;( (
+    inoremap &lt;C-W&gt;[ [
+    inoremap &lt;C-W&gt;{ {
+    &#34;autoclose and position cursor to write text inside
+    inoremap &#39; &#39;&#39;&lt;left&gt;
+    inoremap ` ``&lt;left&gt;
+    inoremap &#34; &#34;&#34;&lt;left&gt;
+    inoremap ( ()&lt;left&gt;
+    inoremap [ []&lt;left&gt;
+    inoremap { {}&lt;left&gt;
+    &#34;autoclose with ; and position cursor to write text inside
+    inoremap &#39;; &#39;&#39;;&lt;left&gt;&lt;left&gt;
+    inoremap `; ``;&lt;left&gt;&lt;left&gt;
+    inoremap &#34;; &#34;&#34;;&lt;left&gt;&lt;left&gt;
+    inoremap (; ();&lt;left&gt;&lt;left&gt;
+    inoremap [; [];&lt;left&gt;&lt;left&gt;
+    inoremap {; {};&lt;left&gt;&lt;left&gt;
+    &#34;autoclose with , and position cursor to write text inside
+    inoremap &#39;, &#39;&#39;,&lt;left&gt;&lt;left&gt;
+    inoremap `, ``,&lt;left&gt;&lt;left&gt;
+    inoremap &#34;, &#34;&#34;,&lt;left&gt;&lt;left&gt;
+    inoremap (, (),&lt;left&gt;&lt;left&gt;
+    inoremap [, [],&lt;left&gt;&lt;left&gt;
+    inoremap {, {},&lt;left&gt;&lt;left&gt;
+    &#34;autoclose and position cursor after
+    inoremap &#39;&lt;tab&gt; &#39;&#39;
+    inoremap `&lt;tab&gt; ``
+    inoremap &#34;&lt;tab&gt; &#34;&#34;
+    inoremap (&lt;tab&gt; ()
+    inoremap [&lt;tab&gt; []
+    inoremap {&lt;tab&gt; {}
+    &#34;autoclose with ; and position cursor after
+    inoremap &#39;;&lt;tab&gt; &#39;&#39;;
+    inoremap `;&lt;tab&gt; ``;
+    inoremap &#34;;&lt;tab&gt; &#34;&#34;;
+    inoremap (;&lt;tab&gt; ();
+    inoremap [;&lt;tab&gt; [];
+    inoremap {;&lt;tab&gt; {};
+    &#34;autoclose with , and position cursor after
+    inoremap &#39;,&lt;tab&gt; &#39;&#39;,
+    inoremap `,&lt;tab&gt; ``,
+    inoremap &#34;,&lt;tab&gt; &#34;&#34;,
+    inoremap (,&lt;tab&gt; (),
+    inoremap [,&lt;tab&gt; [],
+    inoremap {,&lt;tab&gt; {},
+    &#34;autoclose 2 lines below and position cursor in the middle
+    inoremap &#39;&lt;CR&gt; &#39;&lt;CR&gt;&#39;&lt;ESC&gt;O
+    inoremap `&lt;CR&gt; `&lt;CR&gt;`&lt;ESC&gt;O
+    inoremap &#34;&lt;CR&gt; &#34;&lt;CR&gt;&#34;&lt;ESC&gt;O
+    inoremap (&lt;CR&gt; (&lt;CR&gt;)&lt;ESC&gt;O
+    inoremap [&lt;CR&gt; [&lt;CR&gt;]&lt;ESC&gt;O
+    inoremap {&lt;CR&gt; {&lt;CR&gt;}&lt;ESC&gt;O
+    &#34;autoclose 2 lines below adding ; and position cursor in the middle
+    inoremap &#39;;&lt;CR&gt; &#39;&lt;CR&gt;&#39;;&lt;ESC&gt;O
+    inoremap `;&lt;CR&gt; `&lt;CR&gt;`;&lt;ESC&gt;O
+    inoremap &#34;;&lt;CR&gt; &#34;&lt;CR&gt;&#34;;&lt;ESC&gt;O
+    inoremap (;&lt;CR&gt; (&lt;CR&gt;);&lt;ESC&gt;O
+    inoremap [;&lt;CR&gt; [&lt;CR&gt;];&lt;ESC&gt;O
+    inoremap {;&lt;CR&gt; {&lt;CR&gt;};&lt;ESC&gt;O
+    &#34;autoclose 2 lines below adding , and position cursor in the middle
+    inoremap &#39;,&lt;CR&gt; &#39;&lt;CR&gt;&#39;,&lt;ESC&gt;O
+    inoremap `,&lt;CR&gt; `&lt;CR&gt;`,&lt;ESC&gt;O
+    inoremap &#34;,&lt;CR&gt; &#34;&lt;CR&gt;&#34;,&lt;ESC&gt;O
+    inoremap (,&lt;CR&gt; (&lt;CR&gt;),&lt;ESC&gt;O
+    inoremap [,&lt;CR&gt; [&lt;CR&gt;],&lt;ESC&gt;O
+    inoremap {,&lt;CR&gt; {&lt;CR&gt;},&lt;ESC&gt;O
+
+</code></pre></div><div class=collapsable-code><input id=219687354 type=checkbox checked>
+<label for=219687354><span class=collapsable-code__language>vim</span>
+<span class=collapsable-code__title>~/.vim/config/custom_map.vim</span>
+<span class=collapsable-code__toggle data-label-expand=△ data-label-collapse=▽></span></label><pre class=language-vim><code>
+    map &lt;leader&gt;`  :NERDTreeToggle&lt;CR&gt;
+    map &lt;leader&gt;~  :NERDTreeFind&lt;CR&gt;
+
+    nnoremap  &lt;silent&gt;   &lt;tab&gt;  :if &amp;modifiable &amp;&amp; !&amp;readonly &amp;&amp; &amp;modified &lt;CR&gt; :write&lt;CR&gt; :endif&lt;CR&gt;:bnext&lt;CR&gt;
+    nnoremap  &lt;silent&gt; &lt;s-tab&gt;  :if &amp;modifiable &amp;&amp; !&amp;readonly &amp;&amp; &amp;modified &lt;CR&gt; :write&lt;CR&gt; :endif&lt;CR&gt;:bprevious&lt;CR&gt;
+
+    nnoremap &lt;C-J&gt; &lt;C-W&gt;&lt;C-J&gt;
+    nnoremap &lt;C-K&gt; &lt;C-W&gt;&lt;C-K&gt;
+    nnoremap &lt;C-L&gt; &lt;C-W&gt;&lt;C-L&gt;
+    nnoremap &lt;C-H&gt; &lt;C-W&gt;&lt;C-H&gt;
+
+    nnoremap &lt;silent&gt; &lt;C-W&gt;&lt;Up&gt;     :exe &#34;resize &#34; . (winheight(0) * 3/2)&lt;CR&gt;
+    nnoremap &lt;silent&gt; &lt;C-W&gt;&lt;Down&gt;   :exe &#34;resize &#34; . (winheight(0) * 2/3)&lt;CR&gt;
+    nnoremap &lt;silent&gt; &lt;C-W&gt;&lt;Left&gt;   :exe &#34;vert resize &#34; . (winwidth(0) * 2/3)&lt;CR&gt;
+    nnoremap &lt;silent&gt; &lt;C-W&gt;&lt;Right&gt;  :exe &#34;vert resize &#34; . (winwidth(0) * 3/2)&lt;CR&gt;
+</code></pre></div><div class=collapsable-code><input id=439176528 type=checkbox checked>
+<label for=439176528><span class=collapsable-code__language>vim</span>
+<span class=collapsable-code__title>~/.vim/config/session.vim</span>
+<span class=collapsable-code__toggle data-label-expand=△ data-label-collapse=▽></span></label><pre class=language-vim><code>
+    function GetSessionFileName() abort
+      if len(argv()) &gt; 0
+        return substitute(fnamemodify(argv()[0], &#39;:p:h&#39;), &#34;/&#34;, &#34;_&#34;, &#34;g&#34;)
+      endif
+      return substitute(fnamemodify(getcwd(), &#39;:p:h&#39;), &#34;/&#34;, &#34;_&#34;, &#34;g&#34;)
+    endfunction!
+
+    let g:session_path = join([&#39;~/.vim/sessions/&#39;, GetSessionFileName(), &#39;.vim&#39;], &#39;&#39;)
+
+    &#34; Save session on quitting Vim
+    autocmd VimLeave * NERDTreeClose
+    autocmd VimLeave * execute &#39;mksession!&#39; g:session_path
+
+    &#34; Restore session function
+    function RestoreSession() abort
+        execute &#39;source&#39; g:session_path
+        autocmd VimEnter * NERDTree
+    endfunction!
+
+    map &lt;leader&gt;r  :call RestoreSession()&lt;CR&gt;
+</code></pre></div><h2 id=custom-shortcut-list>Custom Shortcut List<a href=#custom-shortcut-list class=hanchor arialabel=Anchor>&#8983;</a></h2><table><thead><tr><th>Shortcut</th><th>Action</th></tr></thead><tbody><tr><td>\`</td><td>Toggle NerdTree</td></tr><tr><td>\~</td><td>Toggle NerdTree focus on current file</td></tr><tr><td>\r</td><td>Restore Sessions</td></tr><tr><td>\ww</td><td>Open vimwiki</td></tr><tr><td>\dd</td><td>Open debug session / continue to next breakpoint</td></tr><tr><td>\db</td><td>Toggle debug breakpoint</td></tr><tr><td>\dq</td><td>Quit debug session</td></tr><tr><td>\dc</td><td>Clear all debug breakpoint</td></tr><tr><td>\dr</td><td>Restart debug</td></tr><tr><td>\dn</td><td>Step over (next line)</td></tr><tr><td>\di</td><td>Step into (function)</td></tr><tr><td>\do</td><td>Step out (function)</td></tr></tbody></table><p><strong>References</strong></p><ol><li><a href=https://levelup.gitconnected.com/tweak-your-vim-as-a-powerful-ide-fcea5f7eff9c>https://levelup.gitconnected.com/tweak-your-vim-as-a-powerful-ide-fcea5f7eff9c</a></li><li><a href=https://neovim.io/roadmap/>https://neovim.io/roadmap/</a></li><li><a href=https://github.com/autozimu/LanguageClient-neovim>https://github.com/autozimu/LanguageClient-neovim</a></li><li><a href=https://github.com/ChristianChiarulli/LunarVim>https://github.com/ChristianChiarulli/LunarVim</a></li></ol></div></div><div class=pagination><div class=pagination__title><span class=pagination__title-h>Read other posts</span><hr></div><div class=pagination__buttons><span class="button next"><a href=https://deryrahman.github.io/posts/software-system-fundamentals/><span class=button__text>Software System Fundamentals</span>
+<span class=button__icon>→</span></a></span></div></div></div></div><footer class=footer><div class=footer__inner><div class=copyright><span>© 2021 Powered by <a href=http://gohugo.io>Hugo</a></span>
+<span>:: Theme made by <a href=https://twitter.com/panr>panr</a></span></div></div></footer><script src=https://deryrahman.github.io/assets/main.js></script><script src=https://deryrahman.github.io/assets/prism.js></script></div></body></html>
