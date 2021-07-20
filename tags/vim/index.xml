@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>vim on Dery R Ahaddienata</title><link>https://deryrahman.github.io/tags/vim/</link><description>Recent content in vim on Dery R Ahaddienata</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Tue, 20 Jul 2021 12:02:09 +0700</lastBuildDate><atom:link href="https://deryrahman.github.io/tags/vim/index.xml" rel="self" type="application/rss+xml"/><item><title>July Vim Setup</title><link>https://deryrahman.github.io/posts/july-vim-setup/</link><pubDate>Tue, 20 Jul 2021 12:02:09 +0700</pubDate><guid>https://deryrahman.github.io/posts/july-vim-setup/</guid><description>I&amp;rsquo;ve been using vim as my default IDE for about a year. Until now I&amp;rsquo;m still improving the vim configuration so that I could do the task even more effective. Now after nvim launch version 0.5.0 which support native LSP client, I immediately tried this feature. Yeps, there&amp;rsquo;re no significant difference when I use LanguageClient-neovim, but since version 0.5.0 has built in feature for LSP client, I would preferably use the built in one.</description><content>&lt;p>I&amp;rsquo;ve been using &lt;a href="https://levelup.gitconnected.com/tweak-your-vim-as-a-powerful-ide-fcea5f7eff9c">vim as my default IDE&lt;/a> for about a year. Until now I&amp;rsquo;m still improving the vim configuration so that I could do the task even more effective. Now after &lt;a href="https://neovim.io/roadmap/">nvim launch version 0.5.0&lt;/a> which support native LSP client, I immediately tried this feature. Yeps, there&amp;rsquo;re no significant difference when I use &lt;a href="https://github.com/autozimu/LanguageClient-neovim">LanguageClient-neovim&lt;/a>, but since version 0.5.0 has built in feature for LSP client, I would preferably use the built in one.&lt;/p>
 &lt;p>If we compare with &lt;a href="https://levelup.gitconnected.com/tweak-your-vim-as-a-powerful-ide-fcea5f7eff9c">my last setup&lt;/a>, we can see significant config differences. And because I also planned to try contribute on &lt;a href="https://github.com/ChristianChiarulli/LunarVim">LunarVim project&lt;/a>, I would like to documenting all of the setup I used now.&lt;/p>
+&lt;p>&lt;a href="https://asciinema.org/a/426314">&lt;img src="https://asciinema.org/a/426314.svg" alt="asciicast">&lt;/a>&lt;/p>
 &lt;h2 id="plugins">Plugins&lt;/h2>
 &lt;h3 id="autocomplete-definition-etc-related-plugin">Autocomplete, Definition, etc Related Plugin&lt;/h3>
 &lt;ol>
@@ -35,8 +36,8 @@
 &lt;h2 id="dot-files">Dot Files&lt;/h2>
 &lt;h3 id="plugin-config">Plugin Config&lt;/h3>
 &lt;div class="collapsable-code">
-&lt;input id="138564927" type="checkbox" checked />
-&lt;label for="138564927">
+&lt;input id="519682473" type="checkbox" checked />
+&lt;label for="519682473">
 &lt;span class="collapsable-code__language">vim&lt;/span>
 &lt;span class="collapsable-code__title">~/.vimrc&lt;/span>
 &lt;span class="collapsable-code__toggle" data-label-expand="△" data-label-collapse="▽">&lt;/span>
@@ -103,8 +104,8 @@ endif
 &lt;/code>&lt;/pre>
 &lt;/div>
 &lt;div class="collapsable-code">
-&lt;input id="396218475" type="checkbox" checked />
-&lt;label for="396218475">
+&lt;input id="431629587" type="checkbox" checked />
+&lt;label for="431629587">
 &lt;span class="collapsable-code__language">vim&lt;/span>
 &lt;span class="collapsable-code__title">~/.vim/config/theme.vim&lt;/span>
 &lt;span class="collapsable-code__toggle" data-label-expand="△" data-label-collapse="▽">&lt;/span>
@@ -148,8 +149,8 @@ let NERDTreeShowHidden = 1
 &lt;/code>&lt;/pre>
 &lt;/div>
 &lt;div class="collapsable-code">
-&lt;input id="594213678" type="checkbox" checked />
-&lt;label for="594213678">
+&lt;input id="316457928" type="checkbox" checked />
+&lt;label for="316457928">
 &lt;span class="collapsable-code__language">vim&lt;/span>
 &lt;span class="collapsable-code__title">~/.vim/config/fzf.vim&lt;/span>
 &lt;span class="collapsable-code__toggle" data-label-expand="△" data-label-collapse="▽">&lt;/span>
@@ -163,8 +164,8 @@ let $FZF_DEFAULT_OPTS = &amp;#39;--layout=reverse --info=inline&amp;#39;
 &lt;/code>&lt;/pre>
 &lt;/div>
 &lt;div class="collapsable-code">
-&lt;input id="682735941" type="checkbox" checked />
-&lt;label for="682735941">
+&lt;input id="873614295" type="checkbox" checked />
+&lt;label for="873614295">
 &lt;span class="collapsable-code__language">vim&lt;/span>
 &lt;span class="collapsable-code__title">~/.vim/config/treesitter.vim&lt;/span>
 &lt;span class="collapsable-code__toggle" data-label-expand="△" data-label-collapse="▽">&lt;/span>
@@ -188,8 +189,8 @@ EOF
 &lt;/code>&lt;/pre>
 &lt;/div>
 &lt;div class="collapsable-code">
-&lt;input id="183795426" type="checkbox" checked />
-&lt;label for="183795426">
+&lt;input id="156839472" type="checkbox" checked />
+&lt;label for="156839472">
 &lt;span class="collapsable-code__language">vim&lt;/span>
 &lt;span class="collapsable-code__title">~/.vim/config/vimwiki.vim&lt;/span>
 &lt;span class="collapsable-code__toggle" data-label-expand="△" data-label-collapse="▽">&lt;/span>
@@ -206,8 +207,8 @@ let g:vimwiki_global_ext = 0
 &lt;/code>&lt;/pre>
 &lt;/div>
 &lt;div class="collapsable-code">
-&lt;input id="591246873" type="checkbox" checked />
-&lt;label for="591246873">
+&lt;input id="698742513" type="checkbox" checked />
+&lt;label for="698742513">
 &lt;span class="collapsable-code__language">vim&lt;/span>
 &lt;span class="collapsable-code__title">~/.vim/config/lsp_config.vim&lt;/span>
 &lt;span class="collapsable-code__toggle" data-label-expand="△" data-label-collapse="▽">&lt;/span>
@@ -237,8 +238,8 @@ autocmd BufWritePre *.json lua vim.lsp.buf.formatting_sync(nil, 100)
 &lt;/code>&lt;/pre>
 &lt;/div>
 &lt;div class="collapsable-code">
-&lt;input id="651289374" type="checkbox" checked />
-&lt;label for="651289374">
+&lt;input id="916385472" type="checkbox" checked />
+&lt;label for="916385472">
 &lt;span class="collapsable-code__language">vim&lt;/span>
 &lt;span class="collapsable-code__title">~/.vim/config/ale.vim&lt;/span>
 &lt;span class="collapsable-code__toggle" data-label-expand="△" data-label-collapse="▽">&lt;/span>
@@ -277,8 +278,8 @@ let g:ale_fix_on_save = 1
 &lt;/code>&lt;/pre>
 &lt;/div>
 &lt;div class="collapsable-code">
-&lt;input id="742985613" type="checkbox" checked />
-&lt;label for="742985613">
+&lt;input id="549817362" type="checkbox" checked />
+&lt;label for="549817362">
 &lt;span class="collapsable-code__language">vim&lt;/span>
 &lt;span class="collapsable-code__title">~/.vim/config/vimspector.vim&lt;/span>
 &lt;span class="collapsable-code__toggle" data-label-expand="△" data-label-collapse="▽">&lt;/span>
@@ -296,8 +297,8 @@ nmap &amp;lt;leader&amp;gt;do &amp;lt;Plug&amp;gt;VimspectorStepOut
 &lt;/code>&lt;/pre>
 &lt;/div>
 &lt;div class="collapsable-code">
-&lt;input id="634819527" type="checkbox" checked />
-&lt;label for="634819527">
+&lt;input id="293541678" type="checkbox" checked />
+&lt;label for="293541678">
 &lt;span class="collapsable-code__language">vim&lt;/span>
 &lt;span class="collapsable-code__title">~/.vim/config/maximizer.vim&lt;/span>
 &lt;span class="collapsable-code__toggle" data-label-expand="△" data-label-collapse="▽">&lt;/span>
@@ -307,8 +308,8 @@ map &amp;lt;C-W&amp;gt;z :MaximizerToggle&amp;lt;CR&amp;gt;
 &lt;/code>&lt;/pre>
 &lt;/div>
 &lt;div class="collapsable-code">
-&lt;input id="389217456" type="checkbox" checked />
-&lt;label for="389217456">
+&lt;input id="679381452" type="checkbox" checked />
+&lt;label for="679381452">
 &lt;span class="collapsable-code__language">lua&lt;/span>
 &lt;span class="collapsable-code__title">~/.vim/config/compe.lua&lt;/span>
 &lt;span class="collapsable-code__toggle" data-label-expand="△" data-label-collapse="▽">&lt;/span>
@@ -343,8 +344,8 @@ snippets_nvim = true;
 &lt;/code>&lt;/pre>
 &lt;/div>
 &lt;div class="collapsable-code">
-&lt;input id="684792135" type="checkbox" checked />
-&lt;label for="684792135">
+&lt;input id="376241985" type="checkbox" checked />
+&lt;label for="376241985">
 &lt;span class="collapsable-code__language">lua&lt;/span>
 &lt;span class="collapsable-code__title">~/.vim/config/lspfuzzy.lua&lt;/span>
 &lt;span class="collapsable-code__toggle" data-label-expand="△" data-label-collapse="▽">&lt;/span>
@@ -367,8 +368,8 @@ fzf_trim = true, -- trim FZF entries
 &lt;/div>
 &lt;h3 id="external-config">External Config&lt;/h3>
 &lt;div class="collapsable-code">
-&lt;input id="789624153" type="checkbox" checked />
-&lt;label for="789624153">
+&lt;input id="861257493" type="checkbox" checked />
+&lt;label for="861257493">
 &lt;span class="collapsable-code__language">vim&lt;/span>
 &lt;span class="collapsable-code__title">~/.vim/config/autoclose.vim&lt;/span>
 &lt;span class="collapsable-code__toggle" data-label-expand="△" data-label-collapse="▽">&lt;/span>
@@ -448,8 +449,8 @@ inoremap {,&amp;lt;CR&amp;gt; {&amp;lt;CR&amp;gt;},&amp;lt;ESC&amp;gt;O
 &lt;/code>&lt;/pre>
 &lt;/div>
 &lt;div class="collapsable-code">
-&lt;input id="219687354" type="checkbox" checked />
-&lt;label for="219687354">
+&lt;input id="467138925" type="checkbox" checked />
+&lt;label for="467138925">
 &lt;span class="collapsable-code__language">vim&lt;/span>
 &lt;span class="collapsable-code__title">~/.vim/config/custom_map.vim&lt;/span>
 &lt;span class="collapsable-code__toggle" data-label-expand="△" data-label-collapse="▽">&lt;/span>
@@ -470,8 +471,8 @@ nnoremap &amp;lt;silent&amp;gt; &amp;lt;C-W&amp;gt;&amp;lt;Right&amp;gt; :exe &a
 &lt;/code>&lt;/pre>
 &lt;/div>
 &lt;div class="collapsable-code">
-&lt;input id="439176528" type="checkbox" checked />
-&lt;label for="439176528">
+&lt;input id="456892713" type="checkbox" checked />
+&lt;label for="456892713">
 &lt;span class="collapsable-code__language">vim&lt;/span>
 &lt;span class="collapsable-code__title">~/.vim/config/session.vim&lt;/span>
 &lt;span class="collapsable-code__toggle" data-label-expand="△" data-label-collapse="▽">&lt;/span>
