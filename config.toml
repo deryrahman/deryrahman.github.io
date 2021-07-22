@@ -1,4 +1,4 @@
-baseurl = "https://deryrahman.github.io"
+baseurl = "https://dery.dev"
 languageCode = "en-us"
 theme = "terminal"
 paginate = 2
@@ -60,7 +60,7 @@ paginate = 2
     missingBackButtonLabel = "Back to home page"
 
     [languages.en.params.logo]
-      logoText = "deryrahman@github.io:~#"
+      logoText = "dery@dev:~#"
       logoHomeLink = "/"
 
     [languages.en.menu]
