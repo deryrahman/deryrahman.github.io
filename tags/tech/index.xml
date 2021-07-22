@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>tech on Dery R Ahaddienata</title><link>https://deryrahman.github.io/tags/tech/</link><description>Recent content in tech on Dery R Ahaddienata</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Tue, 20 Jul 2021 12:02:09 +0700</lastBuildDate><atom:link href="https://deryrahman.github.io/tags/tech/index.xml" rel="self" type="application/rss+xml"/><item><title>July Vim Setup</title><link>https://deryrahman.github.io/posts/july-vim-setup/</link><pubDate>Tue, 20 Jul 2021 12:02:09 +0700</pubDate><guid>https://deryrahman.github.io/posts/july-vim-setup/</guid><description>I&amp;rsquo;ve been using vim as my default IDE for about a year. Until now I&amp;rsquo;m still improving the vim configuration so that I could do the task even more effective. Now after nvim launch version 0.5.0 which support native LSP client, I immediately tried this feature. Yeps, there&amp;rsquo;re no significant difference when I use LanguageClient-neovim, but since version 0.5.0 has built in feature for LSP client, I would preferably use the built in one.</description><content>&lt;p>I&amp;rsquo;ve been using &lt;a href="https://levelup.gitconnected.com/tweak-your-vim-as-a-powerful-ide-fcea5f7eff9c">vim as my default IDE&lt;/a> for about a year. Until now I&amp;rsquo;m still improving the vim configuration so that I could do the task even more effective. Now after &lt;a href="https://neovim.io/roadmap/">nvim launch version 0.5.0&lt;/a> which support native LSP client, I immediately tried this feature. Yeps, there&amp;rsquo;re no significant difference when I use &lt;a href="https://github.com/autozimu/LanguageClient-neovim">LanguageClient-neovim&lt;/a>, but since version 0.5.0 has built in feature for LSP client, I would preferably use the built in one.&lt;/p>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>tech on Dery R Ahaddienata</title><link>https://dery.dev/tags/tech/</link><description>Recent content in tech on Dery R Ahaddienata</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Tue, 20 Jul 2021 12:02:09 +0700</lastBuildDate><atom:link href="https://dery.dev/tags/tech/index.xml" rel="self" type="application/rss+xml"/><item><title>July Vim Setup</title><link>https://dery.dev/posts/july-vim-setup/</link><pubDate>Tue, 20 Jul 2021 12:02:09 +0700</pubDate><guid>https://dery.dev/posts/july-vim-setup/</guid><description>I&amp;rsquo;ve been using vim as my default IDE for about a year. Until now I&amp;rsquo;m still improving the vim configuration so that I could do the task even more effective. Now after nvim launch version 0.5.0 which support native LSP client, I immediately tried this feature. Yeps, there&amp;rsquo;re no significant difference when I use LanguageClient-neovim, but since version 0.5.0 has built in feature for LSP client, I would preferably use the built in one.</description><content>&lt;p>I&amp;rsquo;ve been using &lt;a href="https://levelup.gitconnected.com/tweak-your-vim-as-a-powerful-ide-fcea5f7eff9c">vim as my default IDE&lt;/a> for about a year. Until now I&amp;rsquo;m still improving the vim configuration so that I could do the task even more effective. Now after &lt;a href="https://neovim.io/roadmap/">nvim launch version 0.5.0&lt;/a> which support native LSP client, I immediately tried this feature. Yeps, there&amp;rsquo;re no significant difference when I use &lt;a href="https://github.com/autozimu/LanguageClient-neovim">LanguageClient-neovim&lt;/a>, but since version 0.5.0 has built in feature for LSP client, I would preferably use the built in one.&lt;/p>
 &lt;p>If we compare with &lt;a href="https://levelup.gitconnected.com/tweak-your-vim-as-a-powerful-ide-fcea5f7eff9c">my last setup&lt;/a>, we can see significant config differences. And because I also planned to try contribute on &lt;a href="https://github.com/ChristianChiarulli/LunarVim">LunarVim project&lt;/a>, I would like to documenting all of the setup I used now.&lt;/p>
 &lt;p>&lt;a href="https://asciinema.org/a/426314">&lt;img src="https://asciinema.org/a/426314.svg" alt="asciicast">&lt;/a>&lt;/p>
 &lt;h2 id="plugins">Plugins&lt;/h2>
@@ -36,8 +36,8 @@
 &lt;h2 id="dot-files">Dot Files&lt;/h2>
 &lt;h3 id="plugin-config">Plugin Config&lt;/h3>
 &lt;div class="collapsable-code">
-&lt;input id="519682473" type="checkbox" checked />
-&lt;label for="519682473">
+&lt;input id="532619487" type="checkbox" checked />
+&lt;label for="532619487">
 &lt;span class="collapsable-code__language">vim&lt;/span>
 &lt;span class="collapsable-code__title">~/.vimrc&lt;/span>
 &lt;span class="collapsable-code__toggle" data-label-expand="△" data-label-collapse="▽">&lt;/span>
@@ -104,8 +104,8 @@ endif
 &lt;/code>&lt;/pre>
 &lt;/div>
 &lt;div class="collapsable-code">
-&lt;input id="431629587" type="checkbox" checked />
-&lt;label for="431629587">
+&lt;input id="874691235" type="checkbox" checked />
+&lt;label for="874691235">
 &lt;span class="collapsable-code__language">vim&lt;/span>
 &lt;span class="collapsable-code__title">~/.vim/config/theme.vim&lt;/span>
 &lt;span class="collapsable-code__toggle" data-label-expand="△" data-label-collapse="▽">&lt;/span>
@@ -149,8 +149,8 @@ let NERDTreeShowHidden = 1
 &lt;/code>&lt;/pre>
 &lt;/div>
 &lt;div class="collapsable-code">
-&lt;input id="316457928" type="checkbox" checked />
-&lt;label for="316457928">
+&lt;input id="289457613" type="checkbox" checked />
+&lt;label for="289457613">
 &lt;span class="collapsable-code__language">vim&lt;/span>
 &lt;span class="collapsable-code__title">~/.vim/config/fzf.vim&lt;/span>
 &lt;span class="collapsable-code__toggle" data-label-expand="△" data-label-collapse="▽">&lt;/span>
@@ -164,8 +164,8 @@ let $FZF_DEFAULT_OPTS = &amp;#39;--layout=reverse --info=inline&amp;#39;
 &lt;/code>&lt;/pre>
 &lt;/div>
 &lt;div class="collapsable-code">
-&lt;input id="873614295" type="checkbox" checked />
-&lt;label for="873614295">
+&lt;input id="168543279" type="checkbox" checked />
+&lt;label for="168543279">
 &lt;span class="collapsable-code__language">vim&lt;/span>
 &lt;span class="collapsable-code__title">~/.vim/config/treesitter.vim&lt;/span>
 &lt;span class="collapsable-code__toggle" data-label-expand="△" data-label-collapse="▽">&lt;/span>
@@ -189,8 +189,8 @@ EOF
 &lt;/code>&lt;/pre>
 &lt;/div>
 &lt;div class="collapsable-code">
-&lt;input id="156839472" type="checkbox" checked />
-&lt;label for="156839472">
+&lt;input id="689372145" type="checkbox" checked />
+&lt;label for="689372145">
 &lt;span class="collapsable-code__language">vim&lt;/span>
 &lt;span class="collapsable-code__title">~/.vim/config/vimwiki.vim&lt;/span>
 &lt;span class="collapsable-code__toggle" data-label-expand="△" data-label-collapse="▽">&lt;/span>
@@ -207,8 +207,8 @@ let g:vimwiki_global_ext = 0
 &lt;/code>&lt;/pre>
 &lt;/div>
 &lt;div class="collapsable-code">
-&lt;input id="698742513" type="checkbox" checked />
-&lt;label for="698742513">
+&lt;input id="927138564" type="checkbox" checked />
+&lt;label for="927138564">
 &lt;span class="collapsable-code__language">vim&lt;/span>
 &lt;span class="collapsable-code__title">~/.vim/config/lsp_config.vim&lt;/span>
 &lt;span class="collapsable-code__toggle" data-label-expand="△" data-label-collapse="▽">&lt;/span>
@@ -238,8 +238,8 @@ autocmd BufWritePre *.json lua vim.lsp.buf.formatting_sync(nil, 100)
 &lt;/code>&lt;/pre>
 &lt;/div>
 &lt;div class="collapsable-code">
-&lt;input id="916385472" type="checkbox" checked />
-&lt;label for="916385472">
+&lt;input id="864317925" type="checkbox" checked />
+&lt;label for="864317925">
 &lt;span class="collapsable-code__language">vim&lt;/span>
 &lt;span class="collapsable-code__title">~/.vim/config/ale.vim&lt;/span>
 &lt;span class="collapsable-code__toggle" data-label-expand="△" data-label-collapse="▽">&lt;/span>
@@ -278,8 +278,8 @@ let g:ale_fix_on_save = 1
 &lt;/code>&lt;/pre>
 &lt;/div>
 &lt;div class="collapsable-code">
-&lt;input id="549817362" type="checkbox" checked />
-&lt;label for="549817362">
+&lt;input id="241593876" type="checkbox" checked />
+&lt;label for="241593876">
 &lt;span class="collapsable-code__language">vim&lt;/span>
 &lt;span class="collapsable-code__title">~/.vim/config/vimspector.vim&lt;/span>
 &lt;span class="collapsable-code__toggle" data-label-expand="△" data-label-collapse="▽">&lt;/span>
@@ -297,8 +297,8 @@ nmap &amp;lt;leader&amp;gt;do &amp;lt;Plug&amp;gt;VimspectorStepOut
 &lt;/code>&lt;/pre>
 &lt;/div>
 &lt;div class="collapsable-code">
-&lt;input id="293541678" type="checkbox" checked />
-&lt;label for="293541678">
+&lt;input id="587924613" type="checkbox" checked />
+&lt;label for="587924613">
 &lt;span class="collapsable-code__language">vim&lt;/span>
 &lt;span class="collapsable-code__title">~/.vim/config/maximizer.vim&lt;/span>
 &lt;span class="collapsable-code__toggle" data-label-expand="△" data-label-collapse="▽">&lt;/span>
@@ -308,8 +308,8 @@ map &amp;lt;C-W&amp;gt;z :MaximizerToggle&amp;lt;CR&amp;gt;
 &lt;/code>&lt;/pre>
 &lt;/div>
 &lt;div class="collapsable-code">
-&lt;input id="679381452" type="checkbox" checked />
-&lt;label for="679381452">
+&lt;input id="489126357" type="checkbox" checked />
+&lt;label for="489126357">
 &lt;span class="collapsable-code__language">lua&lt;/span>
 &lt;span class="collapsable-code__title">~/.vim/config/compe.lua&lt;/span>
 &lt;span class="collapsable-code__toggle" data-label-expand="△" data-label-collapse="▽">&lt;/span>
@@ -344,8 +344,8 @@ snippets_nvim = true;
 &lt;/code>&lt;/pre>
 &lt;/div>
 &lt;div class="collapsable-code">
-&lt;input id="376241985" type="checkbox" checked />
-&lt;label for="376241985">
+&lt;input id="849613572" type="checkbox" checked />
+&lt;label for="849613572">
 &lt;span class="collapsable-code__language">lua&lt;/span>
 &lt;span class="collapsable-code__title">~/.vim/config/lspfuzzy.lua&lt;/span>
 &lt;span class="collapsable-code__toggle" data-label-expand="△" data-label-collapse="▽">&lt;/span>
@@ -368,8 +368,8 @@ fzf_trim = true, -- trim FZF entries
 &lt;/div>
 &lt;h3 id="external-config">External Config&lt;/h3>
 &lt;div class="collapsable-code">
-&lt;input id="861257493" type="checkbox" checked />
-&lt;label for="861257493">
+&lt;input id="364298157" type="checkbox" checked />
+&lt;label for="364298157">
 &lt;span class="collapsable-code__language">vim&lt;/span>
 &lt;span class="collapsable-code__title">~/.vim/config/autoclose.vim&lt;/span>
 &lt;span class="collapsable-code__toggle" data-label-expand="△" data-label-collapse="▽">&lt;/span>
@@ -449,8 +449,8 @@ inoremap {,&amp;lt;CR&amp;gt; {&amp;lt;CR&amp;gt;},&amp;lt;ESC&amp;gt;O
 &lt;/code>&lt;/pre>
 &lt;/div>
 &lt;div class="collapsable-code">
-&lt;input id="467138925" type="checkbox" checked />
-&lt;label for="467138925">
+&lt;input id="298376415" type="checkbox" checked />
+&lt;label for="298376415">
 &lt;span class="collapsable-code__language">vim&lt;/span>
 &lt;span class="collapsable-code__title">~/.vim/config/custom_map.vim&lt;/span>
 &lt;span class="collapsable-code__toggle" data-label-expand="△" data-label-collapse="▽">&lt;/span>
@@ -471,8 +471,8 @@ nnoremap &amp;lt;silent&amp;gt; &amp;lt;C-W&amp;gt;&amp;lt;Right&amp;gt; :exe &a
 &lt;/code>&lt;/pre>
 &lt;/div>
 &lt;div class="collapsable-code">
-&lt;input id="456892713" type="checkbox" checked />
-&lt;label for="456892713">
+&lt;input id="795164283" type="checkbox" checked />
+&lt;label for="795164283">
 &lt;span class="collapsable-code__language">vim&lt;/span>
 &lt;span class="collapsable-code__title">~/.vim/config/session.vim&lt;/span>
 &lt;span class="collapsable-code__toggle" data-label-expand="△" data-label-collapse="▽">&lt;/span>
@@ -561,7 +561,7 @@ map &amp;lt;leader&amp;gt;r :call RestoreSession()&amp;lt;CR&amp;gt;
 &lt;li>&lt;a href="https://neovim.io/roadmap/">https://neovim.io/roadmap/&lt;/a>&lt;/li>
 &lt;li>&lt;a href="https://github.com/autozimu/LanguageClient-neovim">https://github.com/autozimu/LanguageClient-neovim&lt;/a>&lt;/li>
 &lt;li>&lt;a href="https://github.com/ChristianChiarulli/LunarVim">https://github.com/ChristianChiarulli/LunarVim&lt;/a>&lt;/li>
-&lt;/ol></content></item><item><title>Software System Fundamentals</title><link>https://deryrahman.github.io/posts/software-system-fundamentals/</link><pubDate>Mon, 19 Jul 2021 15:49:33 +0700</pubDate><guid>https://deryrahman.github.io/posts/software-system-fundamentals/</guid><description>The book I&amp;rsquo;m currently reading is Designing Data Intensive Applications by Martin Kleppmann. During the first read, I found concise fundamentals we need to concern most when dealing with a high quality software system. There&amp;rsquo;re 3 fundamentals as follow:
+&lt;/ol></content></item><item><title>Software System Fundamentals</title><link>https://dery.dev/posts/software-system-fundamentals/</link><pubDate>Mon, 19 Jul 2021 15:49:33 +0700</pubDate><guid>https://dery.dev/posts/software-system-fundamentals/</guid><description>The book I&amp;rsquo;m currently reading is Designing Data Intensive Applications by Martin Kleppmann. During the first read, I found concise fundamentals we need to concern most when dealing with a high quality software system. There&amp;rsquo;re 3 fundamentals as follow:
 Fundamental Definition Reliability The system should work properly even when the things go wrong (faulty) Scalability The system should be able to handle the growth (data volume, traffic, or complexity) Maintainability The system should easily adaptable enough during maintenance (bugs, failures, and new features) Reliability Faulty can come up from several places:</description><content>&lt;p>The book I&amp;rsquo;m currently reading is &lt;a href="https://learning.oreilly.com/library/view/designing-data-intensive-applications/9781491903063/">Designing Data Intensive Applications&lt;/a> by Martin Kleppmann. During the first read, I found concise fundamentals we need to concern most when dealing with a high quality software system. There&amp;rsquo;re 3 fundamentals as follow:&lt;/p>
 &lt;table>
 &lt;thead>
@@ -622,7 +622,7 @@ Fundamental Definition Reliability The system should work properly even when the
 &lt;p>&lt;strong>References&lt;/strong>&lt;/p>
 &lt;ol>
 &lt;li>&lt;a href="https://learning.oreilly.com/library/view/designing-data-intensive-applications/9781491903063/">Designing Data Intensive Applications&lt;/a> by Martin Kleppmann&lt;/li>
-&lt;/ol></content></item><item><title>Redis Cluster Migration Strategy</title><link>https://deryrahman.github.io/posts/redis-cluster-migration-strategy/</link><pubDate>Sat, 17 Jul 2021 23:16:48 +0700</pubDate><guid>https://deryrahman.github.io/posts/redis-cluster-migration-strategy/</guid><description>Last week I have a chance to perform Redis cluster migration. Our Redis cluster contains 6 high memory VMs. At peak, it has 800 request/second. In this article I would like to explain how we migrate Redis cluster with zero downtime as well as lesson learned I&amp;rsquo;ve gathered.
+&lt;/ol></content></item><item><title>Redis Cluster Migration Strategy</title><link>https://dery.dev/posts/redis-cluster-migration-strategy/</link><pubDate>Sat, 17 Jul 2021 23:16:48 +0700</pubDate><guid>https://dery.dev/posts/redis-cluster-migration-strategy/</guid><description>Last week I have a chance to perform Redis cluster migration. Our Redis cluster contains 6 high memory VMs. At peak, it has 800 request/second. In this article I would like to explain how we migrate Redis cluster with zero downtime as well as lesson learned I&amp;rsquo;ve gathered.
 Problem Statement As Ubuntu 16.04 no longer support LTS, we need to upgrade some obsolete VMs to latest version (20.04). One of the obsolete VMs are our Redis cluster.</description><content>&lt;p>Last week I have a chance to perform Redis cluster migration. Our Redis cluster contains 6 high memory VMs. At peak, it has 800 request/second. In this article I would like to explain how we migrate Redis cluster with zero downtime as well as lesson learned I&amp;rsquo;ve gathered.&lt;/p>
 &lt;h2 id="problem-statement">Problem Statement&lt;/h2>
 &lt;p>As Ubuntu 16.04 no longer support LTS, we need to upgrade some obsolete VMs to latest version (20.04). One of the obsolete VMs are our Redis cluster. Most of the services rely on our service that use this Redis cluster as in-memory storage. Upgrading the OS inside the node is not the option since it require complex reconfiguration as well as inevitable downtime.&lt;/p>
@@ -678,7 +678,7 @@ aof-use-rdb-preamble yes
 &lt;li>&lt;a href="https://redis.io/topics/cluster-tutorial">https://redis.io/topics/cluster-tutorial&lt;/a>&lt;/li>
 &lt;li>&lt;a href="https://redis.io/commands/cluster-failover">https://redis.io/commands/cluster-failover&lt;/a>&lt;/li>
 &lt;li>&lt;a href="https://github.com/redis/redis/issues/4815">https://github.com/redis/redis/issues/4815&lt;/a>&lt;/li>
-&lt;/ol></content></item><item><title>Slow Coding</title><link>https://deryrahman.github.io/posts/slow-coding/</link><pubDate>Fri, 09 Apr 2021 18:27:48 +0700</pubDate><guid>https://deryrahman.github.io/posts/slow-coding/</guid><description>I wrote this article for my own documentation related to lesson learned I was gathered during my coding-life. Really, up until now, coding is fun. The way we transfer our idea and logic into code so that computer can do whatever we want seems really magical. There&amp;rsquo;s a joke I&amp;rsquo;ve found somewhere (I forget exactly), today&amp;rsquo;s magician is programmer. It&amp;rsquo;s quite true, imagine the world which can do so much things, efficiently, automatically, and precisely without human inference.</description><content>&lt;p>I wrote this article for my own documentation related to lesson learned I was gathered during my coding-life. Really, up until now, coding is fun. The way we transfer our idea and logic into code so that computer can do whatever we want seems really magical. There&amp;rsquo;s a joke I&amp;rsquo;ve found somewhere (I forget exactly), today&amp;rsquo;s magician is programmer. It&amp;rsquo;s quite true, imagine the world which can do so much things, efficiently, automatically, and precisely without human inference. It can be done with computer.&lt;/p>
+&lt;/ol></content></item><item><title>Slow Coding</title><link>https://dery.dev/posts/slow-coding/</link><pubDate>Fri, 09 Apr 2021 18:27:48 +0700</pubDate><guid>https://dery.dev/posts/slow-coding/</guid><description>I wrote this article for my own documentation related to lesson learned I was gathered during my coding-life. Really, up until now, coding is fun. The way we transfer our idea and logic into code so that computer can do whatever we want seems really magical. There&amp;rsquo;s a joke I&amp;rsquo;ve found somewhere (I forget exactly), today&amp;rsquo;s magician is programmer. It&amp;rsquo;s quite true, imagine the world which can do so much things, efficiently, automatically, and precisely without human inference.</description><content>&lt;p>I wrote this article for my own documentation related to lesson learned I was gathered during my coding-life. Really, up until now, coding is fun. The way we transfer our idea and logic into code so that computer can do whatever we want seems really magical. There&amp;rsquo;s a joke I&amp;rsquo;ve found somewhere (I forget exactly), today&amp;rsquo;s magician is programmer. It&amp;rsquo;s quite true, imagine the world which can do so much things, efficiently, automatically, and precisely without human inference. It can be done with computer.&lt;/p>
 &lt;p>But the ugliest fact is that thing is dumb, computer can&amp;rsquo;t do anything meaningful unless someone instructs the machine to do something. How to instruct the computer? Through code. Code is just an alternate name of computer instruction which computer can understand. To code, or we can say coding, is quite similar with typing. The fun part, coding/typing is like a playing keyboard, it satisfies if we could type it fast. Expecially when you use mechanical keyboard :)&lt;/p>
 &lt;hr>
 &lt;p>On typing, we use natural language, we know english, indonesian, japanese, etc. On coding, we use programming language, we know golang, python, ruby, etc. To type/code we need to understand the language syntax, grammar, and meaning. Both translates conceptual abstraction into text. On typing, if we don&amp;rsquo;t know the concept idea / the topic / story, we can&amp;rsquo;t write the article, even we know fluently about the grammar and the words meaning. Same with coding, we&amp;rsquo;ll stuck and don&amp;rsquo;t know what to code if we didn&amp;rsquo;t know the bigger picture of the abstract system we want to build. It can tremendously slow down the coding process. To understand the bigger picture is to understand how to code effectively. I&amp;rsquo;ve ever experienced to not knowing bigger picture of the flow of the service our team owned, so I code blindly without knowing the side effect of my code.&lt;/p>
