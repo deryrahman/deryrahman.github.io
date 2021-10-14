@@ -36,8 +36,8 @@
 &lt;h2 id="dot-files">Dot Files&lt;/h2>
 &lt;h3 id="plugin-config">Plugin Config&lt;/h3>
 &lt;div class="collapsable-code">
-&lt;input id="542918736" type="checkbox" checked />
-&lt;label for="542918736">
+&lt;input id="581263749" type="checkbox" checked />
+&lt;label for="581263749">
 &lt;span class="collapsable-code__language">vim&lt;/span>
 &lt;span class="collapsable-code__title">~/.vimrc&lt;/span>
 &lt;span class="collapsable-code__toggle" data-label-expand="△" data-label-collapse="▽">&lt;/span>
@@ -104,8 +104,8 @@ endif
 &lt;/code>&lt;/pre>
 &lt;/div>
 &lt;div class="collapsable-code">
-&lt;input id="415872963" type="checkbox" checked />
-&lt;label for="415872963">
+&lt;input id="956138274" type="checkbox" checked />
+&lt;label for="956138274">
 &lt;span class="collapsable-code__language">vim&lt;/span>
 &lt;span class="collapsable-code__title">~/.vim/config/theme.vim&lt;/span>
 &lt;span class="collapsable-code__toggle" data-label-expand="△" data-label-collapse="▽">&lt;/span>
@@ -149,8 +149,8 @@ let NERDTreeShowHidden = 1
 &lt;/code>&lt;/pre>
 &lt;/div>
 &lt;div class="collapsable-code">
-&lt;input id="783425961" type="checkbox" checked />
-&lt;label for="783425961">
+&lt;input id="754891362" type="checkbox" checked />
+&lt;label for="754891362">
 &lt;span class="collapsable-code__language">vim&lt;/span>
 &lt;span class="collapsable-code__title">~/.vim/config/fzf.vim&lt;/span>
 &lt;span class="collapsable-code__toggle" data-label-expand="△" data-label-collapse="▽">&lt;/span>
@@ -164,8 +164,8 @@ let $FZF_DEFAULT_OPTS = &amp;#39;--layout=reverse --info=inline&amp;#39;
 &lt;/code>&lt;/pre>
 &lt;/div>
 &lt;div class="collapsable-code">
-&lt;input id="165748293" type="checkbox" checked />
-&lt;label for="165748293">
+&lt;input id="718965324" type="checkbox" checked />
+&lt;label for="718965324">
 &lt;span class="collapsable-code__language">vim&lt;/span>
 &lt;span class="collapsable-code__title">~/.vim/config/treesitter.vim&lt;/span>
 &lt;span class="collapsable-code__toggle" data-label-expand="△" data-label-collapse="▽">&lt;/span>
@@ -189,8 +189,8 @@ EOF
 &lt;/code>&lt;/pre>
 &lt;/div>
 &lt;div class="collapsable-code">
-&lt;input id="932874615" type="checkbox" checked />
-&lt;label for="932874615">
+&lt;input id="652149378" type="checkbox" checked />
+&lt;label for="652149378">
 &lt;span class="collapsable-code__language">vim&lt;/span>
 &lt;span class="collapsable-code__title">~/.vim/config/vimwiki.vim&lt;/span>
 &lt;span class="collapsable-code__toggle" data-label-expand="△" data-label-collapse="▽">&lt;/span>
@@ -207,8 +207,8 @@ let g:vimwiki_global_ext = 0
 &lt;/code>&lt;/pre>
 &lt;/div>
 &lt;div class="collapsable-code">
-&lt;input id="718693254" type="checkbox" checked />
-&lt;label for="718693254">
+&lt;input id="632851947" type="checkbox" checked />
+&lt;label for="632851947">
 &lt;span class="collapsable-code__language">vim&lt;/span>
 &lt;span class="collapsable-code__title">~/.vim/config/lsp_config.vim&lt;/span>
 &lt;span class="collapsable-code__toggle" data-label-expand="△" data-label-collapse="▽">&lt;/span>
@@ -238,8 +238,8 @@ autocmd BufWritePre *.json lua vim.lsp.buf.formatting_sync(nil, 100)
 &lt;/code>&lt;/pre>
 &lt;/div>
 &lt;div class="collapsable-code">
-&lt;input id="149587632" type="checkbox" checked />
-&lt;label for="149587632">
+&lt;input id="425319768" type="checkbox" checked />
+&lt;label for="425319768">
 &lt;span class="collapsable-code__language">vim&lt;/span>
 &lt;span class="collapsable-code__title">~/.vim/config/ale.vim&lt;/span>
 &lt;span class="collapsable-code__toggle" data-label-expand="△" data-label-collapse="▽">&lt;/span>
@@ -278,8 +278,8 @@ let g:ale_fix_on_save = 1
 &lt;/code>&lt;/pre>
 &lt;/div>
 &lt;div class="collapsable-code">
-&lt;input id="874613925" type="checkbox" checked />
-&lt;label for="874613925">
+&lt;input id="697485231" type="checkbox" checked />
+&lt;label for="697485231">
 &lt;span class="collapsable-code__language">vim&lt;/span>
 &lt;span class="collapsable-code__title">~/.vim/config/vimspector.vim&lt;/span>
 &lt;span class="collapsable-code__toggle" data-label-expand="△" data-label-collapse="▽">&lt;/span>
@@ -297,8 +297,8 @@ nmap &amp;lt;leader&amp;gt;do &amp;lt;Plug&amp;gt;VimspectorStepOut
 &lt;/code>&lt;/pre>
 &lt;/div>
 &lt;div class="collapsable-code">
-&lt;input id="957168342" type="checkbox" checked />
-&lt;label for="957168342">
+&lt;input id="134962857" type="checkbox" checked />
+&lt;label for="134962857">
 &lt;span class="collapsable-code__language">vim&lt;/span>
 &lt;span class="collapsable-code__title">~/.vim/config/maximizer.vim&lt;/span>
 &lt;span class="collapsable-code__toggle" data-label-expand="△" data-label-collapse="▽">&lt;/span>
@@ -308,8 +308,8 @@ map &amp;lt;C-W&amp;gt;z :MaximizerToggle&amp;lt;CR&amp;gt;
 &lt;/code>&lt;/pre>
 &lt;/div>
 &lt;div class="collapsable-code">
-&lt;input id="543871926" type="checkbox" checked />
-&lt;label for="543871926">
+&lt;input id="345216879" type="checkbox" checked />
+&lt;label for="345216879">
 &lt;span class="collapsable-code__language">lua&lt;/span>
 &lt;span class="collapsable-code__title">~/.vim/config/compe.lua&lt;/span>
 &lt;span class="collapsable-code__toggle" data-label-expand="△" data-label-collapse="▽">&lt;/span>
@@ -344,8 +344,8 @@ snippets_nvim = true;
 &lt;/code>&lt;/pre>
 &lt;/div>
 &lt;div class="collapsable-code">
-&lt;input id="741589263" type="checkbox" checked />
-&lt;label for="741589263">
+&lt;input id="264198537" type="checkbox" checked />
+&lt;label for="264198537">
 &lt;span class="collapsable-code__language">lua&lt;/span>
 &lt;span class="collapsable-code__title">~/.vim/config/lspfuzzy.lua&lt;/span>
 &lt;span class="collapsable-code__toggle" data-label-expand="△" data-label-collapse="▽">&lt;/span>
@@ -368,8 +368,8 @@ fzf_trim = true, -- trim FZF entries
 &lt;/div>
 &lt;h3 id="external-config">External Config&lt;/h3>
 &lt;div class="collapsable-code">
-&lt;input id="368157492" type="checkbox" checked />
-&lt;label for="368157492">
+&lt;input id="249371865" type="checkbox" checked />
+&lt;label for="249371865">
 &lt;span class="collapsable-code__language">vim&lt;/span>
 &lt;span class="collapsable-code__title">~/.vim/config/autoclose.vim&lt;/span>
 &lt;span class="collapsable-code__toggle" data-label-expand="△" data-label-collapse="▽">&lt;/span>
@@ -449,8 +449,8 @@ inoremap {,&amp;lt;CR&amp;gt; {&amp;lt;CR&amp;gt;},&amp;lt;ESC&amp;gt;O
 &lt;/code>&lt;/pre>
 &lt;/div>
 &lt;div class="collapsable-code">
-&lt;input id="623854719" type="checkbox" checked />
-&lt;label for="623854719">
+&lt;input id="187293546" type="checkbox" checked />
+&lt;label for="187293546">
 &lt;span class="collapsable-code__language">vim&lt;/span>
 &lt;span class="collapsable-code__title">~/.vim/config/custom_map.vim&lt;/span>
 &lt;span class="collapsable-code__toggle" data-label-expand="△" data-label-collapse="▽">&lt;/span>
@@ -471,8 +471,8 @@ nnoremap &amp;lt;silent&amp;gt; &amp;lt;C-W&amp;gt;&amp;lt;Right&amp;gt; :exe &a
 &lt;/code>&lt;/pre>
 &lt;/div>
 &lt;div class="collapsable-code">
-&lt;input id="123749865" type="checkbox" checked />
-&lt;label for="123749865">
+&lt;input id="837245619" type="checkbox" checked />
+&lt;label for="837245619">
 &lt;span class="collapsable-code__language">vim&lt;/span>
 &lt;span class="collapsable-code__title">~/.vim/config/session.vim&lt;/span>
 &lt;span class="collapsable-code__toggle" data-label-expand="△" data-label-collapse="▽">&lt;/span>
@@ -644,6 +644,7 @@ Fundamental Definition Reliability The system should work properly even when the
 &lt;li>Action first then motivation will follow&lt;/li>
 &lt;li>Follow by example not what other&amp;rsquo;s saying&lt;/li>
 &lt;li>Working deliverable instead of perfect result. Then iterate&lt;/li>
+&lt;li>Underpromise, overdeliver&lt;/li>
 &lt;/ul></content></item><item><title>Redis Cluster Migration Strategy</title><link>https://dery.dev/posts/redis-cluster-migration-strategy/</link><pubDate>Sat, 17 Jul 2021 23:16:48 +0700</pubDate><guid>https://dery.dev/posts/redis-cluster-migration-strategy/</guid><description>Last week I have a chance to perform Redis cluster migration. Our Redis cluster contains 6 high memory VMs. At peak, it has 800 request/second. In this article I would like to explain how we migrate Redis cluster with zero downtime as well as lesson learned I&amp;rsquo;ve gathered.
 Problem Statement As Ubuntu 16.04 no longer support LTS, we need to upgrade some obsolete VMs to latest version (20.04). One of the obsolete VMs are our Redis cluster.</description><content>&lt;p>Last week I have a chance to perform Redis cluster migration. Our Redis cluster contains 6 high memory VMs. At peak, it has 800 request/second. In this article I would like to explain how we migrate Redis cluster with zero downtime as well as lesson learned I&amp;rsquo;ve gathered.&lt;/p>
 &lt;h2 id="problem-statement">Problem Statement&lt;/h2>
