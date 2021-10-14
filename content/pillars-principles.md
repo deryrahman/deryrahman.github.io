@@ -25,3 +25,4 @@ date: 2021-07-18T14:17:00+07:00
 * Action first then motivation will follow
 * Follow by example not what other's saying
 * Working deliverable instead of perfect result. Then iterate
+* Underpromise, overdeliver
