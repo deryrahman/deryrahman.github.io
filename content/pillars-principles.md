@@ -27,3 +27,4 @@ date: 2021-07-18T14:17:00+07:00
 * Working deliverable instead of perfect result. Then iterate
 * Underpromise, overdeliver
 * Focus on high leverage activities
+* Assertive over aggressive
