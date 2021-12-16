@@ -42,8 +42,8 @@
 &lt;h2 id="dot-files">Dot Files&lt;/h2>
 &lt;h3 id="plugin-config">Plugin Config&lt;/h3>
 &lt;div class="collapsable-code">
-&lt;input id="428931756" type="checkbox" checked />
-&lt;label for="428931756">
+&lt;input id="916234785" type="checkbox" checked />
+&lt;label for="916234785">
 &lt;span class="collapsable-code__language">vim&lt;/span>
 &lt;span class="collapsable-code__title">~/.vimrc&lt;/span>
 &lt;span class="collapsable-code__toggle" data-label-expand="△" data-label-collapse="▽">&lt;/span>
@@ -110,8 +110,8 @@ endif
 &lt;/code>&lt;/pre>
 &lt;/div>
 &lt;div class="collapsable-code">
-&lt;input id="152943786" type="checkbox" checked />
-&lt;label for="152943786">
+&lt;input id="387125496" type="checkbox" checked />
+&lt;label for="387125496">
 &lt;span class="collapsable-code__language">vim&lt;/span>
 &lt;span class="collapsable-code__title">~/.vim/config/theme.vim&lt;/span>
 &lt;span class="collapsable-code__toggle" data-label-expand="△" data-label-collapse="▽">&lt;/span>
@@ -155,8 +155,8 @@ let NERDTreeShowHidden = 1
 &lt;/code>&lt;/pre>
 &lt;/div>
 &lt;div class="collapsable-code">
-&lt;input id="832416579" type="checkbox" checked />
-&lt;label for="832416579">
+&lt;input id="764581293" type="checkbox" checked />
+&lt;label for="764581293">
 &lt;span class="collapsable-code__language">vim&lt;/span>
 &lt;span class="collapsable-code__title">~/.vim/config/fzf.vim&lt;/span>
 &lt;span class="collapsable-code__toggle" data-label-expand="△" data-label-collapse="▽">&lt;/span>
@@ -170,8 +170,8 @@ let $FZF_DEFAULT_OPTS = &amp;#39;--layout=reverse --info=inline&amp;#39;
 &lt;/code>&lt;/pre>
 &lt;/div>
 &lt;div class="collapsable-code">
-&lt;input id="534786921" type="checkbox" checked />
-&lt;label for="534786921">
+&lt;input id="875612439" type="checkbox" checked />
+&lt;label for="875612439">
 &lt;span class="collapsable-code__language">vim&lt;/span>
 &lt;span class="collapsable-code__title">~/.vim/config/treesitter.vim&lt;/span>
 &lt;span class="collapsable-code__toggle" data-label-expand="△" data-label-collapse="▽">&lt;/span>
@@ -195,8 +195,8 @@ EOF
 &lt;/code>&lt;/pre>
 &lt;/div>
 &lt;div class="collapsable-code">
-&lt;input id="594623718" type="checkbox" checked />
-&lt;label for="594623718">
+&lt;input id="341782659" type="checkbox" checked />
+&lt;label for="341782659">
 &lt;span class="collapsable-code__language">vim&lt;/span>
 &lt;span class="collapsable-code__title">~/.vim/config/vimwiki.vim&lt;/span>
 &lt;span class="collapsable-code__toggle" data-label-expand="△" data-label-collapse="▽">&lt;/span>
@@ -213,8 +213,8 @@ let g:vimwiki_global_ext = 0
 &lt;/code>&lt;/pre>
 &lt;/div>
 &lt;div class="collapsable-code">
-&lt;input id="548693217" type="checkbox" checked />
-&lt;label for="548693217">
+&lt;input id="934751826" type="checkbox" checked />
+&lt;label for="934751826">
 &lt;span class="collapsable-code__language">vim&lt;/span>
 &lt;span class="collapsable-code__title">~/.vim/config/lsp_config.vim&lt;/span>
 &lt;span class="collapsable-code__toggle" data-label-expand="△" data-label-collapse="▽">&lt;/span>
@@ -244,8 +244,8 @@ autocmd BufWritePre *.json lua vim.lsp.buf.formatting_sync(nil, 100)
 &lt;/code>&lt;/pre>
 &lt;/div>
 &lt;div class="collapsable-code">
-&lt;input id="127386549" type="checkbox" checked />
-&lt;label for="127386549">
+&lt;input id="274198365" type="checkbox" checked />
+&lt;label for="274198365">
 &lt;span class="collapsable-code__language">vim&lt;/span>
 &lt;span class="collapsable-code__title">~/.vim/config/ale.vim&lt;/span>
 &lt;span class="collapsable-code__toggle" data-label-expand="△" data-label-collapse="▽">&lt;/span>
@@ -284,8 +284,8 @@ let g:ale_fix_on_save = 1
 &lt;/code>&lt;/pre>
 &lt;/div>
 &lt;div class="collapsable-code">
-&lt;input id="418257639" type="checkbox" checked />
-&lt;label for="418257639">
+&lt;input id="289675314" type="checkbox" checked />
+&lt;label for="289675314">
 &lt;span class="collapsable-code__language">vim&lt;/span>
 &lt;span class="collapsable-code__title">~/.vim/config/vimspector.vim&lt;/span>
 &lt;span class="collapsable-code__toggle" data-label-expand="△" data-label-collapse="▽">&lt;/span>
@@ -303,8 +303,8 @@ nmap &amp;lt;leader&amp;gt;do &amp;lt;Plug&amp;gt;VimspectorStepOut
 &lt;/code>&lt;/pre>
 &lt;/div>
 &lt;div class="collapsable-code">
-&lt;input id="614935728" type="checkbox" checked />
-&lt;label for="614935728">
+&lt;input id="214958673" type="checkbox" checked />
+&lt;label for="214958673">
 &lt;span class="collapsable-code__language">vim&lt;/span>
 &lt;span class="collapsable-code__title">~/.vim/config/maximizer.vim&lt;/span>
 &lt;span class="collapsable-code__toggle" data-label-expand="△" data-label-collapse="▽">&lt;/span>
@@ -314,8 +314,8 @@ map &amp;lt;C-W&amp;gt;z :MaximizerToggle&amp;lt;CR&amp;gt;
 &lt;/code>&lt;/pre>
 &lt;/div>
 &lt;div class="collapsable-code">
-&lt;input id="215698734" type="checkbox" checked />
-&lt;label for="215698734">
+&lt;input id="952634718" type="checkbox" checked />
+&lt;label for="952634718">
 &lt;span class="collapsable-code__language">lua&lt;/span>
 &lt;span class="collapsable-code__title">~/.vim/config/compe.lua&lt;/span>
 &lt;span class="collapsable-code__toggle" data-label-expand="△" data-label-collapse="▽">&lt;/span>
@@ -350,8 +350,8 @@ snippets_nvim = true;
 &lt;/code>&lt;/pre>
 &lt;/div>
 &lt;div class="collapsable-code">
-&lt;input id="972865431" type="checkbox" checked />
-&lt;label for="972865431">
+&lt;input id="175694823" type="checkbox" checked />
+&lt;label for="175694823">
 &lt;span class="collapsable-code__language">lua&lt;/span>
 &lt;span class="collapsable-code__title">~/.vim/config/lspfuzzy.lua&lt;/span>
 &lt;span class="collapsable-code__toggle" data-label-expand="△" data-label-collapse="▽">&lt;/span>
@@ -374,8 +374,8 @@ fzf_trim = true, -- trim FZF entries
 &lt;/div>
 &lt;h3 id="external-config">External Config&lt;/h3>
 &lt;div class="collapsable-code">
-&lt;input id="781642953" type="checkbox" checked />
-&lt;label for="781642953">
+&lt;input id="426537918" type="checkbox" checked />
+&lt;label for="426537918">
 &lt;span class="collapsable-code__language">vim&lt;/span>
 &lt;span class="collapsable-code__title">~/.vim/config/autoclose.vim&lt;/span>
 &lt;span class="collapsable-code__toggle" data-label-expand="△" data-label-collapse="▽">&lt;/span>
@@ -455,8 +455,8 @@ inoremap {,&amp;lt;CR&amp;gt; {&amp;lt;CR&amp;gt;},&amp;lt;ESC&amp;gt;O
 &lt;/code>&lt;/pre>
 &lt;/div>
 &lt;div class="collapsable-code">
-&lt;input id="517423986" type="checkbox" checked />
-&lt;label for="517423986">
+&lt;input id="568947132" type="checkbox" checked />
+&lt;label for="568947132">
 &lt;span class="collapsable-code__language">vim&lt;/span>
 &lt;span class="collapsable-code__title">~/.vim/config/custom_map.vim&lt;/span>
 &lt;span class="collapsable-code__toggle" data-label-expand="△" data-label-collapse="▽">&lt;/span>
@@ -477,8 +477,8 @@ nnoremap &amp;lt;silent&amp;gt; &amp;lt;C-W&amp;gt;&amp;lt;Right&amp;gt; :exe &a
 &lt;/code>&lt;/pre>
 &lt;/div>
 &lt;div class="collapsable-code">
-&lt;input id="317269485" type="checkbox" checked />
-&lt;label for="317269485">
+&lt;input id="137958642" type="checkbox" checked />
+&lt;label for="137958642">
 &lt;span class="collapsable-code__language">vim&lt;/span>
 &lt;span class="collapsable-code__title">~/.vim/config/session.vim&lt;/span>
 &lt;span class="collapsable-code__toggle" data-label-expand="△" data-label-collapse="▽">&lt;/span>
