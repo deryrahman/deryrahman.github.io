@@ -36,6 +36,9 @@ paginate = 2
   # it's set to `true` by default
   # oneHeadingSize = false
 
+  # author avatar url
+  authorAvatarURL = "https://avatars.githubusercontent.com/u/3104624?v=4"
+
 [params.twitter]
   # set Twitter handles for Twitter cards
   # see https://developer.twitter.com/en/docs/tweets/optimize-with-cards/guides/getting-started#card-and-content-attribution
