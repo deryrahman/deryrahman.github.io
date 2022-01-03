@@ -1,18 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Dery R Ahaddienata</title><link>https://dery.dev/</link><description>Recent content on Dery R Ahaddienata</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Sat, 25 Dec 2021 16:04:08 +0700</lastBuildDate><atom:link href="https://dery.dev/index.xml" rel="self" type="application/rss+xml"/><item><title>Lesson Learned 2021</title><link>https://dery.dev/posts/lesson-learned-2021/</link><pubDate>Sat, 25 Dec 2021 16:04:08 +0700</pubDate><guid>https://dery.dev/posts/lesson-learned-2021/</guid><description>During 2021, most of the time, I felt lost. But, thanks God, they give me precious lessons. As the year will be ended, I always spend time to write reflection in my personal diary. But, for now, I would like to write it down to my blog. So here&amp;rsquo;s some key takeaways I&amp;rsquo;ve got during 2021.
-Mental models and resilience To understand how the world works, I spent time to read 2 books:</description><content>&lt;p>During 2021, most of the time, I felt lost. But, thanks God, they give me precious lessons. As the year will be ended, I always spend time to write reflection in my personal diary. But, for now, I would like to write it down to my blog. So here&amp;rsquo;s some key takeaways I&amp;rsquo;ve got during 2021.&lt;/p>
-&lt;h2 id="mental-models-and-resilience">Mental models and resilience&lt;/h2>
-&lt;p>To understand how the world works, I spent time to read 2 books:&lt;/p>
-&lt;ul>
-&lt;li>Thinking in Systems: A Primer - Donella Meadows&lt;/li>
-&lt;li>The Great Mental Models Volume 1: General Thinking Concepts - Shane Parrish
-In a nutshell, those books teach me how to think in a right way. We know, there&amp;rsquo;s many misconception how we understand things because of poor ability to ingest the information. I definitely want to reread these books in 2022. 🤓&lt;/li>
-&lt;/ul>
-&lt;p>2021 is tough, I&amp;rsquo;ve badly performed self diagnoses that I was mentally exhausted. There&amp;rsquo;s some sequence of events that leads me to think and act differently. Something that I can&amp;rsquo;t barely share through this post. But, this is the lesson I&amp;rsquo;ve learned, everything happen unpredictably, no decision is perfect, and everything is a tradeoff. Just calm, do what you believe in that moment, and let it go. 💃&lt;/p>
-&lt;h2 id="extended-memory">Extended memory&lt;/h2>
-&lt;p>I often easily forget something, so I utilized note taking app as my extended memory 😄. I created Get the Things Done (GTD), the method developed by David Allen, in Notion. So yeah, I don&amp;rsquo;t really care about the heavy task to remember what I need to do, I just focus on the thing I do at the moment. Let the memory persist in Notion rather than store it in my memory. I believe human&amp;rsquo;s brain is designed to perform the processing task rather than memorizing the detail. We can leverage the effectiveness through delegate the memorizing task on computer.&lt;/p>
-&lt;h2 id="healthy-habits">Healthy habits&lt;/h2>
-&lt;p>Yeah, I also tracked my habits in Notion. Fyi, I create a personal tracker that I need to do everyday, currently it&amp;rsquo;s 12-15 checklist, so huge and I felt burnout to do all this personal track. So in 2022, I decide to retract it, and leave my tracker clean (&amp;lt;6 daily checklist). I didn&amp;rsquo;t know if it&amp;rsquo;s wrong until I work on it right? OOT 🍒&lt;/p>
-&lt;p>There&amp;rsquo;s only several lessons I&amp;rsquo;ve learned during 2021. I hope, 2022, I can embrace the mistake I will unintendedly created and take a maximum learning from it to become a better person.&lt;/p></content></item><item><title>Payments</title><link>https://dery.dev/payments/</link><pubDate>Mon, 25 Oct 2021 12:18:14 +0700</pubDate><guid>https://dery.dev/payments/</guid><description> BCA: QR Code GoPay: QR Code OVO: QR Code Dana: QR Code Jenius: $deryrahman</description><content>&lt;ul>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Dery R Ahaddienata</title><link>https://dery.dev/</link><description>Recent content on Dery R Ahaddienata</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Sat, 25 Dec 2021 16:04:08 +0700</lastBuildDate><atom:link href="https://dery.dev/index.xml" rel="self" type="application/rss+xml"/><item><title>Lesson Learned 2021</title><link>https://dery.dev/posts/lesson-learned-2021/</link><pubDate>Sat, 25 Dec 2021 16:04:08 +0700</pubDate><guid>https://dery.dev/posts/lesson-learned-2021/</guid><description>[This post is marked as private]</description><content>&lt;p>&lt;em>[This post is marked as private]&lt;/em>&lt;/p></content></item><item><title>Payments</title><link>https://dery.dev/payments/</link><pubDate>Mon, 25 Oct 2021 12:18:14 +0700</pubDate><guid>https://dery.dev/payments/</guid><description> BCA: QR Code GoPay: QR Code OVO: QR Code Dana: QR Code Jenius: $deryrahman</description><content>&lt;ul>
 &lt;li>BCA: &lt;a href="https://dery.dev/static/img/payments/bca.jpeg">QR Code&lt;/a>&lt;/li>
 &lt;li>GoPay: &lt;a href="https://dery.dev/static/img/payments/gopay.jpeg">QR Code&lt;/a>&lt;/li>
 &lt;li>OVO: &lt;a href="https://dery.dev/static/img/payments/ovo.jpeg">QR Code&lt;/a>&lt;/li>
@@ -56,8 +42,8 @@ In a nutshell, those books teach me how to think in a right way. We know, there&
 &lt;h2 id="dot-files">Dot Files&lt;/h2>
 &lt;h3 id="plugin-config">Plugin Config&lt;/h3>
 &lt;div class="collapsable-code">
-&lt;input id="128346795" type="checkbox" checked />
-&lt;label for="128346795">
+&lt;input id="745629318" type="checkbox" checked />
+&lt;label for="745629318">
 &lt;span class="collapsable-code__language">vim&lt;/span>
 &lt;span class="collapsable-code__title">~/.vimrc&lt;/span>
 &lt;span class="collapsable-code__toggle" data-label-expand="△" data-label-collapse="▽">&lt;/span>
@@ -124,8 +110,8 @@ endif
 &lt;/code>&lt;/pre>
 &lt;/div>
 &lt;div class="collapsable-code">
-&lt;input id="172459836" type="checkbox" checked />
-&lt;label for="172459836">
+&lt;input id="532681794" type="checkbox" checked />
+&lt;label for="532681794">
 &lt;span class="collapsable-code__language">vim&lt;/span>
 &lt;span class="collapsable-code__title">~/.vim/config/theme.vim&lt;/span>
 &lt;span class="collapsable-code__toggle" data-label-expand="△" data-label-collapse="▽">&lt;/span>
@@ -169,8 +155,8 @@ let NERDTreeShowHidden = 1
 &lt;/code>&lt;/pre>
 &lt;/div>
 &lt;div class="collapsable-code">
-&lt;input id="826957413" type="checkbox" checked />
-&lt;label for="826957413">
+&lt;input id="613294857" type="checkbox" checked />
+&lt;label for="613294857">
 &lt;span class="collapsable-code__language">vim&lt;/span>
 &lt;span class="collapsable-code__title">~/.vim/config/fzf.vim&lt;/span>
 &lt;span class="collapsable-code__toggle" data-label-expand="△" data-label-collapse="▽">&lt;/span>
@@ -184,8 +170,8 @@ let $FZF_DEFAULT_OPTS = &amp;#39;--layout=reverse --info=inline&amp;#39;
 &lt;/code>&lt;/pre>
 &lt;/div>
 &lt;div class="collapsable-code">
-&lt;input id="836124975" type="checkbox" checked />
-&lt;label for="836124975">
+&lt;input id="246537981" type="checkbox" checked />
+&lt;label for="246537981">
 &lt;span class="collapsable-code__language">vim&lt;/span>
 &lt;span class="collapsable-code__title">~/.vim/config/treesitter.vim&lt;/span>
 &lt;span class="collapsable-code__toggle" data-label-expand="△" data-label-collapse="▽">&lt;/span>
@@ -209,8 +195,8 @@ EOF
 &lt;/code>&lt;/pre>
 &lt;/div>
 &lt;div class="collapsable-code">
-&lt;input id="169324857" type="checkbox" checked />
-&lt;label for="169324857">
+&lt;input id="134827596" type="checkbox" checked />
+&lt;label for="134827596">
 &lt;span class="collapsable-code__language">vim&lt;/span>
 &lt;span class="collapsable-code__title">~/.vim/config/vimwiki.vim&lt;/span>
 &lt;span class="collapsable-code__toggle" data-label-expand="△" data-label-collapse="▽">&lt;/span>
@@ -227,8 +213,8 @@ let g:vimwiki_global_ext = 0
 &lt;/code>&lt;/pre>
 &lt;/div>
 &lt;div class="collapsable-code">
-&lt;input id="482396517" type="checkbox" checked />
-&lt;label for="482396517">
+&lt;input id="632548197" type="checkbox" checked />
+&lt;label for="632548197">
 &lt;span class="collapsable-code__language">vim&lt;/span>
 &lt;span class="collapsable-code__title">~/.vim/config/lsp_config.vim&lt;/span>
 &lt;span class="collapsable-code__toggle" data-label-expand="△" data-label-collapse="▽">&lt;/span>
@@ -258,8 +244,8 @@ autocmd BufWritePre *.json lua vim.lsp.buf.formatting_sync(nil, 100)
 &lt;/code>&lt;/pre>
 &lt;/div>
 &lt;div class="collapsable-code">
-&lt;input id="491756382" type="checkbox" checked />
-&lt;label for="491756382">
+&lt;input id="267589341" type="checkbox" checked />
+&lt;label for="267589341">
 &lt;span class="collapsable-code__language">vim&lt;/span>
 &lt;span class="collapsable-code__title">~/.vim/config/ale.vim&lt;/span>
 &lt;span class="collapsable-code__toggle" data-label-expand="△" data-label-collapse="▽">&lt;/span>
@@ -298,8 +284,8 @@ let g:ale_fix_on_save = 1
 &lt;/code>&lt;/pre>
 &lt;/div>
 &lt;div class="collapsable-code">
-&lt;input id="354286971" type="checkbox" checked />
-&lt;label for="354286971">
+&lt;input id="731258469" type="checkbox" checked />
+&lt;label for="731258469">
 &lt;span class="collapsable-code__language">vim&lt;/span>
 &lt;span class="collapsable-code__title">~/.vim/config/vimspector.vim&lt;/span>
 &lt;span class="collapsable-code__toggle" data-label-expand="△" data-label-collapse="▽">&lt;/span>
@@ -317,8 +303,8 @@ nmap &amp;lt;leader&amp;gt;do &amp;lt;Plug&amp;gt;VimspectorStepOut
 &lt;/code>&lt;/pre>
 &lt;/div>
 &lt;div class="collapsable-code">
-&lt;input id="916542378" type="checkbox" checked />
-&lt;label for="916542378">
+&lt;input id="785231649" type="checkbox" checked />
+&lt;label for="785231649">
 &lt;span class="collapsable-code__language">vim&lt;/span>
 &lt;span class="collapsable-code__title">~/.vim/config/maximizer.vim&lt;/span>
 &lt;span class="collapsable-code__toggle" data-label-expand="△" data-label-collapse="▽">&lt;/span>
@@ -328,8 +314,8 @@ map &amp;lt;C-W&amp;gt;z :MaximizerToggle&amp;lt;CR&amp;gt;
 &lt;/code>&lt;/pre>
 &lt;/div>
 &lt;div class="collapsable-code">
-&lt;input id="951763248" type="checkbox" checked />
-&lt;label for="951763248">
+&lt;input id="134258796" type="checkbox" checked />
+&lt;label for="134258796">
 &lt;span class="collapsable-code__language">lua&lt;/span>
 &lt;span class="collapsable-code__title">~/.vim/config/compe.lua&lt;/span>
 &lt;span class="collapsable-code__toggle" data-label-expand="△" data-label-collapse="▽">&lt;/span>
@@ -364,8 +350,8 @@ snippets_nvim = true;
 &lt;/code>&lt;/pre>
 &lt;/div>
 &lt;div class="collapsable-code">
-&lt;input id="637812459" type="checkbox" checked />
-&lt;label for="637812459">
+&lt;input id="832751649" type="checkbox" checked />
+&lt;label for="832751649">
 &lt;span class="collapsable-code__language">lua&lt;/span>
 &lt;span class="collapsable-code__title">~/.vim/config/lspfuzzy.lua&lt;/span>
 &lt;span class="collapsable-code__toggle" data-label-expand="△" data-label-collapse="▽">&lt;/span>
@@ -388,8 +374,8 @@ fzf_trim = true, -- trim FZF entries
 &lt;/div>
 &lt;h3 id="external-config">External Config&lt;/h3>
 &lt;div class="collapsable-code">
-&lt;input id="813642795" type="checkbox" checked />
-&lt;label for="813642795">
+&lt;input id="846125793" type="checkbox" checked />
+&lt;label for="846125793">
 &lt;span class="collapsable-code__language">vim&lt;/span>
 &lt;span class="collapsable-code__title">~/.vim/config/autoclose.vim&lt;/span>
 &lt;span class="collapsable-code__toggle" data-label-expand="△" data-label-collapse="▽">&lt;/span>
@@ -469,8 +455,8 @@ inoremap {,&amp;lt;CR&amp;gt; {&amp;lt;CR&amp;gt;},&amp;lt;ESC&amp;gt;O
 &lt;/code>&lt;/pre>
 &lt;/div>
 &lt;div class="collapsable-code">
-&lt;input id="536941782" type="checkbox" checked />
-&lt;label for="536941782">
+&lt;input id="163248795" type="checkbox" checked />
+&lt;label for="163248795">
 &lt;span class="collapsable-code__language">vim&lt;/span>
 &lt;span class="collapsable-code__title">~/.vim/config/custom_map.vim&lt;/span>
 &lt;span class="collapsable-code__toggle" data-label-expand="△" data-label-collapse="▽">&lt;/span>
@@ -491,8 +477,8 @@ nnoremap &amp;lt;silent&amp;gt; &amp;lt;C-W&amp;gt;&amp;lt;Right&amp;gt; :exe &a
 &lt;/code>&lt;/pre>
 &lt;/div>
 &lt;div class="collapsable-code">
-&lt;input id="719435628" type="checkbox" checked />
-&lt;label for="719435628">
+&lt;input id="365981724" type="checkbox" checked />
+&lt;label for="365981724">
 &lt;span class="collapsable-code__language">vim&lt;/span>
 &lt;span class="collapsable-code__title">~/.vim/config/session.vim&lt;/span>
 &lt;span class="collapsable-code__toggle" data-label-expand="△" data-label-collapse="▽">&lt;/span>
