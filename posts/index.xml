@@ -1,47 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on Dery R Ahaddienata</title><link>https://dery.dev/posts/</link><description>Recent content in Posts on Dery R Ahaddienata</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Tue, 04 Jan 2022 11:44:52 +0700</lastBuildDate><atom:link href="https://dery.dev/posts/index.xml" rel="self" type="application/rss+xml"/><item><title>Switch Back to VS Code</title><link>https://dery.dev/posts/switch-back-to-vscode/</link><pubDate>Tue, 04 Jan 2022 11:44:52 +0700</pubDate><guid>https://dery.dev/posts/switch-back-to-vscode/</guid><description>It&amp;rsquo;s about 1.5 year I use vim as my default IDE. But, recently I found reduction in term of productivity when using vim for heavy-tools coding task. So, here, I make a simple comparision between VS Code and Vim, how one has advantages than other.
-Comparison Vim / Neovim VS Code Typing Speed Really fast (+) Just so-so (.) Configuration Highly configurable (+) but it&amp;rsquo;s hard &amp;amp; takes so much time (-) Built-in, support many plugin and has more standard plugin configuration than vim (+) Widely Use Github star 49.</description><content>&lt;p>It&amp;rsquo;s about 1.5 year I use vim as my default IDE. But, recently I found reduction in term of productivity when using vim for heavy-tools coding task. So, here, I make a simple comparision between VS Code and Vim, how one has advantages than other.&lt;/p>
-&lt;h2 id="comparison">Comparison&lt;/h2>
-&lt;table>
-&lt;thead>
-&lt;tr>
-&lt;th>&lt;/th>
-&lt;th>Vim / Neovim&lt;/th>
-&lt;th>VS Code&lt;/th>
-&lt;/tr>
-&lt;/thead>
-&lt;tbody>
-&lt;tr>
-&lt;td>Typing Speed&lt;/td>
-&lt;td>Really fast (+)&lt;/td>
-&lt;td>Just so-so (.)&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>Configuration&lt;/td>
-&lt;td>Highly configurable (+) but it&amp;rsquo;s hard &amp;amp; takes so much time (-)&lt;/td>
-&lt;td>Built-in, support many plugin and has more standard plugin configuration than vim (+)&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>Widely Use&lt;/td>
-&lt;td>Github star 49.8k (nvim), 25.7k (vim)&lt;/td>
-&lt;td>Github star 126k&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>Coolness 😎&lt;/td>
-&lt;td>Absolute win the battle&lt;/td>
-&lt;td>Not so cool but just enough coolness&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>Performance&lt;/td>
-&lt;td>Amazingly powerful (+), but to make vim support modern IDE, installing many plugin make the performance even worst (-)&lt;/td>
-&lt;td>Still powerful, I believe VS Code might leverage the resource more efficient than vim (+)&lt;/td>
-&lt;/tr>
-&lt;/tbody>
-&lt;/table>
-&lt;h2 id="analyze">Analyze&lt;/h2>
-&lt;p>I felt the open source project is still the best but today&amp;rsquo;s open source need to have backup from gigantic tech company to support their maintainer. VS Code is under microsoft, I believe it&amp;rsquo;s more sustain than Vim / NVim. Vim configuration is not so standard, hard to maintain, even NVim provide more realible configuration format, but it&amp;rsquo;s still hard to introduce new config. If you use vim to develop vim, using vim is totally fine, but if you use vim to develop other app, I would not recommend, it takes lot of time, and most of the time, with dynamic tools like we face today, using vim means you will learn 80% vim and 20% code, deployment, etc. Since vim requires extra mental aritmatic model, we will lost the important of learning how to build software itself. Also compared with vscode, vscode has advantages when you need to move to another company / techstack / even pairing with others.&lt;/p>
-&lt;p>Beside those limitation, I believe if you&amp;rsquo;re non novice programmer and have good balance of memorization + aritmetic, you can utilize vim as your productivity tools. If you can takes no-time to configure vim or you know how vim works behind the scene, you can use it. If most of the time, when you&amp;rsquo;re using vim to code, and take only small amount of time learning vim, let say 5%, the rest 95% can be allocated into the coding activity itself.&lt;/p>
-&lt;h2 id="conclusion">Conclusion&lt;/h2>
-&lt;p>So, I decide to use VS Code + Vim interchangebly. I use VS Code for heavy software development task, and use Vim as my go to editing software. By this, I can leverage both advantages. 🔌&lt;/p></content></item><item><title>Lesson Learned 2021</title><link>https://dery.dev/posts/lesson-learned-2021/</link><pubDate>Sat, 25 Dec 2021 16:04:08 +0700</pubDate><guid>https://dery.dev/posts/lesson-learned-2021/</guid><description>[This post is marked as private]</description><content>&lt;p>&lt;em>[This post is marked as private]&lt;/em>&lt;/p></content></item><item><title>July Vim Setup</title><link>https://dery.dev/posts/july-vim-setup/</link><pubDate>Tue, 20 Jul 2021 12:02:09 +0700</pubDate><guid>https://dery.dev/posts/july-vim-setup/</guid><description>I&amp;rsquo;ve been using vim as my default IDE for about a year. Until now I&amp;rsquo;m still improving the vim configuration so that I could do the task even more effective. Now after nvim launch version 0.5.0 which support native LSP client, I immediately tried this feature. Yeps, there&amp;rsquo;re no significant difference when I use LanguageClient-neovim, but since version 0.5.0 has built in feature for LSP client, I would preferably use the built in one.</description><content>&lt;p>I&amp;rsquo;ve been using &lt;a href="https://levelup.gitconnected.com/tweak-your-vim-as-a-powerful-ide-fcea5f7eff9c">vim as my default IDE&lt;/a> for about a year. Until now I&amp;rsquo;m still improving the vim configuration so that I could do the task even more effective. Now after &lt;a href="https://neovim.io/roadmap/">nvim launch version 0.5.0&lt;/a> which support native LSP client, I immediately tried this feature. Yeps, there&amp;rsquo;re no significant difference when I use &lt;a href="https://github.com/autozimu/LanguageClient-neovim">LanguageClient-neovim&lt;/a>, but since version 0.5.0 has built in feature for LSP client, I would preferably use the built in one.&lt;/p>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on Dery R Ahaddienata</title><link>https://dery.dev/posts/</link><description>Recent content in Posts on Dery R Ahaddienata</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Sat, 25 Dec 2021 16:04:08 +0700</lastBuildDate><atom:link href="https://dery.dev/posts/index.xml" rel="self" type="application/rss+xml"/><item><title>Lesson Learned 2021</title><link>https://dery.dev/posts/lesson-learned-2021/</link><pubDate>Sat, 25 Dec 2021 16:04:08 +0700</pubDate><guid>https://dery.dev/posts/lesson-learned-2021/</guid><description>[This post is marked as private]</description><content>&lt;p>&lt;em>[This post is marked as private]&lt;/em>&lt;/p></content></item><item><title>July Vim Setup</title><link>https://dery.dev/posts/july-vim-setup/</link><pubDate>Tue, 20 Jul 2021 12:02:09 +0700</pubDate><guid>https://dery.dev/posts/july-vim-setup/</guid><description>I&amp;rsquo;ve been using vim as my default IDE for about a year. Until now I&amp;rsquo;m still improving the vim configuration so that I could do the task even more effective. Now after nvim launch version 0.5.0 which support native LSP client, I immediately tried this feature. Yeps, there&amp;rsquo;re no significant difference when I use LanguageClient-neovim, but since version 0.5.0 has built in feature for LSP client, I would preferably use the built in one.</description><content>&lt;p>I&amp;rsquo;ve been using &lt;a href="https://levelup.gitconnected.com/tweak-your-vim-as-a-powerful-ide-fcea5f7eff9c">vim as my default IDE&lt;/a> for about a year. Until now I&amp;rsquo;m still improving the vim configuration so that I could do the task even more effective. Now after &lt;a href="https://neovim.io/roadmap/">nvim launch version 0.5.0&lt;/a> which support native LSP client, I immediately tried this feature. Yeps, there&amp;rsquo;re no significant difference when I use &lt;a href="https://github.com/autozimu/LanguageClient-neovim">LanguageClient-neovim&lt;/a>, but since version 0.5.0 has built in feature for LSP client, I would preferably use the built in one.&lt;/p>
 &lt;p>If we compare with &lt;a href="https://levelup.gitconnected.com/tweak-your-vim-as-a-powerful-ide-fcea5f7eff9c">my last setup&lt;/a>, we can see significant config differences. And because I also planned to try contribute on &lt;a href="https://github.com/ChristianChiarulli/LunarVim">LunarVim project&lt;/a>, I would like to documenting all of the setup I used now.&lt;/p>
 &lt;p>&lt;a href="https://asciinema.org/a/426314">&lt;img src="https://asciinema.org/a/426314.svg" alt="asciicast">&lt;/a>&lt;/p>
 &lt;h2 id="plugins">Plugins&lt;/h2>
@@ -79,8 +36,8 @@ Comparison Vim / Neovim VS Code Typing Speed Really fast (+) Just so-so (.) Conf
 &lt;h2 id="dot-files">Dot Files&lt;/h2>
 &lt;h3 id="plugin-config">Plugin Config&lt;/h3>
 &lt;div class="collapsable-code">
-&lt;input id="825317946" type="checkbox" checked />
-&lt;label for="825317946">
+&lt;input id="721489635" type="checkbox" checked />
+&lt;label for="721489635">
 &lt;span class="collapsable-code__language">vim&lt;/span>
 &lt;span class="collapsable-code__title">~/.vimrc&lt;/span>
 &lt;span class="collapsable-code__toggle" data-label-expand="△" data-label-collapse="▽">&lt;/span>
@@ -147,8 +104,8 @@ endif
 &lt;/code>&lt;/pre>
 &lt;/div>
 &lt;div class="collapsable-code">
-&lt;input id="631729584" type="checkbox" checked />
-&lt;label for="631729584">
+&lt;input id="187265439" type="checkbox" checked />
+&lt;label for="187265439">
 &lt;span class="collapsable-code__language">vim&lt;/span>
 &lt;span class="collapsable-code__title">~/.vim/config/theme.vim&lt;/span>
 &lt;span class="collapsable-code__toggle" data-label-expand="△" data-label-collapse="▽">&lt;/span>
@@ -192,8 +149,8 @@ let NERDTreeShowHidden = 1
 &lt;/code>&lt;/pre>
 &lt;/div>
 &lt;div class="collapsable-code">
-&lt;input id="162835749" type="checkbox" checked />
-&lt;label for="162835749">
+&lt;input id="897632415" type="checkbox" checked />
+&lt;label for="897632415">
 &lt;span class="collapsable-code__language">vim&lt;/span>
 &lt;span class="collapsable-code__title">~/.vim/config/fzf.vim&lt;/span>
 &lt;span class="collapsable-code__toggle" data-label-expand="△" data-label-collapse="▽">&lt;/span>
@@ -207,8 +164,8 @@ let $FZF_DEFAULT_OPTS = &amp;#39;--layout=reverse --info=inline&amp;#39;
 &lt;/code>&lt;/pre>
 &lt;/div>
 &lt;div class="collapsable-code">
-&lt;input id="935274861" type="checkbox" checked />
-&lt;label for="935274861">
+&lt;input id="374512689" type="checkbox" checked />
+&lt;label for="374512689">
 &lt;span class="collapsable-code__language">vim&lt;/span>
 &lt;span class="collapsable-code__title">~/.vim/config/treesitter.vim&lt;/span>
 &lt;span class="collapsable-code__toggle" data-label-expand="△" data-label-collapse="▽">&lt;/span>
@@ -232,8 +189,8 @@ EOF
 &lt;/code>&lt;/pre>
 &lt;/div>
 &lt;div class="collapsable-code">
-&lt;input id="138926475" type="checkbox" checked />
-&lt;label for="138926475">
+&lt;input id="589214763" type="checkbox" checked />
+&lt;label for="589214763">
 &lt;span class="collapsable-code__language">vim&lt;/span>
 &lt;span class="collapsable-code__title">~/.vim/config/vimwiki.vim&lt;/span>
 &lt;span class="collapsable-code__toggle" data-label-expand="△" data-label-collapse="▽">&lt;/span>
@@ -250,8 +207,8 @@ let g:vimwiki_global_ext = 0
 &lt;/code>&lt;/pre>
 &lt;/div>
 &lt;div class="collapsable-code">
-&lt;input id="816723594" type="checkbox" checked />
-&lt;label for="816723594">
+&lt;input id="176342895" type="checkbox" checked />
+&lt;label for="176342895">
 &lt;span class="collapsable-code__language">vim&lt;/span>
 &lt;span class="collapsable-code__title">~/.vim/config/lsp_config.vim&lt;/span>
 &lt;span class="collapsable-code__toggle" data-label-expand="△" data-label-collapse="▽">&lt;/span>
@@ -281,8 +238,8 @@ autocmd BufWritePre *.json lua vim.lsp.buf.formatting_sync(nil, 100)
 &lt;/code>&lt;/pre>
 &lt;/div>
 &lt;div class="collapsable-code">
-&lt;input id="341627589" type="checkbox" checked />
-&lt;label for="341627589">
+&lt;input id="159724683" type="checkbox" checked />
+&lt;label for="159724683">
 &lt;span class="collapsable-code__language">vim&lt;/span>
 &lt;span class="collapsable-code__title">~/.vim/config/ale.vim&lt;/span>
 &lt;span class="collapsable-code__toggle" data-label-expand="△" data-label-collapse="▽">&lt;/span>
@@ -321,8 +278,8 @@ let g:ale_fix_on_save = 1
 &lt;/code>&lt;/pre>
 &lt;/div>
 &lt;div class="collapsable-code">
-&lt;input id="184965273" type="checkbox" checked />
-&lt;label for="184965273">
+&lt;input id="346172985" type="checkbox" checked />
+&lt;label for="346172985">
 &lt;span class="collapsable-code__language">vim&lt;/span>
 &lt;span class="collapsable-code__title">~/.vim/config/vimspector.vim&lt;/span>
 &lt;span class="collapsable-code__toggle" data-label-expand="△" data-label-collapse="▽">&lt;/span>
@@ -340,8 +297,8 @@ nmap &amp;lt;leader&amp;gt;do &amp;lt;Plug&amp;gt;VimspectorStepOut
 &lt;/code>&lt;/pre>
 &lt;/div>
 &lt;div class="collapsable-code">
-&lt;input id="473269815" type="checkbox" checked />
-&lt;label for="473269815">
+&lt;input id="491256783" type="checkbox" checked />
+&lt;label for="491256783">
 &lt;span class="collapsable-code__language">vim&lt;/span>
 &lt;span class="collapsable-code__title">~/.vim/config/maximizer.vim&lt;/span>
 &lt;span class="collapsable-code__toggle" data-label-expand="△" data-label-collapse="▽">&lt;/span>
@@ -351,8 +308,8 @@ map &amp;lt;C-W&amp;gt;z :MaximizerToggle&amp;lt;CR&amp;gt;
 &lt;/code>&lt;/pre>
 &lt;/div>
 &lt;div class="collapsable-code">
-&lt;input id="534817962" type="checkbox" checked />
-&lt;label for="534817962">
+&lt;input id="496157283" type="checkbox" checked />
+&lt;label for="496157283">
 &lt;span class="collapsable-code__language">lua&lt;/span>
 &lt;span class="collapsable-code__title">~/.vim/config/compe.lua&lt;/span>
 &lt;span class="collapsable-code__toggle" data-label-expand="△" data-label-collapse="▽">&lt;/span>
@@ -387,8 +344,8 @@ snippets_nvim = true;
 &lt;/code>&lt;/pre>
 &lt;/div>
 &lt;div class="collapsable-code">
-&lt;input id="932581764" type="checkbox" checked />
-&lt;label for="932581764">
+&lt;input id="745821396" type="checkbox" checked />
+&lt;label for="745821396">
 &lt;span class="collapsable-code__language">lua&lt;/span>
 &lt;span class="collapsable-code__title">~/.vim/config/lspfuzzy.lua&lt;/span>
 &lt;span class="collapsable-code__toggle" data-label-expand="△" data-label-collapse="▽">&lt;/span>
@@ -411,8 +368,8 @@ fzf_trim = true, -- trim FZF entries
 &lt;/div>
 &lt;h3 id="external-config">External Config&lt;/h3>
 &lt;div class="collapsable-code">
-&lt;input id="259361487" type="checkbox" checked />
-&lt;label for="259361487">
+&lt;input id="762915384" type="checkbox" checked />
+&lt;label for="762915384">
 &lt;span class="collapsable-code__language">vim&lt;/span>
 &lt;span class="collapsable-code__title">~/.vim/config/autoclose.vim&lt;/span>
 &lt;span class="collapsable-code__toggle" data-label-expand="△" data-label-collapse="▽">&lt;/span>
@@ -492,8 +449,8 @@ inoremap {,&amp;lt;CR&amp;gt; {&amp;lt;CR&amp;gt;},&amp;lt;ESC&amp;gt;O
 &lt;/code>&lt;/pre>
 &lt;/div>
 &lt;div class="collapsable-code">
-&lt;input id="261759438" type="checkbox" checked />
-&lt;label for="261759438">
+&lt;input id="943756821" type="checkbox" checked />
+&lt;label for="943756821">
 &lt;span class="collapsable-code__language">vim&lt;/span>
 &lt;span class="collapsable-code__title">~/.vim/config/custom_map.vim&lt;/span>
 &lt;span class="collapsable-code__toggle" data-label-expand="△" data-label-collapse="▽">&lt;/span>
@@ -514,8 +471,8 @@ nnoremap &amp;lt;silent&amp;gt; &amp;lt;C-W&amp;gt;&amp;lt;Right&amp;gt; :exe &a
 &lt;/code>&lt;/pre>
 &lt;/div>
 &lt;div class="collapsable-code">
-&lt;input id="629713584" type="checkbox" checked />
-&lt;label for="629713584">
+&lt;input id="239584176" type="checkbox" checked />
+&lt;label for="239584176">
 &lt;span class="collapsable-code__language">vim&lt;/span>
 &lt;span class="collapsable-code__title">~/.vim/config/session.vim&lt;/span>
 &lt;span class="collapsable-code__toggle" data-label-expand="△" data-label-collapse="▽">&lt;/span>
