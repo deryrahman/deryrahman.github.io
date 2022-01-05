@@ -28,3 +28,5 @@ date: 2021-07-18T14:17:00+07:00
 * Underpromise, overdeliver
 * Focus on high leverage activities
 * Assertive over aggressive
+* Dynamic over monotone
+* Polymath over specialized
