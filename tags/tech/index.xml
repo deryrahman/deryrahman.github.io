@@ -1,4 +1,19 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>tech on Dery R Ahaddienata</title><link>https://dery.dev/tags/tech/</link><description>Recent content in tech on Dery R Ahaddienata</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Tue, 20 Jul 2021 12:02:09 +0700</lastBuildDate><atom:link href="https://dery.dev/tags/tech/index.xml" rel="self" type="application/rss+xml"/><item><title>July Vim Setup</title><link>https://dery.dev/posts/july-vim-setup/</link><pubDate>Tue, 20 Jul 2021 12:02:09 +0700</pubDate><guid>https://dery.dev/posts/july-vim-setup/</guid><description>I&amp;rsquo;ve been using vim as my default IDE for about a year. Until now I&amp;rsquo;m still improving the vim configuration so that I could do the task even more effective. Now after nvim launch version 0.5.0 which support native LSP client, I immediately tried this feature. Yeps, there&amp;rsquo;re no significant difference when I use LanguageClient-neovim, but since version 0.5.0 has built in feature for LSP client, I would preferably use the built in one.</description><content>&lt;p>I&amp;rsquo;ve been using &lt;a href="https://levelup.gitconnected.com/tweak-your-vim-as-a-powerful-ide-fcea5f7eff9c">vim as my default IDE&lt;/a> for about a year. Until now I&amp;rsquo;m still improving the vim configuration so that I could do the task even more effective. Now after &lt;a href="https://neovim.io/roadmap/">nvim launch version 0.5.0&lt;/a> which support native LSP client, I immediately tried this feature. Yeps, there&amp;rsquo;re no significant difference when I use &lt;a href="https://github.com/autozimu/LanguageClient-neovim">LanguageClient-neovim&lt;/a>, but since version 0.5.0 has built in feature for LSP client, I would preferably use the built in one.&lt;/p>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>tech on Dery R Ahaddienata</title><link>https://dery.dev/tags/tech/</link><description>Recent content in tech on Dery R Ahaddienata</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Sun, 16 Jan 2022 19:08:09 +0700</lastBuildDate><atom:link href="https://dery.dev/tags/tech/index.xml" rel="self" type="application/rss+xml"/><item><title>Balancing High Level Low Level Thinking</title><link>https://dery.dev/posts/balancing-high-level-low-level-thinking/</link><pubDate>Sun, 16 Jan 2022 19:08:09 +0700</pubDate><guid>https://dery.dev/posts/balancing-high-level-low-level-thinking/</guid><description>We can&amp;rsquo;t maintain fast thinking and precise thinking at the same time. There&amp;rsquo;s a tradeoff. Let me explain, when you read a sentence, you can grasp the meaning of that sentence. But, you don&amp;rsquo;t really care about the meaning of each word, or in more precise manner, you don&amp;rsquo;t even read each alphabet. How many alphabet m you&amp;rsquo;ve read up until this point? You don&amp;rsquo;t really care right. Because, our brain has tendency to store common repeatable things (in this case, the individual word meaning or the alphabet) and only focus on the things that we think it matters (in this case, the meaning of whole sentence).</description><content>&lt;p>We can&amp;rsquo;t maintain fast thinking and precise thinking at the same time. There&amp;rsquo;s a tradeoff. Let me explain, when you read a sentence, you can grasp the meaning of that sentence. But, you don&amp;rsquo;t really care about the meaning of each word, or in more precise manner, you don&amp;rsquo;t even read each alphabet. How many alphabet &lt;code>m&lt;/code> you&amp;rsquo;ve read up until this point? You don&amp;rsquo;t really care right. Because, our brain has tendency to store common repeatable things (in this case, the individual word meaning or the alphabet) and only focus on the things that we think it matters (in this case, the meaning of whole sentence).&lt;/p>
+&lt;img src="https://dery.dev/static/img/highlevel-lowlevel.png" alt="High Level &amp;amp; low level in language hierarchy" class="center" style="border-radius: 5px;" />
+&lt;p>Understanding individual word meaning can be seen as a low level, and understanding the whole sentence meaning can be seen as a high level. If we only focus on each individual word meaning, our reading ability will slower than if we focus on whole sentence as it is. But you can&amp;rsquo;t know the meaning of the sentence if you&amp;rsquo;ve never understood the individual word itself. You need to be more precise when you learn something new. Are you able to understanding this sentence? 月曜日の朝. If you&amp;rsquo;re not familiar with the Japanese language, you need to learn the alphabet (hiragana, katakana, kanji), and learn the meaning of the word, and then the sentence as a whole. Let me rephrase this into more generalize concept.&lt;/p>
+&lt;blockquote>
+&lt;p>If we only focus on lower level task, we trade the speed over the detailed things. But if we focus on high level task before lower level, our understanding of high level is blurred. We need a balance of it. And as a software engineer, it really matters.&lt;/p>
+&lt;/blockquote>
+&lt;h2 id="why-is-it-important">Why is it important&lt;/h2>
+&lt;p>Short answer, it&amp;rsquo;s not. But if you care about the efficiency of your time, it&amp;rsquo;s important. It will reduce the unecessary thinking if you see the things in higher level. And it will improve your ability to understand the things under the hood if you see the things in lower level. We know the abstraction. We don&amp;rsquo;t care about how the electricity give the chip gate circuit on and off while we write a program (unless you&amp;rsquo;re assembly engineer). But knowing how memory works while we write a program, can be reduce the catastrophic disaster that can be possibly happen in certain point of time.&lt;/p>
+&lt;blockquote>
+&lt;p>Just enough to know the low level, but think in high level abstraction.&lt;/p>
+&lt;/blockquote>
+&lt;h2 id="how-we-define-the-high-level-and-low-level">How we define the high level and low level&lt;/h2>
+&lt;p>It depends on our role. But rule of thumb is you need to know just enough the low level that you think it matters, and think in high level to boost you productivity. If you&amp;rsquo;re a backend engineer, the low level you need to know is how OS works, and the high level thing is the code itself. If you&amp;rsquo;re an assembly engineer, maybe backend&amp;rsquo;s low level can be their high level and how the chip works can be seen as their low level thing.&lt;/p>
+&lt;img src="https://dery.dev/static/img/highlevel-lowlevel-softeng.png" alt="High Level &amp;amp; low level in software engineer" class="center" style="border-radius: 5px;" />
+&lt;h2 id="conclusion">Conclusion&lt;/h2>
+&lt;p>We need a right balance between thinking in high level and low level. Sometimes, we need to slowdown the process if we need to understand the detail in deep, sometimes we focus only on high level without even care about the lower level (it just happens unconciously).&lt;/p></content></item><item><title>July Vim Setup</title><link>https://dery.dev/posts/july-vim-setup/</link><pubDate>Tue, 20 Jul 2021 12:02:09 +0700</pubDate><guid>https://dery.dev/posts/july-vim-setup/</guid><description>I&amp;rsquo;ve been using vim as my default IDE for about a year. Until now I&amp;rsquo;m still improving the vim configuration so that I could do the task even more effective. Now after nvim launch version 0.5.0 which support native LSP client, I immediately tried this feature. Yeps, there&amp;rsquo;re no significant difference when I use LanguageClient-neovim, but since version 0.5.0 has built in feature for LSP client, I would preferably use the built in one.</description><content>&lt;p>I&amp;rsquo;ve been using &lt;a href="https://levelup.gitconnected.com/tweak-your-vim-as-a-powerful-ide-fcea5f7eff9c">vim as my default IDE&lt;/a> for about a year. Until now I&amp;rsquo;m still improving the vim configuration so that I could do the task even more effective. Now after &lt;a href="https://neovim.io/roadmap/">nvim launch version 0.5.0&lt;/a> which support native LSP client, I immediately tried this feature. Yeps, there&amp;rsquo;re no significant difference when I use &lt;a href="https://github.com/autozimu/LanguageClient-neovim">LanguageClient-neovim&lt;/a>, but since version 0.5.0 has built in feature for LSP client, I would preferably use the built in one.&lt;/p>
 &lt;p>If we compare with &lt;a href="https://levelup.gitconnected.com/tweak-your-vim-as-a-powerful-ide-fcea5f7eff9c">my last setup&lt;/a>, we can see significant config differences. And because I also planned to try contribute on &lt;a href="https://github.com/ChristianChiarulli/LunarVim">LunarVim project&lt;/a>, I would like to documenting all of the setup I used now.&lt;/p>
 &lt;p>&lt;a href="https://asciinema.org/a/426314">&lt;img src="https://asciinema.org/a/426314.svg" alt="asciicast">&lt;/a>&lt;/p>
 &lt;h2 id="plugins">Plugins&lt;/h2>
@@ -36,8 +51,8 @@
 &lt;h2 id="dot-files">Dot Files&lt;/h2>
 &lt;h3 id="plugin-config">Plugin Config&lt;/h3>
 &lt;div class="collapsable-code">
-&lt;input id="698251437" type="checkbox" checked />
-&lt;label for="698251437">
+&lt;input id="235948167" type="checkbox" checked />
+&lt;label for="235948167">
 &lt;span class="collapsable-code__language">vim&lt;/span>
 &lt;span class="collapsable-code__title">~/.vimrc&lt;/span>
 &lt;span class="collapsable-code__toggle" data-label-expand="△" data-label-collapse="▽">&lt;/span>
@@ -104,8 +119,8 @@ endif
 &lt;/code>&lt;/pre>
 &lt;/div>
 &lt;div class="collapsable-code">
-&lt;input id="936471825" type="checkbox" checked />
-&lt;label for="936471825">
+&lt;input id="452367981" type="checkbox" checked />
+&lt;label for="452367981">
 &lt;span class="collapsable-code__language">vim&lt;/span>
 &lt;span class="collapsable-code__title">~/.vim/config/theme.vim&lt;/span>
 &lt;span class="collapsable-code__toggle" data-label-expand="△" data-label-collapse="▽">&lt;/span>
@@ -149,8 +164,8 @@ let NERDTreeShowHidden = 1
 &lt;/code>&lt;/pre>
 &lt;/div>
 &lt;div class="collapsable-code">
-&lt;input id="943672185" type="checkbox" checked />
-&lt;label for="943672185">
+&lt;input id="627513849" type="checkbox" checked />
+&lt;label for="627513849">
 &lt;span class="collapsable-code__language">vim&lt;/span>
 &lt;span class="collapsable-code__title">~/.vim/config/fzf.vim&lt;/span>
 &lt;span class="collapsable-code__toggle" data-label-expand="△" data-label-collapse="▽">&lt;/span>
@@ -164,8 +179,8 @@ let $FZF_DEFAULT_OPTS = &amp;#39;--layout=reverse --info=inline&amp;#39;
 &lt;/code>&lt;/pre>
 &lt;/div>
 &lt;div class="collapsable-code">
-&lt;input id="639871245" type="checkbox" checked />
-&lt;label for="639871245">
+&lt;input id="658123749" type="checkbox" checked />
+&lt;label for="658123749">
 &lt;span class="collapsable-code__language">vim&lt;/span>
 &lt;span class="collapsable-code__title">~/.vim/config/treesitter.vim&lt;/span>
 &lt;span class="collapsable-code__toggle" data-label-expand="△" data-label-collapse="▽">&lt;/span>
@@ -189,8 +204,8 @@ EOF
 &lt;/code>&lt;/pre>
 &lt;/div>
 &lt;div class="collapsable-code">
-&lt;input id="526398714" type="checkbox" checked />
-&lt;label for="526398714">
+&lt;input id="375482169" type="checkbox" checked />
+&lt;label for="375482169">
 &lt;span class="collapsable-code__language">vim&lt;/span>
 &lt;span class="collapsable-code__title">~/.vim/config/vimwiki.vim&lt;/span>
 &lt;span class="collapsable-code__toggle" data-label-expand="△" data-label-collapse="▽">&lt;/span>
@@ -207,8 +222,8 @@ let g:vimwiki_global_ext = 0
 &lt;/code>&lt;/pre>
 &lt;/div>
 &lt;div class="collapsable-code">
-&lt;input id="139652478" type="checkbox" checked />
-&lt;label for="139652478">
+&lt;input id="678951324" type="checkbox" checked />
+&lt;label for="678951324">
 &lt;span class="collapsable-code__language">vim&lt;/span>
 &lt;span class="collapsable-code__title">~/.vim/config/lsp_config.vim&lt;/span>
 &lt;span class="collapsable-code__toggle" data-label-expand="△" data-label-collapse="▽">&lt;/span>
@@ -238,8 +253,8 @@ autocmd BufWritePre *.json lua vim.lsp.buf.formatting_sync(nil, 100)
 &lt;/code>&lt;/pre>
 &lt;/div>
 &lt;div class="collapsable-code">
-&lt;input id="975438621" type="checkbox" checked />
-&lt;label for="975438621">
+&lt;input id="597238641" type="checkbox" checked />
+&lt;label for="597238641">
 &lt;span class="collapsable-code__language">vim&lt;/span>
 &lt;span class="collapsable-code__title">~/.vim/config/ale.vim&lt;/span>
 &lt;span class="collapsable-code__toggle" data-label-expand="△" data-label-collapse="▽">&lt;/span>
@@ -278,8 +293,8 @@ let g:ale_fix_on_save = 1
 &lt;/code>&lt;/pre>
 &lt;/div>
 &lt;div class="collapsable-code">
-&lt;input id="619428573" type="checkbox" checked />
-&lt;label for="619428573">
+&lt;input id="842613579" type="checkbox" checked />
+&lt;label for="842613579">
 &lt;span class="collapsable-code__language">vim&lt;/span>
 &lt;span class="collapsable-code__title">~/.vim/config/vimspector.vim&lt;/span>
 &lt;span class="collapsable-code__toggle" data-label-expand="△" data-label-collapse="▽">&lt;/span>
@@ -297,8 +312,8 @@ nmap &amp;lt;leader&amp;gt;do &amp;lt;Plug&amp;gt;VimspectorStepOut
 &lt;/code>&lt;/pre>
 &lt;/div>
 &lt;div class="collapsable-code">
-&lt;input id="246358791" type="checkbox" checked />
-&lt;label for="246358791">
+&lt;input id="725839614" type="checkbox" checked />
+&lt;label for="725839614">
 &lt;span class="collapsable-code__language">vim&lt;/span>
 &lt;span class="collapsable-code__title">~/.vim/config/maximizer.vim&lt;/span>
 &lt;span class="collapsable-code__toggle" data-label-expand="△" data-label-collapse="▽">&lt;/span>
@@ -308,8 +323,8 @@ map &amp;lt;C-W&amp;gt;z :MaximizerToggle&amp;lt;CR&amp;gt;
 &lt;/code>&lt;/pre>
 &lt;/div>
 &lt;div class="collapsable-code">
-&lt;input id="985721634" type="checkbox" checked />
-&lt;label for="985721634">
+&lt;input id="193684527" type="checkbox" checked />
+&lt;label for="193684527">
 &lt;span class="collapsable-code__language">lua&lt;/span>
 &lt;span class="collapsable-code__title">~/.vim/config/compe.lua&lt;/span>
 &lt;span class="collapsable-code__toggle" data-label-expand="△" data-label-collapse="▽">&lt;/span>
@@ -344,8 +359,8 @@ snippets_nvim = true;
 &lt;/code>&lt;/pre>
 &lt;/div>
 &lt;div class="collapsable-code">
-&lt;input id="718452369" type="checkbox" checked />
-&lt;label for="718452369">
+&lt;input id="539871264" type="checkbox" checked />
+&lt;label for="539871264">
 &lt;span class="collapsable-code__language">lua&lt;/span>
 &lt;span class="collapsable-code__title">~/.vim/config/lspfuzzy.lua&lt;/span>
 &lt;span class="collapsable-code__toggle" data-label-expand="△" data-label-collapse="▽">&lt;/span>
@@ -368,8 +383,8 @@ fzf_trim = true, -- trim FZF entries
 &lt;/div>
 &lt;h3 id="external-config">External Config&lt;/h3>
 &lt;div class="collapsable-code">
-&lt;input id="486291753" type="checkbox" checked />
-&lt;label for="486291753">
+&lt;input id="693241758" type="checkbox" checked />
+&lt;label for="693241758">
 &lt;span class="collapsable-code__language">vim&lt;/span>
 &lt;span class="collapsable-code__title">~/.vim/config/autoclose.vim&lt;/span>
 &lt;span class="collapsable-code__toggle" data-label-expand="△" data-label-collapse="▽">&lt;/span>
@@ -449,8 +464,8 @@ inoremap {,&amp;lt;CR&amp;gt; {&amp;lt;CR&amp;gt;},&amp;lt;ESC&amp;gt;O
 &lt;/code>&lt;/pre>
 &lt;/div>
 &lt;div class="collapsable-code">
-&lt;input id="564789132" type="checkbox" checked />
-&lt;label for="564789132">
+&lt;input id="847236159" type="checkbox" checked />
+&lt;label for="847236159">
 &lt;span class="collapsable-code__language">vim&lt;/span>
 &lt;span class="collapsable-code__title">~/.vim/config/custom_map.vim&lt;/span>
 &lt;span class="collapsable-code__toggle" data-label-expand="△" data-label-collapse="▽">&lt;/span>
@@ -471,8 +486,8 @@ nnoremap &amp;lt;silent&amp;gt; &amp;lt;C-W&amp;gt;&amp;lt;Right&amp;gt; :exe &a
 &lt;/code>&lt;/pre>
 &lt;/div>
 &lt;div class="collapsable-code">
-&lt;input id="653291784" type="checkbox" checked />
-&lt;label for="653291784">
+&lt;input id="187635942" type="checkbox" checked />
+&lt;label for="187635942">
 &lt;span class="collapsable-code__language">vim&lt;/span>
 &lt;span class="collapsable-code__title">~/.vim/config/session.vim&lt;/span>
 &lt;span class="collapsable-code__toggle" data-label-expand="△" data-label-collapse="▽">&lt;/span>
