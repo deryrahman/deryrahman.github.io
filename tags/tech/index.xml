@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>tech on Dery R Ahaddienata</title><link>https://dery.dev/tags/tech/</link><description>Recent content in tech on Dery R Ahaddienata</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Sun, 16 Jan 2022 19:08:09 +0700</lastBuildDate><atom:link href="https://dery.dev/tags/tech/index.xml" rel="self" type="application/rss+xml"/><item><title>Balancing High Level Low Level Thinking</title><link>https://dery.dev/posts/balancing-high-level-low-level-thinking/</link><pubDate>Sun, 16 Jan 2022 19:08:09 +0700</pubDate><guid>https://dery.dev/posts/balancing-high-level-low-level-thinking/</guid><description>We can&amp;rsquo;t maintain fast thinking and precise thinking at the same time. There&amp;rsquo;s a tradeoff. Let me explain, when you read a sentence, you can grasp the meaning of that sentence. But, you don&amp;rsquo;t really care about the meaning of each word, or in more precise manner, you don&amp;rsquo;t even read each alphabet. How many alphabet m you&amp;rsquo;ve read up until this point? You don&amp;rsquo;t really care right? Because, our brain has tendency to automate common repeatable things (in this case, the individual word meaning or the alphabet) and only focus on the things that we think it matters (in this case, the meaning of whole sentence).</description><content>&lt;p>We can&amp;rsquo;t maintain fast thinking and precise thinking at the same time. There&amp;rsquo;s a tradeoff. Let me explain, when you read a sentence, you can grasp the meaning of that sentence. But, you don&amp;rsquo;t really care about the meaning of each word, or in more precise manner, you don&amp;rsquo;t even read each alphabet. How many alphabet &lt;code>m&lt;/code> you&amp;rsquo;ve read up until this point? You don&amp;rsquo;t really care right? Because, our brain has tendency to automate common repeatable things (in this case, the individual word meaning or the alphabet) and only focus on the things that we think it matters (in this case, the meaning of whole sentence).&lt;/p>
 &lt;img src="https://dery.dev/static/img/highlevel-lowlevel.png" alt="High Level &amp;amp; low level in language hierarchy" class="center" style="border-radius: 5px;" />
 &lt;p>Understanding individual word meaning can be seen as a low level, and understanding the whole sentence meaning can be seen as a high level. If we only focus on each individual word meaning, our reading ability will slower than if we focus on whole sentence as it is. But you can&amp;rsquo;t know the meaning of the sentence if you&amp;rsquo;ve never understood the individual word itself. You need to be more precise when you learn something new.&lt;/p>
-&lt;p>Are you able to understand this sentence? 月曜日の朝. If you&amp;rsquo;re not familiar with the Japanese language, you need to learn the alphabet (hiragana, katakana, kanji), and learn the meaning of the word, and then the sentence as a whole. Let me rephrase this into more generalize concept. If we only focus on lower level task, we trade the speed over the detailed things. But if we focus on high level task before lower level, our understanding of high level is blurred. We need a balance of it. And as a software engineer, it really matters.&lt;/p>
+&lt;p>Are you able to understand this sentence? 月曜日の朝. If you&amp;rsquo;re not familiar with the Japanese language, you need to learn the alphabet (hiragana, katakana, kanji), and learn the meaning of the word, and then the sentence as a whole. Let me rephrase this into more generalize concept. If we only focus on lower level task, we trade the ability to know detailed things over the speed. But if we focus on high level task before lower level, our understanding of high level is blurred. We need a balance of it. And as a software engineer, it really matters.&lt;/p>
 &lt;blockquote>
-&lt;p>If we only focus on lower level task, we trade the speed over the detailed things. But if we focus on high level task before lower level, our understanding of high level is blurred. We need a balance of it.&lt;/p>
+&lt;p>If we only focus on lower level task, we trade the ability to know detailed things over the speed. But if we focus on high level task before lower level, our understanding of high level is blurred. We need a balance of it.&lt;/p>
 &lt;/blockquote>
 &lt;h2 id="why-is-it-important">Why is it important&lt;/h2>
 &lt;p>Short answer, it&amp;rsquo;s not. But if you care about the efficiency of your time, it&amp;rsquo;s important. It will reduce the unecessary thinking if you see the things in higher level. And it will improve your ability to understand the things under the hood if you see the things in lower level. We know the abstraction. Each level has abstraction of its lower level. We don&amp;rsquo;t care about how the electricity give the chip gate circuit on and off (low level) while we write a program (high level) (unless you&amp;rsquo;re assembly engineer 😄). But knowing how memory works (low level) while we write a program (high level), can be reduce the catastrophic disaster that can be possibly happen in certain point of time.&lt;/p>
@@ -52,8 +52,8 @@
 &lt;h2 id="dot-files">Dot Files&lt;/h2>
 &lt;h3 id="plugin-config">Plugin Config&lt;/h3>
 &lt;div class="collapsable-code">
-&lt;input id="824719536" type="checkbox" checked />
-&lt;label for="824719536">
+&lt;input id="267398145" type="checkbox" checked />
+&lt;label for="267398145">
 &lt;span class="collapsable-code__language">vim&lt;/span>
 &lt;span class="collapsable-code__title">~/.vimrc&lt;/span>
 &lt;span class="collapsable-code__toggle" data-label-expand="△" data-label-collapse="▽">&lt;/span>
@@ -120,8 +120,8 @@ endif
 &lt;/code>&lt;/pre>
 &lt;/div>
 &lt;div class="collapsable-code">
-&lt;input id="135624897" type="checkbox" checked />
-&lt;label for="135624897">
+&lt;input id="436789215" type="checkbox" checked />
+&lt;label for="436789215">
 &lt;span class="collapsable-code__language">vim&lt;/span>
 &lt;span class="collapsable-code__title">~/.vim/config/theme.vim&lt;/span>
 &lt;span class="collapsable-code__toggle" data-label-expand="△" data-label-collapse="▽">&lt;/span>
@@ -165,8 +165,8 @@ let NERDTreeShowHidden = 1
 &lt;/code>&lt;/pre>
 &lt;/div>
 &lt;div class="collapsable-code">
-&lt;input id="653187294" type="checkbox" checked />
-&lt;label for="653187294">
+&lt;input id="132459867" type="checkbox" checked />
+&lt;label for="132459867">
 &lt;span class="collapsable-code__language">vim&lt;/span>
 &lt;span class="collapsable-code__title">~/.vim/config/fzf.vim&lt;/span>
 &lt;span class="collapsable-code__toggle" data-label-expand="△" data-label-collapse="▽">&lt;/span>
@@ -180,8 +180,8 @@ let $FZF_DEFAULT_OPTS = &amp;#39;--layout=reverse --info=inline&amp;#39;
 &lt;/code>&lt;/pre>
 &lt;/div>
 &lt;div class="collapsable-code">
-&lt;input id="685231794" type="checkbox" checked />
-&lt;label for="685231794">
+&lt;input id="967813425" type="checkbox" checked />
+&lt;label for="967813425">
 &lt;span class="collapsable-code__language">vim&lt;/span>
 &lt;span class="collapsable-code__title">~/.vim/config/treesitter.vim&lt;/span>
 &lt;span class="collapsable-code__toggle" data-label-expand="△" data-label-collapse="▽">&lt;/span>
@@ -205,8 +205,8 @@ EOF
 &lt;/code>&lt;/pre>
 &lt;/div>
 &lt;div class="collapsable-code">
-&lt;input id="689375421" type="checkbox" checked />
-&lt;label for="689375421">
+&lt;input id="259746831" type="checkbox" checked />
+&lt;label for="259746831">
 &lt;span class="collapsable-code__language">vim&lt;/span>
 &lt;span class="collapsable-code__title">~/.vim/config/vimwiki.vim&lt;/span>
 &lt;span class="collapsable-code__toggle" data-label-expand="△" data-label-collapse="▽">&lt;/span>
@@ -223,8 +223,8 @@ let g:vimwiki_global_ext = 0
 &lt;/code>&lt;/pre>
 &lt;/div>
 &lt;div class="collapsable-code">
-&lt;input id="369547281" type="checkbox" checked />
-&lt;label for="369547281">
+&lt;input id="491567832" type="checkbox" checked />
+&lt;label for="491567832">
 &lt;span class="collapsable-code__language">vim&lt;/span>
 &lt;span class="collapsable-code__title">~/.vim/config/lsp_config.vim&lt;/span>
 &lt;span class="collapsable-code__toggle" data-label-expand="△" data-label-collapse="▽">&lt;/span>
@@ -254,8 +254,8 @@ autocmd BufWritePre *.json lua vim.lsp.buf.formatting_sync(nil, 100)
 &lt;/code>&lt;/pre>
 &lt;/div>
 &lt;div class="collapsable-code">
-&lt;input id="736148925" type="checkbox" checked />
-&lt;label for="736148925">
+&lt;input id="749526183" type="checkbox" checked />
+&lt;label for="749526183">
 &lt;span class="collapsable-code__language">vim&lt;/span>
 &lt;span class="collapsable-code__title">~/.vim/config/ale.vim&lt;/span>
 &lt;span class="collapsable-code__toggle" data-label-expand="△" data-label-collapse="▽">&lt;/span>
@@ -294,8 +294,8 @@ let g:ale_fix_on_save = 1
 &lt;/code>&lt;/pre>
 &lt;/div>
 &lt;div class="collapsable-code">
-&lt;input id="239564781" type="checkbox" checked />
-&lt;label for="239564781">
+&lt;input id="894276513" type="checkbox" checked />
+&lt;label for="894276513">
 &lt;span class="collapsable-code__language">vim&lt;/span>
 &lt;span class="collapsable-code__title">~/.vim/config/vimspector.vim&lt;/span>
 &lt;span class="collapsable-code__toggle" data-label-expand="△" data-label-collapse="▽">&lt;/span>
@@ -313,8 +313,8 @@ nmap &amp;lt;leader&amp;gt;do &amp;lt;Plug&amp;gt;VimspectorStepOut
 &lt;/code>&lt;/pre>
 &lt;/div>
 &lt;div class="collapsable-code">
-&lt;input id="158437629" type="checkbox" checked />
-&lt;label for="158437629">
+&lt;input id="528671934" type="checkbox" checked />
+&lt;label for="528671934">
 &lt;span class="collapsable-code__language">vim&lt;/span>
 &lt;span class="collapsable-code__title">~/.vim/config/maximizer.vim&lt;/span>
 &lt;span class="collapsable-code__toggle" data-label-expand="△" data-label-collapse="▽">&lt;/span>
@@ -324,8 +324,8 @@ map &amp;lt;C-W&amp;gt;z :MaximizerToggle&amp;lt;CR&amp;gt;
 &lt;/code>&lt;/pre>
 &lt;/div>
 &lt;div class="collapsable-code">
-&lt;input id="321874569" type="checkbox" checked />
-&lt;label for="321874569">
+&lt;input id="816593472" type="checkbox" checked />
+&lt;label for="816593472">
 &lt;span class="collapsable-code__language">lua&lt;/span>
 &lt;span class="collapsable-code__title">~/.vim/config/compe.lua&lt;/span>
 &lt;span class="collapsable-code__toggle" data-label-expand="△" data-label-collapse="▽">&lt;/span>
@@ -360,8 +360,8 @@ snippets_nvim = true;
 &lt;/code>&lt;/pre>
 &lt;/div>
 &lt;div class="collapsable-code">
-&lt;input id="257839164" type="checkbox" checked />
-&lt;label for="257839164">
+&lt;input id="184256379" type="checkbox" checked />
+&lt;label for="184256379">
 &lt;span class="collapsable-code__language">lua&lt;/span>
 &lt;span class="collapsable-code__title">~/.vim/config/lspfuzzy.lua&lt;/span>
 &lt;span class="collapsable-code__toggle" data-label-expand="△" data-label-collapse="▽">&lt;/span>
@@ -384,8 +384,8 @@ fzf_trim = true, -- trim FZF entries
 &lt;/div>
 &lt;h3 id="external-config">External Config&lt;/h3>
 &lt;div class="collapsable-code">
-&lt;input id="763842591" type="checkbox" checked />
-&lt;label for="763842591">
+&lt;input id="289761534" type="checkbox" checked />
+&lt;label for="289761534">
 &lt;span class="collapsable-code__language">vim&lt;/span>
 &lt;span class="collapsable-code__title">~/.vim/config/autoclose.vim&lt;/span>
 &lt;span class="collapsable-code__toggle" data-label-expand="△" data-label-collapse="▽">&lt;/span>
@@ -465,8 +465,8 @@ inoremap {,&amp;lt;CR&amp;gt; {&amp;lt;CR&amp;gt;},&amp;lt;ESC&amp;gt;O
 &lt;/code>&lt;/pre>
 &lt;/div>
 &lt;div class="collapsable-code">
-&lt;input id="178256349" type="checkbox" checked />
-&lt;label for="178256349">
+&lt;input id="394215678" type="checkbox" checked />
+&lt;label for="394215678">
 &lt;span class="collapsable-code__language">vim&lt;/span>
 &lt;span class="collapsable-code__title">~/.vim/config/custom_map.vim&lt;/span>
 &lt;span class="collapsable-code__toggle" data-label-expand="△" data-label-collapse="▽">&lt;/span>
@@ -487,8 +487,8 @@ nnoremap &amp;lt;silent&amp;gt; &amp;lt;C-W&amp;gt;&amp;lt;Right&amp;gt; :exe &a
 &lt;/code>&lt;/pre>
 &lt;/div>
 &lt;div class="collapsable-code">
-&lt;input id="851693724" type="checkbox" checked />
-&lt;label for="851693724">
+&lt;input id="198625347" type="checkbox" checked />
+&lt;label for="198625347">
 &lt;span class="collapsable-code__language">vim&lt;/span>
 &lt;span class="collapsable-code__title">~/.vim/config/session.vim&lt;/span>
 &lt;span class="collapsable-code__toggle" data-label-expand="△" data-label-collapse="▽">&lt;/span>
