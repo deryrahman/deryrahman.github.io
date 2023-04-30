@@ -11,8 +11,6 @@ showFullContent = false
 readingTime = false
 +++
 
-> In Moderation :in a way that is reasonable and not excessive :in a moderate way - Merriam-Webster
-
 You will die if you don’t eat, and you will die either if you eat excessively. In the Nicomachean Ethics, Aristotle describes that eating too much or too little has a bad consequences to our body. Hence, the correlation between eating and health is not linear.
 
 In economics, no tax makes government has no revenue, no infrastructure, public health, education, and security. On the other side, charged 100% tax makes individual has no money, and there’s no reason to work, then economy collapse and government has no revenue. It’s clear that the government’s revenue and taxation is not linear either.
