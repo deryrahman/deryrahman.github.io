@@ -40,3 +40,5 @@ It depends. But rule of thumb is you need to know just enough the low level that
 ## Conclusion
 
 We need a right balance between thinking in high level and low level. Sometimes, we need to slowdown the process if we need to understand the detail in deep, sometimes we need to focus only on high level without even care about the lower level (it just happens unconciously). By balancing both dynamically in a certain short of condition, we are able to utilize the advantages from both combination.
+
+> No amount of genius can overcome a preoccupation with detail. - Levy’s Eighth Law
