@@ -23,7 +23,10 @@ In economics, no tax makes government has no revenue, no infrastructure, public 
 &lt;/blockquote>
 &lt;img src="https://dery.dev/static/img/highlevel-lowlevel-softeng.png" alt="High Level &amp;amp; low level in software engineer" class="center" style="border-radius: 5px;" />
 &lt;h2 id="conclusion">Conclusion&lt;/h2>
-&lt;p>We need a right balance between thinking in high level and low level. Sometimes, we need to slowdown the process if we need to understand the detail in deep, sometimes we need to focus only on high level without even care about the lower level (it just happens unconciously). By balancing both dynamically in a certain short of condition, we are able to utilize the advantages from both combination.&lt;/p></content></item><item><title>Lesson Learned 2021</title><link>https://dery.dev/posts/lesson-learned-2021/</link><pubDate>Sat, 25 Dec 2021 16:04:08 +0700</pubDate><guid>https://dery.dev/posts/lesson-learned-2021/</guid><description>[This post is marked as private]</description><content>&lt;p>&lt;em>[This post is marked as private]&lt;/em>&lt;/p></content></item><item><title>Payments</title><link>https://dery.dev/payments/</link><pubDate>Mon, 25 Oct 2021 12:18:14 +0700</pubDate><guid>https://dery.dev/payments/</guid><description> BCA: QR Code GoPay: QR Code OVO: QR Code Dana: QR Code Jenius: $deryrahman</description><content>&lt;ul>
+&lt;p>We need a right balance between thinking in high level and low level. Sometimes, we need to slowdown the process if we need to understand the detail in deep, sometimes we need to focus only on high level without even care about the lower level (it just happens unconciously). By balancing both dynamically in a certain short of condition, we are able to utilize the advantages from both combination.&lt;/p>
+&lt;blockquote>
+&lt;p>No amount of genius can overcome a preoccupation with detail. - Levy’s Eighth Law&lt;/p>
+&lt;/blockquote></content></item><item><title>Lesson Learned 2021</title><link>https://dery.dev/posts/lesson-learned-2021/</link><pubDate>Sat, 25 Dec 2021 16:04:08 +0700</pubDate><guid>https://dery.dev/posts/lesson-learned-2021/</guid><description>[This post is marked as private]</description><content>&lt;p>&lt;em>[This post is marked as private]&lt;/em>&lt;/p></content></item><item><title>Payments</title><link>https://dery.dev/payments/</link><pubDate>Mon, 25 Oct 2021 12:18:14 +0700</pubDate><guid>https://dery.dev/payments/</guid><description> BCA: QR Code GoPay: QR Code OVO: QR Code Dana: QR Code Jenius: $deryrahman</description><content>&lt;ul>
 &lt;li>BCA: &lt;a href="https://dery.dev/static/img/payments/bca.jpeg">QR Code&lt;/a>&lt;/li>
 &lt;li>GoPay: &lt;a href="https://dery.dev/static/img/payments/gopay.jpeg">QR Code&lt;/a>&lt;/li>
 &lt;li>OVO: &lt;a href="https://dery.dev/static/img/payments/ovo.jpeg">QR Code&lt;/a>&lt;/li>
@@ -67,8 +70,8 @@ In economics, no tax makes government has no revenue, no infrastructure, public 
 &lt;h2 id="dot-files">Dot Files&lt;/h2>
 &lt;h3 id="plugin-config">Plugin Config&lt;/h3>
 &lt;div class="collapsable-code">
-&lt;input id="436912785" type="checkbox" checked />
-&lt;label for="436912785">
+&lt;input id="291576483" type="checkbox" checked />
+&lt;label for="291576483">
 &lt;span class="collapsable-code__language">vim&lt;/span>
 &lt;span class="collapsable-code__title">~/.vimrc&lt;/span>
 &lt;span class="collapsable-code__toggle" data-label-expand="△" data-label-collapse="▽">&lt;/span>
@@ -135,8 +138,8 @@ endif
 &lt;/code>&lt;/pre>
 &lt;/div>
 &lt;div class="collapsable-code">
-&lt;input id="375184962" type="checkbox" checked />
-&lt;label for="375184962">
+&lt;input id="689231547" type="checkbox" checked />
+&lt;label for="689231547">
 &lt;span class="collapsable-code__language">vim&lt;/span>
 &lt;span class="collapsable-code__title">~/.vim/config/theme.vim&lt;/span>
 &lt;span class="collapsable-code__toggle" data-label-expand="△" data-label-collapse="▽">&lt;/span>
@@ -180,8 +183,8 @@ let NERDTreeShowHidden = 1
 &lt;/code>&lt;/pre>
 &lt;/div>
 &lt;div class="collapsable-code">
-&lt;input id="913472586" type="checkbox" checked />
-&lt;label for="913472586">
+&lt;input id="957421638" type="checkbox" checked />
+&lt;label for="957421638">
 &lt;span class="collapsable-code__language">vim&lt;/span>
 &lt;span class="collapsable-code__title">~/.vim/config/fzf.vim&lt;/span>
 &lt;span class="collapsable-code__toggle" data-label-expand="△" data-label-collapse="▽">&lt;/span>
@@ -195,8 +198,8 @@ let $FZF_DEFAULT_OPTS = &amp;#39;--layout=reverse --info=inline&amp;#39;
 &lt;/code>&lt;/pre>
 &lt;/div>
 &lt;div class="collapsable-code">
-&lt;input id="625873941" type="checkbox" checked />
-&lt;label for="625873941">
+&lt;input id="517294863" type="checkbox" checked />
+&lt;label for="517294863">
 &lt;span class="collapsable-code__language">vim&lt;/span>
 &lt;span class="collapsable-code__title">~/.vim/config/treesitter.vim&lt;/span>
 &lt;span class="collapsable-code__toggle" data-label-expand="△" data-label-collapse="▽">&lt;/span>
@@ -220,8 +223,8 @@ EOF
 &lt;/code>&lt;/pre>
 &lt;/div>
 &lt;div class="collapsable-code">
-&lt;input id="579482613" type="checkbox" checked />
-&lt;label for="579482613">
+&lt;input id="426397518" type="checkbox" checked />
+&lt;label for="426397518">
 &lt;span class="collapsable-code__language">vim&lt;/span>
 &lt;span class="collapsable-code__title">~/.vim/config/vimwiki.vim&lt;/span>
 &lt;span class="collapsable-code__toggle" data-label-expand="△" data-label-collapse="▽">&lt;/span>
@@ -238,8 +241,8 @@ let g:vimwiki_global_ext = 0
 &lt;/code>&lt;/pre>
 &lt;/div>
 &lt;div class="collapsable-code">
-&lt;input id="975843261" type="checkbox" checked />
-&lt;label for="975843261">
+&lt;input id="317528649" type="checkbox" checked />
+&lt;label for="317528649">
 &lt;span class="collapsable-code__language">vim&lt;/span>
 &lt;span class="collapsable-code__title">~/.vim/config/lsp_config.vim&lt;/span>
 &lt;span class="collapsable-code__toggle" data-label-expand="△" data-label-collapse="▽">&lt;/span>
@@ -269,8 +272,8 @@ autocmd BufWritePre *.json lua vim.lsp.buf.formatting_sync(nil, 100)
 &lt;/code>&lt;/pre>
 &lt;/div>
 &lt;div class="collapsable-code">
-&lt;input id="678421593" type="checkbox" checked />
-&lt;label for="678421593">
+&lt;input id="651847932" type="checkbox" checked />
+&lt;label for="651847932">
 &lt;span class="collapsable-code__language">vim&lt;/span>
 &lt;span class="collapsable-code__title">~/.vim/config/ale.vim&lt;/span>
 &lt;span class="collapsable-code__toggle" data-label-expand="△" data-label-collapse="▽">&lt;/span>
@@ -309,8 +312,8 @@ let g:ale_fix_on_save = 1
 &lt;/code>&lt;/pre>
 &lt;/div>
 &lt;div class="collapsable-code">
-&lt;input id="742653189" type="checkbox" checked />
-&lt;label for="742653189">
+&lt;input id="726983514" type="checkbox" checked />
+&lt;label for="726983514">
 &lt;span class="collapsable-code__language">vim&lt;/span>
 &lt;span class="collapsable-code__title">~/.vim/config/vimspector.vim&lt;/span>
 &lt;span class="collapsable-code__toggle" data-label-expand="△" data-label-collapse="▽">&lt;/span>
@@ -328,8 +331,8 @@ nmap &amp;lt;leader&amp;gt;do &amp;lt;Plug&amp;gt;VimspectorStepOut
 &lt;/code>&lt;/pre>
 &lt;/div>
 &lt;div class="collapsable-code">
-&lt;input id="241369578" type="checkbox" checked />
-&lt;label for="241369578">
+&lt;input id="145729863" type="checkbox" checked />
+&lt;label for="145729863">
 &lt;span class="collapsable-code__language">vim&lt;/span>
 &lt;span class="collapsable-code__title">~/.vim/config/maximizer.vim&lt;/span>
 &lt;span class="collapsable-code__toggle" data-label-expand="△" data-label-collapse="▽">&lt;/span>
@@ -339,8 +342,8 @@ map &amp;lt;C-W&amp;gt;z :MaximizerToggle&amp;lt;CR&amp;gt;
 &lt;/code>&lt;/pre>
 &lt;/div>
 &lt;div class="collapsable-code">
-&lt;input id="714352869" type="checkbox" checked />
-&lt;label for="714352869">
+&lt;input id="496158273" type="checkbox" checked />
+&lt;label for="496158273">
 &lt;span class="collapsable-code__language">lua&lt;/span>
 &lt;span class="collapsable-code__title">~/.vim/config/compe.lua&lt;/span>
 &lt;span class="collapsable-code__toggle" data-label-expand="△" data-label-collapse="▽">&lt;/span>
@@ -375,8 +378,8 @@ snippets_nvim = true;
 &lt;/code>&lt;/pre>
 &lt;/div>
 &lt;div class="collapsable-code">
-&lt;input id="942513876" type="checkbox" checked />
-&lt;label for="942513876">
+&lt;input id="384715269" type="checkbox" checked />
+&lt;label for="384715269">
 &lt;span class="collapsable-code__language">lua&lt;/span>
 &lt;span class="collapsable-code__title">~/.vim/config/lspfuzzy.lua&lt;/span>
 &lt;span class="collapsable-code__toggle" data-label-expand="△" data-label-collapse="▽">&lt;/span>
@@ -399,8 +402,8 @@ fzf_trim = true, -- trim FZF entries
 &lt;/div>
 &lt;h3 id="external-config">External Config&lt;/h3>
 &lt;div class="collapsable-code">
-&lt;input id="589712346" type="checkbox" checked />
-&lt;label for="589712346">
+&lt;input id="734516289" type="checkbox" checked />
+&lt;label for="734516289">
 &lt;span class="collapsable-code__language">vim&lt;/span>
 &lt;span class="collapsable-code__title">~/.vim/config/autoclose.vim&lt;/span>
 &lt;span class="collapsable-code__toggle" data-label-expand="△" data-label-collapse="▽">&lt;/span>
@@ -480,8 +483,8 @@ inoremap {,&amp;lt;CR&amp;gt; {&amp;lt;CR&amp;gt;},&amp;lt;ESC&amp;gt;O
 &lt;/code>&lt;/pre>
 &lt;/div>
 &lt;div class="collapsable-code">
-&lt;input id="816793542" type="checkbox" checked />
-&lt;label for="816793542">
+&lt;input id="951246783" type="checkbox" checked />
+&lt;label for="951246783">
 &lt;span class="collapsable-code__language">vim&lt;/span>
 &lt;span class="collapsable-code__title">~/.vim/config/custom_map.vim&lt;/span>
 &lt;span class="collapsable-code__toggle" data-label-expand="△" data-label-collapse="▽">&lt;/span>
@@ -502,8 +505,8 @@ nnoremap &amp;lt;silent&amp;gt; &amp;lt;C-W&amp;gt;&amp;lt;Right&amp;gt; :exe &a
 &lt;/code>&lt;/pre>
 &lt;/div>
 &lt;div class="collapsable-code">
-&lt;input id="653219487" type="checkbox" checked />
-&lt;label for="653219487">
+&lt;input id="163724895" type="checkbox" checked />
+&lt;label for="163724895">
 &lt;span class="collapsable-code__language">vim&lt;/span>
 &lt;span class="collapsable-code__title">~/.vim/config/session.vim&lt;/span>
 &lt;span class="collapsable-code__toggle" data-label-expand="△" data-label-collapse="▽">&lt;/span>
