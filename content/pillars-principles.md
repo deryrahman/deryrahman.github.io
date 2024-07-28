@@ -33,3 +33,4 @@ date: 2021-07-18T14:17:00+07:00
 * Think in high level abstraction, know just enough low level things
 * Fail fast, fail often
 * Pragmatic over idealistic
+* Walk a talk
