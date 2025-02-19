@@ -1,5 +1,6 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Dery R Ahaddienata</title><link>https://dery.dev/</link><description>Recent content on Dery R Ahaddienata</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Wed, 19 Feb 2025 23:41:09 +0700</lastBuildDate><atom:link href="https://dery.dev/index.xml" rel="self" type="application/rss+xml"/><item><title>Kubernetes Connectivity Unreachable?</title><link>https://dery.dev/posts/2025-02-k8s-connectivity-unreachable/</link><pubDate>Wed, 19 Feb 2025 23:41:09 +0700</pubDate><guid>https://dery.dev/posts/2025-02-k8s-connectivity-unreachable/</guid><description>Recently, I tried to setup the k8s cluster in my local. Unlike common setup where we usually use minikube, kindD, or k3s, this time I play around on bootstrap the cluster using vm directly. This exercise allow me to have a better understanding how k8s manages the containers.I use lima vm to create a vm in my mac. I don&amp;rsquo;t know, when I use VirtualBox or VMWare, I felt like it&amp;rsquo;s more resource consuming.</description><content>&lt;p>Recently, I tried to setup the k8s cluster in my local. Unlike common setup where we usually use minikube, kindD, or k3s, this time I play around on bootstrap the cluster using vm directly. This exercise allow me to have a better understanding how k8s manages the containers.&lt;!-- raw HTML omitted -->&lt;/p>
-&lt;p>I use lima vm to create a vm in my mac. I don&amp;rsquo;t know, when I use VirtualBox or VMWare, I felt like it&amp;rsquo;s more resource consuming. Yet, I found lima vm as an alternative that feel more light weight. I tried to spin up 2 VMs, one for control-plane and other for worker. I use user-v2 and vzNAT as a network. Former for vm to vm communication and later for vm to host communication (yes, I need this for exposing LoadBalancer service). So, with this setup, 1 node has 2 network interface. Then, this is where connectivity issue araises..&lt;/p>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Dery R Ahaddienata</title><link>https://dery.dev/</link><description>Recent content on Dery R Ahaddienata</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Wed, 19 Feb 2025 23:41:09 +0700</lastBuildDate><atom:link href="https://dery.dev/index.xml" rel="self" type="application/rss+xml"/><item><title>Kubernetes Connectivity Unreachable?</title><link>https://dery.dev/posts/2025-02-k8s-connectivity-unreachable/</link><pubDate>Wed, 19 Feb 2025 23:41:09 +0700</pubDate><guid>https://dery.dev/posts/2025-02-k8s-connectivity-unreachable/</guid><description>Recently, I tried to setup the k8s cluster in my local. Unlike common setup where we usually use minikube, kindD, or k3s, this time I play around using vm directly. This exercise allow me to have a better understanding on how k8s manages the containers.
+I use lima vm to create a vm in my mac. Previously I have VirtualBox and VMWare as a candidate, but I felt like it&amp;rsquo;s more resource consuming.</description><content>&lt;p>Recently, I tried to setup the k8s cluster in my local. Unlike common setup where we usually use minikube, kindD, or k3s, this time I play around using vm directly. This exercise allow me to have a better understanding on how k8s manages the containers.&lt;/p>
+&lt;p>I use lima vm to create a vm in my mac. Previously I have VirtualBox and VMWare as a candidate, but I felt like it&amp;rsquo;s more resource consuming. Yet, I found lima vm as an alternative that I feel it&amp;rsquo;s more light weight. I tried to spin up 2 VMs, one for control-plane and other for worker. I use user-v2 and vzNAT as a network. Former for vm to vm communication and later for vm to host communication (yes, I need this for exposing LoadBalancer service). So, with this setup, 1 node has 2 network interface. Then, this is where connectivity issue araises..&lt;/p>
 &lt;hr>
 &lt;h1 id="kube-proxy-crashed-on-worker-node">kube-proxy crashed on worker node&lt;/h1>
 &lt;p>When adding a worker node with 2 interfaces, kube-proxy always crash due to the hostname &lt;code>lima-vm-control-plane.internal&lt;/code> can&amp;rsquo;t resolved. So we need to debug, why it&amp;rsquo;s not resolved:&lt;/p>
@@ -170,8 +171,8 @@ In economics, no tax makes government has no revenue, no infrastructure, public 
 &lt;h2 id="dot-files">Dot Files&lt;/h2>
 &lt;h3 id="plugin-config">Plugin Config&lt;/h3>
 &lt;div class="collapsable-code">
-&lt;input id="548123796" type="checkbox" checked />
-&lt;label for="548123796">
+&lt;input id="819267354" type="checkbox" checked />
+&lt;label for="819267354">
 &lt;span class="collapsable-code__language">vim&lt;/span>
 &lt;span class="collapsable-code__title">~/.vimrc&lt;/span>
 &lt;span class="collapsable-code__toggle" data-label-expand="△" data-label-collapse="▽">&lt;/span>
@@ -238,8 +239,8 @@ endif
 &lt;/code>&lt;/pre>
 &lt;/div>
 &lt;div class="collapsable-code">
-&lt;input id="715382964" type="checkbox" checked />
-&lt;label for="715382964">
+&lt;input id="916387524" type="checkbox" checked />
+&lt;label for="916387524">
 &lt;span class="collapsable-code__language">vim&lt;/span>
 &lt;span class="collapsable-code__title">~/.vim/config/theme.vim&lt;/span>
 &lt;span class="collapsable-code__toggle" data-label-expand="△" data-label-collapse="▽">&lt;/span>
@@ -283,8 +284,8 @@ let NERDTreeShowHidden = 1
 &lt;/code>&lt;/pre>
 &lt;/div>
 &lt;div class="collapsable-code">
-&lt;input id="741368529" type="checkbox" checked />
-&lt;label for="741368529">
+&lt;input id="623587941" type="checkbox" checked />
+&lt;label for="623587941">
 &lt;span class="collapsable-code__language">vim&lt;/span>
 &lt;span class="collapsable-code__title">~/.vim/config/fzf.vim&lt;/span>
 &lt;span class="collapsable-code__toggle" data-label-expand="△" data-label-collapse="▽">&lt;/span>
@@ -298,8 +299,8 @@ let $FZF_DEFAULT_OPTS = &amp;#39;--layout=reverse --info=inline&amp;#39;
 &lt;/code>&lt;/pre>
 &lt;/div>
 &lt;div class="collapsable-code">
-&lt;input id="258976143" type="checkbox" checked />
-&lt;label for="258976143">
+&lt;input id="391785246" type="checkbox" checked />
+&lt;label for="391785246">
 &lt;span class="collapsable-code__language">vim&lt;/span>
 &lt;span class="collapsable-code__title">~/.vim/config/treesitter.vim&lt;/span>
 &lt;span class="collapsable-code__toggle" data-label-expand="△" data-label-collapse="▽">&lt;/span>
@@ -323,8 +324,8 @@ EOF
 &lt;/code>&lt;/pre>
 &lt;/div>
 &lt;div class="collapsable-code">
-&lt;input id="637219845" type="checkbox" checked />
-&lt;label for="637219845">
+&lt;input id="174682395" type="checkbox" checked />
+&lt;label for="174682395">
 &lt;span class="collapsable-code__language">vim&lt;/span>
 &lt;span class="collapsable-code__title">~/.vim/config/vimwiki.vim&lt;/span>
 &lt;span class="collapsable-code__toggle" data-label-expand="△" data-label-collapse="▽">&lt;/span>
@@ -341,8 +342,8 @@ let g:vimwiki_global_ext = 0
 &lt;/code>&lt;/pre>
 &lt;/div>
 &lt;div class="collapsable-code">
-&lt;input id="839157264" type="checkbox" checked />
-&lt;label for="839157264">
+&lt;input id="648529731" type="checkbox" checked />
+&lt;label for="648529731">
 &lt;span class="collapsable-code__language">vim&lt;/span>
 &lt;span class="collapsable-code__title">~/.vim/config/lsp_config.vim&lt;/span>
 &lt;span class="collapsable-code__toggle" data-label-expand="△" data-label-collapse="▽">&lt;/span>
@@ -372,8 +373,8 @@ autocmd BufWritePre *.json lua vim.lsp.buf.formatting_sync(nil, 100)
 &lt;/code>&lt;/pre>
 &lt;/div>
 &lt;div class="collapsable-code">
-&lt;input id="273658491" type="checkbox" checked />
-&lt;label for="273658491">
+&lt;input id="265178493" type="checkbox" checked />
+&lt;label for="265178493">
 &lt;span class="collapsable-code__language">vim&lt;/span>
 &lt;span class="collapsable-code__title">~/.vim/config/ale.vim&lt;/span>
 &lt;span class="collapsable-code__toggle" data-label-expand="△" data-label-collapse="▽">&lt;/span>
@@ -412,8 +413,8 @@ let g:ale_fix_on_save = 1
 &lt;/code>&lt;/pre>
 &lt;/div>
 &lt;div class="collapsable-code">
-&lt;input id="472361598" type="checkbox" checked />
-&lt;label for="472361598">
+&lt;input id="742986135" type="checkbox" checked />
+&lt;label for="742986135">
 &lt;span class="collapsable-code__language">vim&lt;/span>
 &lt;span class="collapsable-code__title">~/.vim/config/vimspector.vim&lt;/span>
 &lt;span class="collapsable-code__toggle" data-label-expand="△" data-label-collapse="▽">&lt;/span>
@@ -431,8 +432,8 @@ nmap &amp;lt;leader&amp;gt;do &amp;lt;Plug&amp;gt;VimspectorStepOut
 &lt;/code>&lt;/pre>
 &lt;/div>
 &lt;div class="collapsable-code">
-&lt;input id="631827945" type="checkbox" checked />
-&lt;label for="631827945">
+&lt;input id="531684729" type="checkbox" checked />
+&lt;label for="531684729">
 &lt;span class="collapsable-code__language">vim&lt;/span>
 &lt;span class="collapsable-code__title">~/.vim/config/maximizer.vim&lt;/span>
 &lt;span class="collapsable-code__toggle" data-label-expand="△" data-label-collapse="▽">&lt;/span>
@@ -442,8 +443,8 @@ map &amp;lt;C-W&amp;gt;z :MaximizerToggle&amp;lt;CR&amp;gt;
 &lt;/code>&lt;/pre>
 &lt;/div>
 &lt;div class="collapsable-code">
-&lt;input id="563498127" type="checkbox" checked />
-&lt;label for="563498127">
+&lt;input id="273546198" type="checkbox" checked />
+&lt;label for="273546198">
 &lt;span class="collapsable-code__language">lua&lt;/span>
 &lt;span class="collapsable-code__title">~/.vim/config/compe.lua&lt;/span>
 &lt;span class="collapsable-code__toggle" data-label-expand="△" data-label-collapse="▽">&lt;/span>
@@ -478,8 +479,8 @@ snippets_nvim = true;
 &lt;/code>&lt;/pre>
 &lt;/div>
 &lt;div class="collapsable-code">
-&lt;input id="386791524" type="checkbox" checked />
-&lt;label for="386791524">
+&lt;input id="587392641" type="checkbox" checked />
+&lt;label for="587392641">
 &lt;span class="collapsable-code__language">lua&lt;/span>
 &lt;span class="collapsable-code__title">~/.vim/config/lspfuzzy.lua&lt;/span>
 &lt;span class="collapsable-code__toggle" data-label-expand="△" data-label-collapse="▽">&lt;/span>
@@ -502,8 +503,8 @@ fzf_trim = true, -- trim FZF entries
 &lt;/div>
 &lt;h3 id="external-config">External Config&lt;/h3>
 &lt;div class="collapsable-code">
-&lt;input id="164582937" type="checkbox" checked />
-&lt;label for="164582937">
+&lt;input id="423719865" type="checkbox" checked />
+&lt;label for="423719865">
 &lt;span class="collapsable-code__language">vim&lt;/span>
 &lt;span class="collapsable-code__title">~/.vim/config/autoclose.vim&lt;/span>
 &lt;span class="collapsable-code__toggle" data-label-expand="△" data-label-collapse="▽">&lt;/span>
@@ -583,8 +584,8 @@ inoremap {,&amp;lt;CR&amp;gt; {&amp;lt;CR&amp;gt;},&amp;lt;ESC&amp;gt;O
 &lt;/code>&lt;/pre>
 &lt;/div>
 &lt;div class="collapsable-code">
-&lt;input id="914672385" type="checkbox" checked />
-&lt;label for="914672385">
+&lt;input id="428165937" type="checkbox" checked />
+&lt;label for="428165937">
 &lt;span class="collapsable-code__language">vim&lt;/span>
 &lt;span class="collapsable-code__title">~/.vim/config/custom_map.vim&lt;/span>
 &lt;span class="collapsable-code__toggle" data-label-expand="△" data-label-collapse="▽">&lt;/span>
@@ -605,8 +606,8 @@ nnoremap &amp;lt;silent&amp;gt; &amp;lt;C-W&amp;gt;&amp;lt;Right&amp;gt; :exe &a
 &lt;/code>&lt;/pre>
 &lt;/div>
 &lt;div class="collapsable-code">
-&lt;input id="186374529" type="checkbox" checked />
-&lt;label for="186374529">
+&lt;input id="387965214" type="checkbox" checked />
+&lt;label for="387965214">
 &lt;span class="collapsable-code__language">vim&lt;/span>
 &lt;span class="collapsable-code__title">~/.vim/config/session.vim&lt;/span>
 &lt;span class="collapsable-code__toggle" data-label-expand="△" data-label-collapse="▽">&lt;/span>
