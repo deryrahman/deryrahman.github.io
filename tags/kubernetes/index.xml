@@ -68,6 +68,7 @@ cat &lt;span style="color:#e6db74">&amp;lt;&amp;lt;EOF | sudo tee /etc/sysctl.d/
 &lt;span style="color:#75715e"># Apply sysctl params without reboot&lt;/span>
 sudo sysctl --system
 &lt;/code>&lt;/pre>&lt;/div>&lt;hr>
+&lt;h1 id="in-summary--references">In summary &amp;amp; references&lt;/h1>
 &lt;p>There will be many networking issue comes. Knowing how networking works really save me. There&amp;rsquo;re some book that I found helpful during my debugging process:&lt;/p>
 &lt;ul>
 &lt;li>Networking for Systems Administrators - Michael Lucas&lt;/li>
