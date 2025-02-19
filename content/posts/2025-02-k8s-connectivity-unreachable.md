@@ -82,6 +82,8 @@ sudo sysctl --system
 ```
 ---
 
+# In summary & references
+
 There will be many networking issue comes. Knowing how networking works really save me. There're some book that I found helpful during my debugging process:
 - Networking for Systems Administrators - Michael Lucas
 - Linux iptables Pocket Reference - Gregor N. Purdy
