@@ -1,4 +1,77 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>tech on Dery R Ahaddienata</title><link>https://dery.dev/tags/tech/</link><description>Recent content in tech on Dery R Ahaddienata</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Sun, 30 Apr 2023 19:44:09 +0700</lastBuildDate><atom:link href="https://dery.dev/tags/tech/index.xml" rel="self" type="application/rss+xml"/><item><title>Thinking in Moderation</title><link>https://dery.dev/posts/thinking-in-moderation/</link><pubDate>Sun, 30 Apr 2023 19:44:09 +0700</pubDate><guid>https://dery.dev/posts/thinking-in-moderation/</guid><description>You will die if you don’t eat, and you will die either if you eat excessively. In the Nicomachean Ethics, Aristotle describes that eating too much or too little has a bad consequences to our body. Hence, the correlation between eating and health is not linear.
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>tech on Dery R Ahaddienata</title><link>https://dery.dev/tags/tech/</link><description>Recent content in tech on Dery R Ahaddienata</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Wed, 19 Feb 2025 23:41:09 +0700</lastBuildDate><atom:link href="https://dery.dev/tags/tech/index.xml" rel="self" type="application/rss+xml"/><item><title>Kubernetes Connectivity Unreachable?</title><link>https://dery.dev/posts/2025-02-k8s-connectivity-unreachable/</link><pubDate>Wed, 19 Feb 2025 23:41:09 +0700</pubDate><guid>https://dery.dev/posts/2025-02-k8s-connectivity-unreachable/</guid><description>Recently, I tried to setup the k8s cluster in my local. Unlike common setup where we usually use minikube, kindD, or k3s, this time I play around on bootstrap the cluster using vm directly. This exercise allow me to have a better understanding how k8s manages the containers.I use lima vm to create a vm in my mac. I don&amp;rsquo;t know, when I use VirtualBox or VMWare, I felt like it&amp;rsquo;s more resource consuming.</description><content>&lt;p>Recently, I tried to setup the k8s cluster in my local. Unlike common setup where we usually use minikube, kindD, or k3s, this time I play around on bootstrap the cluster using vm directly. This exercise allow me to have a better understanding how k8s manages the containers.&lt;!-- raw HTML omitted -->&lt;/p>
+&lt;p>I use lima vm to create a vm in my mac. I don&amp;rsquo;t know, when I use VirtualBox or VMWare, I felt like it&amp;rsquo;s more resource consuming. Yet, I found lima vm as an alternative that feel more light weight. I tried to spin up 2 VMs, one for control-plane and other for worker. I use user-v2 and vzNAT as a network. Former for vm to vm communication and later for vm to host communication (yes, I need this for exposing LoadBalancer service). So, with this setup, 1 node has 2 network interface. Then, this is where connectivity issue araises..&lt;/p>
+&lt;hr>
+&lt;h1 id="kube-proxy-crashed-on-worker-node">kube-proxy crashed on worker node&lt;/h1>
+&lt;p>When adding a worker node with 2 interfaces, kube-proxy always crash due to the hostname &lt;code>lima-vm-control-plane.internal&lt;/code> can&amp;rsquo;t resolved. So we need to debug, why it&amp;rsquo;s not resolved:&lt;/p>
+&lt;ul>
+&lt;li>Most likely the problem lies on dns resolution. Turns out when I run debug container on worker node and try to &lt;code>nslookup&lt;/code> that hostname, it&amp;rsquo;s not resolved&lt;/li>
+&lt;/ul>
+&lt;p>&lt;strong>Root cause:&lt;/strong>&lt;/p>
+&lt;ul>
+&lt;li>In that container, &lt;code>/etc/resolv.conf&lt;/code> is wrongly ordered:
+&lt;pre>&lt;code>nameserver 192.168.106.1
+nameserver fe80::184a:53ff:fe41:e165%3
+nameserver 192.168.104.2
+&lt;/code>&lt;/pre>&lt;/li>
+&lt;li>It first lookup on 192.168.106.1 which is it&amp;rsquo;s vzNAT and it&amp;rsquo;s not accessible through worker&lt;/li>
+&lt;/ul>
+&lt;p>&lt;strong>Fix:&lt;/strong>&lt;/p>
+&lt;ul>
+&lt;li>First, we should find, how resolv.conf is assined to the container. Turns out it&amp;rsquo;s handled by kubelet, which is can be seen in the kubelet configuration, there&amp;rsquo;s a section to specify in which the configuration must be used (resolvConf). By default, it&amp;rsquo;s &lt;code>/run/systemd/resolve/resolv.conf&lt;/code>&lt;/li>
+&lt;li>Change the order of &lt;code>/run/systemd/resolve/resolv.conf&lt;/code>, so that &lt;code>nameserver 192.168.104.2&lt;/code> is on the top. Then recraate the pod&lt;/li>
+&lt;/ul>
+&lt;hr>
+&lt;h1 id="cni-plugin-in-worker-node-fail">CNI plugin in worker node fail&lt;/h1>
+&lt;p>When I setup the worker node, the cni plugin fails. In the log, I see that the kubernetes IP is unreachable from worker node. When 10.96.0.1 in unreachable, we need know in which layer the network is unreachable.&lt;/p>
+&lt;ul>
+&lt;li>Use curl first, if it&amp;rsquo;s unreachable, then go down to the lower level&lt;/li>
+&lt;li>In networking layer, we can use &lt;code>netcat&lt;/code> , use &lt;code>ip addr&lt;/code>, &lt;code>ip route&lt;/code> to know where the ip should be routed, if it&amp;rsquo;s still unreachable check using &lt;code>iptables&lt;/code> , in my case, the problem shown when I see &lt;code>iptables&lt;/code>:&lt;/li>
+&lt;li>the &lt;code>nat&lt;/code> table somehow configured to the wrong IP. eventho the IP is belong to the correct node that contains controlplane, but this IP is unreachable from worker node.&lt;/li>
+&lt;li>I realized that my setting is 1 node has 2 interfaces at begining (when I bootstrap the cluster).
+&lt;pre>&lt;code>controlplane
+eth0 192.168.104.1/24
+lima1 192.168.106.12/24
+worker
+eth0 192.168.104.8/24
+lima1 192.168.106.15/24
+&lt;/code>&lt;/pre>&lt;p>`&lt;/p>
+&lt;/li>
+&lt;li>lima1 interface is an interface that connect the node to my local. I use vzNAT. And through this interface, the IP between node is unreachable&lt;/li>
+&lt;/ul>
+&lt;p>&lt;strong>Root cause:&lt;/strong>&lt;/p>
+&lt;ul>
+&lt;li>The iptables that I have in worker node translate the destination of &lt;code>10.96.0.1&lt;/code> to &lt;code>192.168.106.12&lt;/code> that&amp;rsquo;s why it&amp;rsquo;s always fail to connect to api-server in controlplane&lt;/li>
+&lt;/ul>
+&lt;p>&lt;strong>Fix:&lt;/strong>&lt;/p>
+&lt;ul>
+&lt;li>Long term fix:
+&lt;ul>
+&lt;li>Hypothetically when bootstrap the kubernetes node, we need to pass the advertise ip for controlplane that can be reached by other nodes. In my case, I bootstrap the cluster without advertise ip&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>Quick fix:
+&lt;ul>
+&lt;li>Route the ip &lt;code>192.168.106.12&lt;/code> directly to &lt;code>192.168.104.1&lt;/code> through eth0&lt;/li>
+&lt;li>&lt;code>ip route add 192.168.106.12 via 192.168.104.1 dev eth0&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;hr>
+&lt;h1 id="coredns-in-worker-node-crashed">CoreDNS in worker node crashed&lt;/h1>
+&lt;p>Truns out the ip forward is not enabled in worker node.&lt;/p>
+&lt;p>&lt;strong>Fix:&lt;/strong>&lt;/p>
+&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-sh" data-lang="sh">&lt;span style="color:#75715e"># sysctl params required by setup, params persist across reboots&lt;/span>
+cat &lt;span style="color:#e6db74">&amp;lt;&amp;lt;EOF | sudo tee /etc/sysctl.d/k8s.conf
+&lt;/span>&lt;span style="color:#e6db74">net.ipv4.ip_forward = 1
+&lt;/span>&lt;span style="color:#e6db74">EOF&lt;/span>
+&lt;span style="color:#75715e"># Apply sysctl params without reboot&lt;/span>
+sudo sysctl --system
+&lt;/code>&lt;/pre>&lt;/div>&lt;hr>
+&lt;p>There will be many networking issue comes. Knowing how networking works really save me. There&amp;rsquo;re some book that I found helpful during my debugging process:&lt;/p>
+&lt;ul>
+&lt;li>Networking for Systems Administrators - Michael Lucas&lt;/li>
+&lt;li>Linux iptables Pocket Reference - Gregor N. Purdy&lt;/li>
+&lt;/ul></content></item><item><title>Thinking in Moderation</title><link>https://dery.dev/posts/thinking-in-moderation/</link><pubDate>Sun, 30 Apr 2023 19:44:09 +0700</pubDate><guid>https://dery.dev/posts/thinking-in-moderation/</guid><description>You will die if you don’t eat, and you will die either if you eat excessively. In the Nicomachean Ethics, Aristotle describes that eating too much or too little has a bad consequences to our body. Hence, the correlation between eating and health is not linear.
 In economics, no tax makes government has no revenue, no infrastructure, public health, education, and security. On the other side, charged 100% tax makes individual has no money, and there’s no reason to work, then economy collapse and government has no revenue.</description><content>&lt;p>You will die if you don’t eat, and you will die either if you eat excessively. In the Nicomachean Ethics, Aristotle describes that eating too much or too little has a bad consequences to our body. Hence, the correlation between eating and health is not linear.&lt;/p>
 &lt;p>In economics, no tax makes government has no revenue, no infrastructure, public health, education, and security. On the other side, charged 100% tax makes individual has no money, and there’s no reason to work, then economy collapse and government has no revenue. It’s clear that the government’s revenue and taxation is not linear either.&lt;/p>
 &lt;img src="https://dery.dev/static/img/non-linear.png" alt="Linear vs Laffer Curve" class="center" style="border-radius: 5px;" />
@@ -64,8 +137,8 @@ In economics, no tax makes government has no revenue, no infrastructure, public 
 &lt;h2 id="dot-files">Dot Files&lt;/h2>
 &lt;h3 id="plugin-config">Plugin Config&lt;/h3>
 &lt;div class="collapsable-code">
-&lt;input id="621539784" type="checkbox" checked />
-&lt;label for="621539784">
+&lt;input id="548123796" type="checkbox" checked />
+&lt;label for="548123796">
 &lt;span class="collapsable-code__language">vim&lt;/span>
 &lt;span class="collapsable-code__title">~/.vimrc&lt;/span>
 &lt;span class="collapsable-code__toggle" data-label-expand="△" data-label-collapse="▽">&lt;/span>
@@ -132,8 +205,8 @@ endif
 &lt;/code>&lt;/pre>
 &lt;/div>
 &lt;div class="collapsable-code">
-&lt;input id="419758362" type="checkbox" checked />
-&lt;label for="419758362">
+&lt;input id="715382964" type="checkbox" checked />
+&lt;label for="715382964">
 &lt;span class="collapsable-code__language">vim&lt;/span>
 &lt;span class="collapsable-code__title">~/.vim/config/theme.vim&lt;/span>
 &lt;span class="collapsable-code__toggle" data-label-expand="△" data-label-collapse="▽">&lt;/span>
@@ -177,8 +250,8 @@ let NERDTreeShowHidden = 1
 &lt;/code>&lt;/pre>
 &lt;/div>
 &lt;div class="collapsable-code">
-&lt;input id="895231674" type="checkbox" checked />
-&lt;label for="895231674">
+&lt;input id="741368529" type="checkbox" checked />
+&lt;label for="741368529">
 &lt;span class="collapsable-code__language">vim&lt;/span>
 &lt;span class="collapsable-code__title">~/.vim/config/fzf.vim&lt;/span>
 &lt;span class="collapsable-code__toggle" data-label-expand="△" data-label-collapse="▽">&lt;/span>
@@ -192,8 +265,8 @@ let $FZF_DEFAULT_OPTS = &amp;#39;--layout=reverse --info=inline&amp;#39;
 &lt;/code>&lt;/pre>
 &lt;/div>
 &lt;div class="collapsable-code">
-&lt;input id="287419635" type="checkbox" checked />
-&lt;label for="287419635">
+&lt;input id="258976143" type="checkbox" checked />
+&lt;label for="258976143">
 &lt;span class="collapsable-code__language">vim&lt;/span>
 &lt;span class="collapsable-code__title">~/.vim/config/treesitter.vim&lt;/span>
 &lt;span class="collapsable-code__toggle" data-label-expand="△" data-label-collapse="▽">&lt;/span>
@@ -217,8 +290,8 @@ EOF
 &lt;/code>&lt;/pre>
 &lt;/div>
 &lt;div class="collapsable-code">
-&lt;input id="254183679" type="checkbox" checked />
-&lt;label for="254183679">
+&lt;input id="637219845" type="checkbox" checked />
+&lt;label for="637219845">
 &lt;span class="collapsable-code__language">vim&lt;/span>
 &lt;span class="collapsable-code__title">~/.vim/config/vimwiki.vim&lt;/span>
 &lt;span class="collapsable-code__toggle" data-label-expand="△" data-label-collapse="▽">&lt;/span>
@@ -235,8 +308,8 @@ let g:vimwiki_global_ext = 0
 &lt;/code>&lt;/pre>
 &lt;/div>
 &lt;div class="collapsable-code">
-&lt;input id="237681495" type="checkbox" checked />
-&lt;label for="237681495">
+&lt;input id="839157264" type="checkbox" checked />
+&lt;label for="839157264">
 &lt;span class="collapsable-code__language">vim&lt;/span>
 &lt;span class="collapsable-code__title">~/.vim/config/lsp_config.vim&lt;/span>
 &lt;span class="collapsable-code__toggle" data-label-expand="△" data-label-collapse="▽">&lt;/span>
@@ -266,8 +339,8 @@ autocmd BufWritePre *.json lua vim.lsp.buf.formatting_sync(nil, 100)
 &lt;/code>&lt;/pre>
 &lt;/div>
 &lt;div class="collapsable-code">
-&lt;input id="297546183" type="checkbox" checked />
-&lt;label for="297546183">
+&lt;input id="273658491" type="checkbox" checked />
+&lt;label for="273658491">
 &lt;span class="collapsable-code__language">vim&lt;/span>
 &lt;span class="collapsable-code__title">~/.vim/config/ale.vim&lt;/span>
 &lt;span class="collapsable-code__toggle" data-label-expand="△" data-label-collapse="▽">&lt;/span>
@@ -306,8 +379,8 @@ let g:ale_fix_on_save = 1
 &lt;/code>&lt;/pre>
 &lt;/div>
 &lt;div class="collapsable-code">
-&lt;input id="832659147" type="checkbox" checked />
-&lt;label for="832659147">
+&lt;input id="472361598" type="checkbox" checked />
+&lt;label for="472361598">
 &lt;span class="collapsable-code__language">vim&lt;/span>
 &lt;span class="collapsable-code__title">~/.vim/config/vimspector.vim&lt;/span>
 &lt;span class="collapsable-code__toggle" data-label-expand="△" data-label-collapse="▽">&lt;/span>
@@ -325,8 +398,8 @@ nmap &amp;lt;leader&amp;gt;do &amp;lt;Plug&amp;gt;VimspectorStepOut
 &lt;/code>&lt;/pre>
 &lt;/div>
 &lt;div class="collapsable-code">
-&lt;input id="572946138" type="checkbox" checked />
-&lt;label for="572946138">
+&lt;input id="631827945" type="checkbox" checked />
+&lt;label for="631827945">
 &lt;span class="collapsable-code__language">vim&lt;/span>
 &lt;span class="collapsable-code__title">~/.vim/config/maximizer.vim&lt;/span>
 &lt;span class="collapsable-code__toggle" data-label-expand="△" data-label-collapse="▽">&lt;/span>
@@ -336,8 +409,8 @@ map &amp;lt;C-W&amp;gt;z :MaximizerToggle&amp;lt;CR&amp;gt;
 &lt;/code>&lt;/pre>
 &lt;/div>
 &lt;div class="collapsable-code">
-&lt;input id="643719852" type="checkbox" checked />
-&lt;label for="643719852">
+&lt;input id="563498127" type="checkbox" checked />
+&lt;label for="563498127">
 &lt;span class="collapsable-code__language">lua&lt;/span>
 &lt;span class="collapsable-code__title">~/.vim/config/compe.lua&lt;/span>
 &lt;span class="collapsable-code__toggle" data-label-expand="△" data-label-collapse="▽">&lt;/span>
@@ -372,8 +445,8 @@ snippets_nvim = true;
 &lt;/code>&lt;/pre>
 &lt;/div>
 &lt;div class="collapsable-code">
-&lt;input id="492381567" type="checkbox" checked />
-&lt;label for="492381567">
+&lt;input id="386791524" type="checkbox" checked />
+&lt;label for="386791524">
 &lt;span class="collapsable-code__language">lua&lt;/span>
 &lt;span class="collapsable-code__title">~/.vim/config/lspfuzzy.lua&lt;/span>
 &lt;span class="collapsable-code__toggle" data-label-expand="△" data-label-collapse="▽">&lt;/span>
@@ -396,8 +469,8 @@ fzf_trim = true, -- trim FZF entries
 &lt;/div>
 &lt;h3 id="external-config">External Config&lt;/h3>
 &lt;div class="collapsable-code">
-&lt;input id="682451397" type="checkbox" checked />
-&lt;label for="682451397">
+&lt;input id="164582937" type="checkbox" checked />
+&lt;label for="164582937">
 &lt;span class="collapsable-code__language">vim&lt;/span>
 &lt;span class="collapsable-code__title">~/.vim/config/autoclose.vim&lt;/span>
 &lt;span class="collapsable-code__toggle" data-label-expand="△" data-label-collapse="▽">&lt;/span>
@@ -477,8 +550,8 @@ inoremap {,&amp;lt;CR&amp;gt; {&amp;lt;CR&amp;gt;},&amp;lt;ESC&amp;gt;O
 &lt;/code>&lt;/pre>
 &lt;/div>
 &lt;div class="collapsable-code">
-&lt;input id="934716258" type="checkbox" checked />
-&lt;label for="934716258">
+&lt;input id="914672385" type="checkbox" checked />
+&lt;label for="914672385">
 &lt;span class="collapsable-code__language">vim&lt;/span>
 &lt;span class="collapsable-code__title">~/.vim/config/custom_map.vim&lt;/span>
 &lt;span class="collapsable-code__toggle" data-label-expand="△" data-label-collapse="▽">&lt;/span>
@@ -499,8 +572,8 @@ nnoremap &amp;lt;silent&amp;gt; &amp;lt;C-W&amp;gt;&amp;lt;Right&amp;gt; :exe &a
 &lt;/code>&lt;/pre>
 &lt;/div>
 &lt;div class="collapsable-code">
-&lt;input id="489137625" type="checkbox" checked />
-&lt;label for="489137625">
+&lt;input id="186374529" type="checkbox" checked />
+&lt;label for="186374529">
 &lt;span class="collapsable-code__language">vim&lt;/span>
 &lt;span class="collapsable-code__title">~/.vim/config/session.vim&lt;/span>
 &lt;span class="collapsable-code__toggle" data-label-expand="△" data-label-collapse="▽">&lt;/span>
