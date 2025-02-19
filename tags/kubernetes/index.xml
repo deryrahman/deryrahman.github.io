@@ -14,7 +14,7 @@ I use lima vm to create a vm in my mac. Previously I have VirtualBox and VMWare 
 nameserver fe80::184a:53ff:fe41:e165%3
 nameserver 192.168.104.2
 &lt;/code>&lt;/pre>&lt;/li>
-&lt;li>It first lookup on 192.168.106.1 which is it&amp;rsquo;s vzNAT and it&amp;rsquo;s not accessible through worker&lt;/li>
+&lt;li>It first lookup on 192.168.106.1 which is vzNAT and it&amp;rsquo;s not accessible through worker&lt;/li>
 &lt;/ul>
 &lt;p>&lt;strong>Fix:&lt;/strong>&lt;/p>
 &lt;ul>
@@ -26,16 +26,18 @@ nameserver 192.168.104.2
 &lt;p>When I setup the worker node, the cni plugin fails. In the log, I see that the kubernetes IP is unreachable from worker node. When 10.96.0.1 in unreachable, we need know in which layer the network is unreachable.&lt;/p>
 &lt;ul>
 &lt;li>Use curl first, if it&amp;rsquo;s unreachable, then go down to the lower level&lt;/li>
-&lt;li>In networking layer, we can use &lt;code>netcat&lt;/code> , use &lt;code>ip addr&lt;/code>, &lt;code>ip route&lt;/code> to know where the ip should be routed, if it&amp;rsquo;s still unreachable check using &lt;code>iptables&lt;/code> , in my case, the problem shown when I see &lt;code>iptables&lt;/code>:&lt;/li>
+&lt;li>In networking layer, we can use &lt;code>netcat&lt;/code> , use &lt;code>ip addr&lt;/code>, &lt;code>ip route&lt;/code> to know where the ip should be routed, if it&amp;rsquo;s still unreachable check using &lt;code>iptables&lt;/code> , in my case, the problem shown when I see &lt;code>iptables&lt;/code>:
+&lt;ul>
 &lt;li>the &lt;code>nat&lt;/code> table somehow configured to the wrong IP. eventho the IP is belong to the correct node that contains controlplane, but this IP is unreachable from worker node.&lt;/li>
-&lt;li>I realized that my setting is 1 node has 2 interfaces at begining (when I bootstrap the cluster).
+&lt;li>I realized that my setting is 1 node with 2 interfaces at begining (when I bootstrap the cluster).
 &lt;pre>&lt;code>controlplane
 eth0 192.168.104.1/24
 lima1 192.168.106.12/24
 worker
 eth0 192.168.104.8/24
 lima1 192.168.106.15/24
-&lt;/code>&lt;/pre>&lt;p>`&lt;/p>
+&lt;/code>&lt;/pre>&lt;/li>
+&lt;/ul>
 &lt;/li>
 &lt;li>lima1 interface is an interface that connect the node to my local. I use vzNAT. And through this interface, the IP between node is unreachable&lt;/li>
 &lt;/ul>
