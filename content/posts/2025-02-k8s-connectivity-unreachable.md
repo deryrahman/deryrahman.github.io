@@ -29,7 +29,7 @@ When adding a worker node with 2 interfaces, kube-proxy always crash due to the 
     nameserver fe80::184a:53ff:fe41:e165%3
     nameserver 192.168.104.2
     ```
-- It first lookup on 192.168.106.1 which is it's vzNAT and it's not accessible through worker
+- It first lookup on 192.168.106.1 which is vzNAT and it's not accessible through worker
 
 **Fix:**
 - First, we should find, how resolv.conf is assined to the container. Turns out it's handled by kubelet, which is can be seen in the kubelet configuration, there's a section to specify in which the configuration must be used (resolvConf). By default, it's `/run/systemd/resolve/resolv.conf`
@@ -42,17 +42,17 @@ When adding a worker node with 2 interfaces, kube-proxy always crash due to the 
 When I setup the worker node, the cni plugin fails. In the log, I see that the kubernetes IP is unreachable from worker node. When 10.96.0.1 in unreachable, we need know in which layer the network is unreachable. 
 - Use curl first, if it's unreachable, then go down to the lower level
 - In networking layer, we can use `netcat` , use `ip addr`, `ip route` to know where the ip should be routed, if it's still unreachable check using `iptables` , in my case, the problem shown when I see `iptables`:
-- the `nat` table somehow configured to the wrong IP. eventho the IP is belong to the correct node that contains controlplane, but this IP is unreachable from worker node.
--  I realized that my setting is 1 node has 2 interfaces at begining (when I bootstrap the cluster).
-	```
-	controlplane
-	eth0 192.168.104.1/24
-	lima1 192.168.106.12/24
-	
-	worker
-	eth0  192.168.104.8/24
-	lima1 192.168.106.15/24 
-	``` 
+    - the `nat` table somehow configured to the wrong IP. eventho the IP is belong to the correct node that contains controlplane, but this IP is unreachable from worker node.
+    -  I realized that my setting is 1 node with 2 interfaces at begining (when I bootstrap the cluster).
+        ```
+        controlplane
+        eth0 192.168.104.1/24
+        lima1 192.168.106.12/24
+        
+        worker
+        eth0  192.168.104.8/24
+        lima1 192.168.106.15/24 
+        ```
 - lima1 interface is an interface that connect the node to my local. I use vzNAT. And through this interface, the IP between node is unreachable
 
 **Root cause:**
