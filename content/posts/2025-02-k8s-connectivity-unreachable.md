@@ -6,14 +6,14 @@ authorTwitter = "deryrahman" #do not include @
 cover = ""
 tags = ["tech", "kubernetes"]
 keywords = ["kubernetes", "networking"]
-description = ""
+description = "Recently, I tried to setup the k8s cluster in my local. Unlike common setup where we usually use minikube, kindD, or k3s, this time I play around using vm directly. This exercise allow me to have a better understanding on how k8s manages the containers."
 showFullContent = false
 readingTime = false
 +++
 
-Recently, I tried to setup the k8s cluster in my local. Unlike common setup where we usually use minikube, kindD, or k3s, this time I play around on bootstrap the cluster using vm directly. This exercise allow me to have a better understanding how k8s manages the containers.<!--break-->
+Recently, I tried to setup the k8s cluster in my local. Unlike common setup where we usually use minikube, kindD, or k3s, this time I play around using vm directly. This exercise allow me to have a better understanding on how k8s manages the containers.
 
-I use lima vm to create a vm in my mac. I don't know, when I use VirtualBox or VMWare, I felt like it's more resource consuming. Yet, I found lima vm as an alternative that feel more light weight. I tried to spin up 2 VMs, one for control-plane and other for worker. I use user-v2 and vzNAT as a network. Former for vm to vm communication and later for vm to host communication (yes, I need this for exposing LoadBalancer service). So, with this setup, 1 node has 2 network interface. Then, this is where connectivity issue araises..
+I use lima vm to create a vm in my mac. Previously I have VirtualBox and VMWare as a candidate, but I felt like it's more resource consuming. Yet, I found lima vm as an alternative that I feel it's more light weight. I tried to spin up 2 VMs, one for control-plane and other for worker. I use user-v2 and vzNAT as a network. Former for vm to vm communication and later for vm to host communication (yes, I need this for exposing LoadBalancer service). So, with this setup, 1 node has 2 network interface. Then, this is where connectivity issue araises..
 
 ---
 
