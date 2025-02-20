@@ -6,14 +6,14 @@ authorTwitter = "deryrahman" #do not include @
 cover = ""
 tags = ["tech", "kubernetes"]
 keywords = ["kubernetes", "networking"]
-description = "Recently, I tried to setup the k8s cluster in my local. Unlike common setup where we usually use minikube, kindD, or k3s, this time I play around using vm directly. This exercise allow me to have a better understanding on how k8s manages the containers."
+description = "Recently, I tried to setup the k8s cluster in my local. Unlike many common setup out there where we usually use minikube, kindD, or k3s, this time I play using vm directly. This exercise allow me to have a better understanding on how k8s manages the containers."
 showFullContent = false
 readingTime = false
 +++
 
-Recently, I tried to setup the k8s cluster in my local. Unlike common setup where we usually use minikube, kindD, or k3s, this time I play around using vm directly. This exercise allow me to have a better understanding on how k8s manages the containers.
+Recently, I tried to setup the k8s cluster in my local. Unlike many common setup out there where we usually use minikube, kindD, or k3s, this time I play using vm directly. This exercise allow me to have a better understanding on how k8s manages the containers.
 
-I use lima vm to create a vm in my mac. Previously I have VirtualBox and VMWare as a candidate, but I felt like it's more resource consuming. Yet, I found lima vm as an alternative that I feel it's more light weight. I tried to spin up 2 VMs, one for control-plane and other for worker. I use user-v2 and vzNAT as a network. Former for vm to vm communication and later for vm to host communication (yes, I need this for exposing LoadBalancer service). So, with this setup, 1 node has 2 network interface. Then, this is where connectivity issue araises..
+I use lima vm to create a vm in my mac. Previously I have several candidates, like VirtualBox and VMWare, but it's quite heave and more resource consuming. Yet, I found lima vm as an alternative that I feel like it's more lightweight. I tried to spin up 2 VMs, one for control-plane and other for worker. I use user-v2 and vzNAT as a network. Former for vm to vm communication and latter for vm to host communication (yes, I need this for exposing LoadBalancer service, because I want to mess this things up 🙂). So, with this setup, 1 node has 2 network interface. Then, this is where connectivity issue araises..
 
 ---
 
@@ -87,3 +87,4 @@ sudo sysctl --system
 There will be many networking issue comes. Knowing how networking works really save me. There're some book that I found helpful during my debugging process:
 - Networking for Systems Administrators - Michael Lucas
 - Linux iptables Pocket Reference - Gregor N. Purdy
+- [Understanding kubernetes networking model - Kevin Sookocheff](https://sookocheff.com/post/kubernetes/understanding-kubernetes-networking-model/)
