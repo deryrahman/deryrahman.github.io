@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Dery R Ahaddienata</title><link>https://dery.dev/</link><description>Recent content on Dery R Ahaddienata</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Sun, 30 Aug 2026 15:18:09 +0700</lastBuildDate><atom:link href="https://dery.dev/index.xml" rel="self" type="application/rss+xml"/><item><title>Build a System Not Just A Goal</title><link>https://dery.dev/posts/build-a-system-not-just-a-goal/</link><pubDate>Sun, 30 Aug 2026 15:18:09 +0700</pubDate><guid>https://dery.dev/posts/build-a-system-not-just-a-goal/</guid><description>A half of the year has been passed. Some has got lost their commitment for the goal they&amp;rsquo;ve set in the beginning of the year. I observed this phenomenon as common yet unusual thing that might lead to frustration to some people. The goal is there for a direction, it answers what, but doesn&amp;rsquo;t answering precisely for how we are going to achieve. That&amp;rsquo;s the common reason the goal seems unattainable.</description><content>&lt;p>A half of the year has been passed. Some has got lost their commitment for the goal they&amp;rsquo;ve set in the beginning of the year. I observed this phenomenon as common yet unusual thing that might lead to frustration to some people. The goal is there for a direction, it answers what, but doesn&amp;rsquo;t answering precisely for how we are going to achieve. That&amp;rsquo;s the common reason the goal seems unattainable. For me, I never glorify the goal, as the goal itself is useless if we didn&amp;rsquo;t do whatever need to do. Instead, it is better to focus on building a system. A system that works so well that failing to achieve almost impossible.&lt;/p>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Dery R Ahaddienata</title><link>https://dery.dev/</link><description>Recent content on Dery R Ahaddienata</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Sun, 30 Aug 2026 15:18:09 +0700</lastBuildDate><atom:link href="https://dery.dev/index.xml" rel="self" type="application/rss+xml"/><item><title>Build a System Not Just A Goal</title><link>https://dery.dev/posts/build-a-system-not-just-a-goal/</link><pubDate>Sun, 30 Aug 2026 15:18:09 +0700</pubDate><guid>https://dery.dev/posts/build-a-system-not-just-a-goal/</guid><description>A half of the year has been passed. Some has got lost their commitment for the goal they&amp;rsquo;ve set in the beginning of the year. I observed this phenomenon as common yet unusual thing that might lead to frustration to some people. The goal is there for a direction, it answers what, but doesn&amp;rsquo;t answering precisely for the how part. That&amp;rsquo;s a common reason the goal seems unattainable. For me, I never glorify the goal, as the goal itself is useless if we didn&amp;rsquo;t do whatever need to do.</description><content>&lt;p>A half of the year has been passed. Some has got lost their commitment for the goal they&amp;rsquo;ve set in the beginning of the year. I observed this phenomenon as common yet unusual thing that might lead to frustration to some people. The goal is there for a direction, it answers what, but doesn&amp;rsquo;t answering precisely for the how part. That&amp;rsquo;s a common reason the goal seems unattainable. For me, I never glorify the goal, as the goal itself is useless if we didn&amp;rsquo;t do whatever need to do. Instead, it is better to focus on building a system. A system that works so well that failing to achieve the goal is almost impossible.&lt;/p>
 &lt;h2 id="research">Research&lt;/h2>
 &lt;p>Do some research, especially from someone who have already achieved what we want to achieve. We can look for their experiences in books or through conversations with people around us. Take what&amp;rsquo;s the thing that might works for us and remove what&amp;rsquo;s the thing that doesn&amp;rsquo;t work for us. It&amp;rsquo;s subjective and personalized.&lt;/p>
 &lt;h2 id="block">Block&lt;/h2>
@@ -187,8 +187,8 @@ In economics, no tax makes government has no revenue, no infrastructure, public 
 &lt;h2 id="dot-files">Dot Files&lt;/h2>
 &lt;h3 id="plugin-config">Plugin Config&lt;/h3>
 &lt;div class="collapsable-code">
-&lt;input id="159423876" type="checkbox" checked />
-&lt;label for="159423876">
+&lt;input id="953182746" type="checkbox" checked />
+&lt;label for="953182746">
 &lt;span class="collapsable-code__language">vim&lt;/span>
 &lt;span class="collapsable-code__title">~/.vimrc&lt;/span>
 &lt;span class="collapsable-code__toggle" data-label-expand="△" data-label-collapse="▽">&lt;/span>
@@ -255,8 +255,8 @@ endif
 &lt;/code>&lt;/pre>
 &lt;/div>
 &lt;div class="collapsable-code">
-&lt;input id="719685342" type="checkbox" checked />
-&lt;label for="719685342">
+&lt;input id="276398415" type="checkbox" checked />
+&lt;label for="276398415">
 &lt;span class="collapsable-code__language">vim&lt;/span>
 &lt;span class="collapsable-code__title">~/.vim/config/theme.vim&lt;/span>
 &lt;span class="collapsable-code__toggle" data-label-expand="△" data-label-collapse="▽">&lt;/span>
@@ -300,8 +300,8 @@ let NERDTreeShowHidden = 1
 &lt;/code>&lt;/pre>
 &lt;/div>
 &lt;div class="collapsable-code">
-&lt;input id="164327598" type="checkbox" checked />
-&lt;label for="164327598">
+&lt;input id="768429135" type="checkbox" checked />
+&lt;label for="768429135">
 &lt;span class="collapsable-code__language">vim&lt;/span>
 &lt;span class="collapsable-code__title">~/.vim/config/fzf.vim&lt;/span>
 &lt;span class="collapsable-code__toggle" data-label-expand="△" data-label-collapse="▽">&lt;/span>
@@ -315,8 +315,8 @@ let $FZF_DEFAULT_OPTS = &amp;#39;--layout=reverse --info=inline&amp;#39;
 &lt;/code>&lt;/pre>
 &lt;/div>
 &lt;div class="collapsable-code">
-&lt;input id="718452963" type="checkbox" checked />
-&lt;label for="718452963">
+&lt;input id="836419752" type="checkbox" checked />
+&lt;label for="836419752">
 &lt;span class="collapsable-code__language">vim&lt;/span>
 &lt;span class="collapsable-code__title">~/.vim/config/treesitter.vim&lt;/span>
 &lt;span class="collapsable-code__toggle" data-label-expand="△" data-label-collapse="▽">&lt;/span>
@@ -340,8 +340,8 @@ EOF
 &lt;/code>&lt;/pre>
 &lt;/div>
 &lt;div class="collapsable-code">
-&lt;input id="791468253" type="checkbox" checked />
-&lt;label for="791468253">
+&lt;input id="691347528" type="checkbox" checked />
+&lt;label for="691347528">
 &lt;span class="collapsable-code__language">vim&lt;/span>
 &lt;span class="collapsable-code__title">~/.vim/config/vimwiki.vim&lt;/span>
 &lt;span class="collapsable-code__toggle" data-label-expand="△" data-label-collapse="▽">&lt;/span>
@@ -358,8 +358,8 @@ let g:vimwiki_global_ext = 0
 &lt;/code>&lt;/pre>
 &lt;/div>
 &lt;div class="collapsable-code">
-&lt;input id="572183649" type="checkbox" checked />
-&lt;label for="572183649">
+&lt;input id="125974683" type="checkbox" checked />
+&lt;label for="125974683">
 &lt;span class="collapsable-code__language">vim&lt;/span>
 &lt;span class="collapsable-code__title">~/.vim/config/lsp_config.vim&lt;/span>
 &lt;span class="collapsable-code__toggle" data-label-expand="△" data-label-collapse="▽">&lt;/span>
@@ -389,8 +389,8 @@ autocmd BufWritePre *.json lua vim.lsp.buf.formatting_sync(nil, 100)
 &lt;/code>&lt;/pre>
 &lt;/div>
 &lt;div class="collapsable-code">
-&lt;input id="386754291" type="checkbox" checked />
-&lt;label for="386754291">
+&lt;input id="162459837" type="checkbox" checked />
+&lt;label for="162459837">
 &lt;span class="collapsable-code__language">vim&lt;/span>
 &lt;span class="collapsable-code__title">~/.vim/config/ale.vim&lt;/span>
 &lt;span class="collapsable-code__toggle" data-label-expand="△" data-label-collapse="▽">&lt;/span>
@@ -429,8 +429,8 @@ let g:ale_fix_on_save = 1
 &lt;/code>&lt;/pre>
 &lt;/div>
 &lt;div class="collapsable-code">
-&lt;input id="579814326" type="checkbox" checked />
-&lt;label for="579814326">
+&lt;input id="168927453" type="checkbox" checked />
+&lt;label for="168927453">
 &lt;span class="collapsable-code__language">vim&lt;/span>
 &lt;span class="collapsable-code__title">~/.vim/config/vimspector.vim&lt;/span>
 &lt;span class="collapsable-code__toggle" data-label-expand="△" data-label-collapse="▽">&lt;/span>
@@ -448,8 +448,8 @@ nmap &amp;lt;leader&amp;gt;do &amp;lt;Plug&amp;gt;VimspectorStepOut
 &lt;/code>&lt;/pre>
 &lt;/div>
 &lt;div class="collapsable-code">
-&lt;input id="417682935" type="checkbox" checked />
-&lt;label for="417682935">
+&lt;input id="719482536" type="checkbox" checked />
+&lt;label for="719482536">
 &lt;span class="collapsable-code__language">vim&lt;/span>
 &lt;span class="collapsable-code__title">~/.vim/config/maximizer.vim&lt;/span>
 &lt;span class="collapsable-code__toggle" data-label-expand="△" data-label-collapse="▽">&lt;/span>
@@ -459,8 +459,8 @@ map &amp;lt;C-W&amp;gt;z :MaximizerToggle&amp;lt;CR&amp;gt;
 &lt;/code>&lt;/pre>
 &lt;/div>
 &lt;div class="collapsable-code">
-&lt;input id="142836795" type="checkbox" checked />
-&lt;label for="142836795">
+&lt;input id="723681945" type="checkbox" checked />
+&lt;label for="723681945">
 &lt;span class="collapsable-code__language">lua&lt;/span>
 &lt;span class="collapsable-code__title">~/.vim/config/compe.lua&lt;/span>
 &lt;span class="collapsable-code__toggle" data-label-expand="△" data-label-collapse="▽">&lt;/span>
@@ -495,8 +495,8 @@ snippets_nvim = true;
 &lt;/code>&lt;/pre>
 &lt;/div>
 &lt;div class="collapsable-code">
-&lt;input id="857293164" type="checkbox" checked />
-&lt;label for="857293164">
+&lt;input id="798325614" type="checkbox" checked />
+&lt;label for="798325614">
 &lt;span class="collapsable-code__language">lua&lt;/span>
 &lt;span class="collapsable-code__title">~/.vim/config/lspfuzzy.lua&lt;/span>
 &lt;span class="collapsable-code__toggle" data-label-expand="△" data-label-collapse="▽">&lt;/span>
@@ -519,8 +519,8 @@ fzf_trim = true, -- trim FZF entries
 &lt;/div>
 &lt;h3 id="external-config">External Config&lt;/h3>
 &lt;div class="collapsable-code">
-&lt;input id="285734916" type="checkbox" checked />
-&lt;label for="285734916">
+&lt;input id="487132596" type="checkbox" checked />
+&lt;label for="487132596">
 &lt;span class="collapsable-code__language">vim&lt;/span>
 &lt;span class="collapsable-code__title">~/.vim/config/autoclose.vim&lt;/span>
 &lt;span class="collapsable-code__toggle" data-label-expand="△" data-label-collapse="▽">&lt;/span>
@@ -600,8 +600,8 @@ inoremap {,&amp;lt;CR&amp;gt; {&amp;lt;CR&amp;gt;},&amp;lt;ESC&amp;gt;O
 &lt;/code>&lt;/pre>
 &lt;/div>
 &lt;div class="collapsable-code">
-&lt;input id="658479123" type="checkbox" checked />
-&lt;label for="658479123">
+&lt;input id="162985743" type="checkbox" checked />
+&lt;label for="162985743">
 &lt;span class="collapsable-code__language">vim&lt;/span>
 &lt;span class="collapsable-code__title">~/.vim/config/custom_map.vim&lt;/span>
 &lt;span class="collapsable-code__toggle" data-label-expand="△" data-label-collapse="▽">&lt;/span>
@@ -622,8 +622,8 @@ nnoremap &amp;lt;silent&amp;gt; &amp;lt;C-W&amp;gt;&amp;lt;Right&amp;gt; :exe &a
 &lt;/code>&lt;/pre>
 &lt;/div>
 &lt;div class="collapsable-code">
-&lt;input id="867142395" type="checkbox" checked />
-&lt;label for="867142395">
+&lt;input id="523749816" type="checkbox" checked />
+&lt;label for="523749816">
 &lt;span class="collapsable-code__language">vim&lt;/span>
 &lt;span class="collapsable-code__title">~/.vim/config/session.vim&lt;/span>
 &lt;span class="collapsable-code__toggle" data-label-expand="△" data-label-collapse="▽">&lt;/span>
